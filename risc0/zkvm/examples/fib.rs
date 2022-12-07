@@ -17,7 +17,7 @@ use risc0_zkp::{
     field::baby_bear::{BabyBearElem, BabyBearExtElem},
     hal::{EvalCheck, Hal},
 };
-use risc0_zkvm::{prove::default_hal, Prover, Receipt};
+use risc0_zkvm::{prove::default_hal, Prover, ProverOpts, Receipt};
 use risc0_zkvm_methods::{FIB_ELF, FIB_ID};
 use tracing_subscriber::{prelude::*, EnvFilter};
 
@@ -27,6 +27,9 @@ struct Args {
     /// Number of iterations.
     #[clap(long)]
     iterations: u32,
+    /// Port number for gdb
+    #[clap(long)]
+    debugger_port: Option<u16>,
 }
 
 fn main() {
@@ -38,7 +41,7 @@ fn main() {
     let args = Args::parse();
     let (hal, eval) = default_hal();
 
-    let receipt = top(hal.as_ref(), &eval, args.iterations);
+    let receipt = top(hal.as_ref(), &eval, args);
     let seal = receipt.get_seal_bytes().len();
     let journal = receipt.get_journal_bytes().len();
     println!(
@@ -50,12 +53,15 @@ fn main() {
 }
 
 #[tracing::instrument(skip_all)]
-fn top<H, E>(hal: &H, eval: &E, iterations: u32) -> Receipt
+fn top<H, E>(hal: &H, eval: &E, args: Args) -> Receipt
 where
     H: Hal<Elem = BabyBearElem, ExtElem = BabyBearExtElem>,
     E: EvalCheck<H>,
 {
-    let mut prover = Prover::new(FIB_ELF, FIB_ID).unwrap();
-    prover.add_input_u32_slice(&[iterations]);
+    let opts = ProverOpts::default()
+        .with_debugger_port(args.debugger_port)
+        .with_skip_seal(args.debugger_port.is_some());
+    let mut prover = Prover::new_with_opts(FIB_ELF, FIB_ID, opts).unwrap();
+    prover.add_input_u32_slice(&[args.iterations]);
     prover.run_with_hal(hal, eval).unwrap()
 }

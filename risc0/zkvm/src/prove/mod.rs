@@ -20,9 +20,11 @@ mod plonk;
 #[cfg(feature = "profiler")]
 pub mod profiler;
 
+use std::net::{TcpListener, TcpStream};
 use std::{collections::HashMap, fmt::Debug, io::Write, rc::Rc};
 
 use anyhow::{bail, Result};
+use gdbstub::stub::GdbStub;
 use risc0_zkp::{
     field::baby_bear::{BabyBearElem, BabyBearExtElem},
     hal::{EvalCheck, Hal},
@@ -43,6 +45,8 @@ use crate::{
 
 /// Options available to modify the prover's behavior.
 pub struct ProverOpts<'a> {
+    pub(crate) debugger_port: Option<u16>,
+
     pub(crate) skip_seal: bool,
 
     pub(crate) sendrecv_callbacks: HashMap<u32, Box<dyn Fn(u32, &[u8]) -> Vec<u8> + 'a + Sync>>,
@@ -51,6 +55,14 @@ pub struct ProverOpts<'a> {
 }
 
 impl<'a> ProverOpts<'a> {
+    /// Port number used by GDB to connect to the guest
+    pub fn with_debugger_port(self, debugger_port: Option<u16>) -> Self {
+        Self {
+            debugger_port,
+            ..self
+        }
+    }
+
     /// If true, skip generating the seal in receipt.  This should
     /// only be used for testing.  In this case, performace will be
     /// much better but we will not be able to cryptographically
@@ -86,6 +98,7 @@ impl<'a> ProverOpts<'a> {
 impl<'a> Default for ProverOpts<'a> {
     fn default() -> ProverOpts<'a> {
         ProverOpts {
+            debugger_port: None,
             skip_seal: false,
             sendrecv_callbacks: HashMap::new(),
             trace_callback: None,
@@ -200,7 +213,22 @@ impl<'a> Prover<'a> {
         H: Hal<Elem = BabyBearElem, ExtElem = BabyBearExtElem>,
         E: EvalCheck<H>,
     {
-        let skip_seal = self.inner.opts.skip_seal || insecure_skip_seal();
+        let skip_seal = self.inner.opts.skip_seal
+            || insecure_skip_seal()
+            || self.inner.opts.debugger_port.is_some();
+
+        if let Some(port_num) = self.inner.opts.debugger_port {
+            let socket_addr = format!("127.0.0.1:{}", port_num);
+            eprintln!("Waiting for a GDB connection on {:?}...", socket_addr);
+            let sock = TcpListener::bind(socket_addr)?;
+            let (connection, addr) = sock.accept()?;
+
+            // i.e: Running `target remote localhost:<port>` from the GDB prompt.
+            eprintln!("Debugger connected from {}", addr);
+            let mut debugger: GdbStub<'_, T, TcpStream> = GdbStub::new(connection);
+            // gdbstub::stub::new(connection);//gdbstubstub::new(connection);//
+            // stub::gdbstub:://gdbstub::GdbStub::new(connection);
+        }
 
         let mut executor = exec::RV32Executor::new(&CIRCUIT, &self.elf, &mut self.inner);
         self.cycles = executor.run()?;
