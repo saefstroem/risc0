@@ -45,6 +45,7 @@ rand = { version = "0.8", optional = true }
 rayon = { version = "1.5", optional = true }
 sha2 = { version = "0.10", optional = true }
 gdbstub = "0.6.3"
+gdbstub_arch = "0.2.4"
 
 [dev-dependencies]
 clap = { version = "4.0", features = ["derive"] }

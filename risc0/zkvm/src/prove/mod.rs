@@ -14,6 +14,7 @@
 
 pub(crate) mod elf;
 mod exec;
+mod gdb;
 pub(crate) mod image;
 pub(crate) mod loader;
 mod plonk;
@@ -223,11 +224,8 @@ impl<'a> Prover<'a> {
             let sock = TcpListener::bind(socket_addr)?;
             let (connection, addr) = sock.accept()?;
 
-            // i.e: Running `target remote localhost:<port>` from the GDB prompt.
             eprintln!("Debugger connected from {}", addr);
-            let mut debugger: GdbStub<'_, T, TcpStream> = GdbStub::new(connection);
-            // gdbstub::stub::new(connection);//gdbstubstub::new(connection);//
-            // stub::gdbstub:://gdbstub::GdbStub::new(connection);
+            let mut debugger: GdbStub<Prover, TcpStream> = GdbStub::new(connection);
         }
 
         let mut executor = exec::RV32Executor::new(&CIRCUIT, &self.elf, &mut self.inner);
