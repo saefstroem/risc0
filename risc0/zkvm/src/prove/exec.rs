@@ -49,7 +49,7 @@ pub trait HostHandler {
     fn on_trace(&mut self, event: TraceEvent) -> Result<()>;
 }
 
-struct MemoryState {
+pub struct MemoryState {
     pub ram: BTreeMap<u32, u32>,
     // Ram in the FFPU section of memory; these RAM slots store four Fps instead of one u32.
     pub ffpu_ram: Vec<(BabyBearElem, BabyBearElem, BabyBearElem, BabyBearElem)>,
@@ -84,8 +84,12 @@ impl MemoryState {
         }
     }
 
-    fn load_register(&self, num: usize) -> u32 {
+    pub fn load_register(&self, num: usize) -> u32 {
         self.load_u32((SYSTEM.start() + num * 4) as u32)
+    }
+
+    pub fn store_register(&mut self, num: usize, value: u32) {
+        self.store_u32((SYSTEM.start() + num * 4) as u32, value)
     }
 
     #[track_caller]
@@ -97,7 +101,7 @@ impl MemoryState {
     }
 
     #[track_caller]
-    fn load_region(&self, addr: u32, size: u32) -> Vec<u8> {
+    pub fn load_region(&self, addr: u32, size: u32) -> Vec<u8> {
         let mut region = Vec::new();
         for addr in addr..addr + size {
             region.push(self.load_u8(addr));
@@ -126,7 +130,7 @@ impl MemoryState {
     }
 
     #[track_caller]
-    fn store_region(&mut self, addr: u32, slice: &[u8]) {
+    pub fn store_region(&mut self, addr: u32, slice: &[u8]) {
         trace!("store_region: 0x{addr:08X} <= {} bytes", slice.len());
         for i in 0..slice.len() {
             self.store_u8(addr + i as u32, slice[i]);
@@ -173,11 +177,11 @@ impl MemoryState {
 }
 
 pub struct MachineContext<'a, H: HostHandler> {
-    memory: MemoryState,
+    pub memory: MemoryState,
     handler: &'a mut H,
     trace_enabled: bool,
     halted: bool,
-    pc: u32,
+    pub pc: u32,
 }
 
 #[derive(Debug)]

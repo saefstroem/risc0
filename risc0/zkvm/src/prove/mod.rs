@@ -37,6 +37,7 @@ use risc0_zkvm_platform::{
 };
 
 use self::elf::Program;
+use crate::prove::exec::RV32Executor;
 use crate::{
     method_id::MethodId,
     receipt::{insecure_skip_seal, Receipt},
@@ -225,10 +226,11 @@ impl<'a> Prover<'a> {
             let (connection, addr) = sock.accept()?;
 
             eprintln!("Debugger connected from {}", addr);
-            let mut debugger: GdbStub<Prover, TcpStream> = GdbStub::new(connection);
+            let mut debugger: GdbStub<RV32Executor<ProverImpl>, TcpStream> =
+                GdbStub::new(connection);
         }
 
-        let mut executor = exec::RV32Executor::new(&CIRCUIT, &self.elf, &mut self.inner);
+        let mut executor = RV32Executor::new(&CIRCUIT, &self.elf, &mut self.inner);
         self.cycles = executor.run()?;
 
         let mut prover = ProveAdapter::new(&mut executor.executor);
