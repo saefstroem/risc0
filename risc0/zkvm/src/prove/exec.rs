@@ -737,4 +737,19 @@ impl<'a, H: HostHandler> RV32Executor<'a, H> {
         self.executor.finalize();
         Ok(cycles)
     }
+
+    #[tracing::instrument(skip_all)]
+    pub fn run_gdb(&mut self) -> Result<usize> {
+        let mut loader = self
+            .loader
+            .load_init_gdb(self.entry, |chunk, fini| self.executor.step(chunk, fini))?;
+        loop {
+            // check for incoming signal
+            if !loader.body_once()? {
+                break;
+            }
+        }
+        loader.fini()?;
+        Ok(loader.cycle)
+    }
 }

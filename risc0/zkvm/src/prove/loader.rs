@@ -126,11 +126,11 @@ impl IndexMut<ControlIndex> for ControlGroup {
     }
 }
 
-struct LoaderImpl<F>
+pub struct LoaderImpl<F>
 where
     F: FnMut(&[BabyBearElem], usize) -> Result<bool>,
 {
-    cycle: usize,
+    pub cycle: usize,
     code: ControlGroup,
     step: F,
 }
@@ -212,13 +212,19 @@ where
         self.next()
     }
 
+    // Execute a single step in the body
+    // For RISCV, this can be thought of as executing a single instruction.
+    pub fn body_once(&mut self) -> Result<bool> {
+        self.start();
+        self.code[ControlIndex::Body] = BabyBearElem::ONE;
+        self.next_fini(2)
+    }
+
     /// Body Phase: In this phase, the zkVM executes the loaded instructions.
     pub fn body(&mut self) -> Result<()> {
         debug!("BODY");
         loop {
-            self.start();
-            self.code[ControlIndex::Body] = BabyBearElem::ONE;
-            if !self.next_fini(2)? {
+            if !self.body_once()? {
                 break;
             }
         }
@@ -253,7 +259,7 @@ const fn setup_count(regs: usize) -> usize {
 }
 
 #[derive(PartialEq)]
-struct TripleWord {
+pub struct TripleWord {
     addr: u32,
     data: [u32; 3],
 }
@@ -371,6 +377,24 @@ impl Loader {
         loader.body()?;
         loader.fini()?;
         Ok(loader.cycle)
+    }
+
+    #[tracing::instrument(skip_all)]
+    pub fn load_init_gdb<F>(&self, start_addr: u32, step: F) -> Result<LoaderImpl<F>>
+    where
+        F: FnMut(&[BabyBearElem], usize) -> Result<bool>,
+    {
+        let mut loader = LoaderImpl::new(step);
+        loader.init()?;
+        loader.setup(Self::SETUP_CYCLES)?;
+        for triple in &self.user {
+            loader.load(triple)?;
+        }
+        for triple in &self.system {
+            loader.load(triple)?;
+        }
+        loader.reset(start_addr)?;
+        Ok(loader)
     }
 }
 
