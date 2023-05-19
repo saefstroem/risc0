@@ -18,6 +18,7 @@
 //! [Segment]s, each which contains an execution trace of the specified program.
 
 mod env;
+mod gdb;
 pub(crate) mod io;
 mod monitor;
 #[cfg(feature = "profiler")]

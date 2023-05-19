@@ -21,7 +21,7 @@ use risc0_zkvm_methods::{
 use risc0_zkvm_platform::{fileno, PAGE_SIZE, WORD_SIZE};
 use test_log::test;
 
-use super::{Executor, ExecutorEnv, TraceEvent};
+use super::{gdb, Executor, ExecutorEnv, TraceEvent};
 use crate::{
     serde::{from_slice, to_vec},
     testutils, ExitCode, MemoryImage, Program,
@@ -497,4 +497,10 @@ fn oom() {
     assert!(err
         .to_string()
         .contains("Guest panicked: panicked at 'Out of memory!'"));
+}
+
+#[test]
+fn gdb() {
+    let mut exec = gdb::run_with_gdb(ExecutorEnv::default(), HELLO_COMMIT_ELF).unwrap();
+    exec.run().unwrap();
 }
