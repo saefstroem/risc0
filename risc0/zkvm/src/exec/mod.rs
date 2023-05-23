@@ -30,6 +30,8 @@ use std::{array, cell::RefCell, fmt::Debug, io::Write, mem::take, rc::Rc};
 
 use anyhow::{anyhow, bail, Context, Result};
 use crypto_bigint::{CheckedMul, Encoding, NonZero, U256, U512};
+use gdb::{GdbEvent, GdbStatus};
+use gdbstub::conn::ConnectionExt;
 use risc0_zkp::{
     core::{
         digest::{DIGEST_BYTES, DIGEST_WORDS},
@@ -54,6 +56,7 @@ pub use self::env::{ExecutorEnv, ExecutorEnvBuilder};
 use self::monitor::MemoryMonitor;
 use crate::{
     align_up,
+    exec::GdbEvent::ExecHalted,
     opcode::{MajorType, OpCode},
     receipt::ExitCode,
     Loader, MemoryImage, Program, Segment, SegmentRef, Session, SimpleSegmentRef,
@@ -238,6 +241,49 @@ impl<'a> Executor<'a> {
         self.segment_cycle = self.init_cycles;
         self.pre_image.pc = self.pc;
         self.monitor.clear_segment();
+    }
+
+    /// Initialize the executor before we start executing instructions
+    pub fn init_executor_for_gdb(&mut self) {
+        self.monitor.clear_session();
+
+        let journal = Journal::default();
+        self.env
+            .io
+            .borrow_mut()
+            .with_write_fd(fileno::JOURNAL, journal.clone());
+    }
+
+    /// Run the executor until [ExitCode::Paused] or [ExitCode::Halted] is
+    /// reached or a signal from gdb is called. This is intended to be called
+    /// only during debugging in gdb and does not produce a [Session]
+    pub fn run_with_gdb(
+        &mut self,
+        conn: &mut Box<dyn ConnectionExt<Error = std::io::Error>>,
+    ) -> Result<GdbStatus> {
+        loop {
+            if let Ok(Some(_)) = conn.peek() {
+                return Ok(GdbStatus::InComingData);
+            }
+            if let Some(exit_code) = self.step()? {
+                let total_cycles = self.total_cycles();
+                log::debug!("exit_code: {exit_code:?}, total_cycles: {total_cycles}");
+
+                match exit_code {
+                    ExitCode::Paused(inner) => {
+                        log::debug!("Paused({inner}): {}", self.segment_cycle);
+                        return Ok(GdbStatus::Event(ExecHalted(exit_code)));
+                    }
+                    ExitCode::Halted(inner) => {
+                        log::debug!("Halted({inner}): {}", self.segment_cycle);
+                        return Ok(GdbStatus::Event(ExecHalted(exit_code)));
+                    }
+                    _ => (), // ignore split
+                };
+            }
+            //    return Ok(GdbStatus::Event(GdbEvent::DoneStep));
+        }
+        Err(anyhow!("temp..."))
     }
 
     /// Execute a single instruction.

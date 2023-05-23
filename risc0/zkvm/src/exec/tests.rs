@@ -502,5 +502,4 @@ fn oom() {
 #[test]
 fn gdb() {
     let mut exec = gdb::run_with_gdb(ExecutorEnv::default(), HELLO_COMMIT_ELF).unwrap();
-    exec.run().unwrap();
 }

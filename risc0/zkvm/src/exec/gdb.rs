@@ -3,11 +3,17 @@ use std::net::{TcpListener, TcpStream};
 use anyhow::Result;
 use gdbstub::{
     conn::ConnectionExt,
-    stub::{run_blocking, GdbStub, SingleThreadStopReason},
+    stub::{run_blocking, GdbStub, GdbStubError, SingleThreadStopReason},
     target::{
-        ext::base::{
-            singlethread::{SingleThreadBase, SingleThreadResume, SingleThreadSingleStep},
-            BaseOps,
+        ext::{
+            base::{
+                singlethread::{
+                    SingleThreadBase, SingleThreadRangeStepping, SingleThreadResume,
+                    SingleThreadSingleStep,
+                },
+                BaseOps,
+            },
+            breakpoints::{Breakpoints, SwBreakpoint},
         },
         Target,
     },
@@ -15,7 +21,7 @@ use gdbstub::{
 use risc0_zkvm_platform::syscall::reg_abi::*;
 
 use super::Executor;
-use crate::{ExecutorEnv, MemoryImage, SyscallContext};
+use crate::{ExecutorEnv, ExitCode, SyscallContext};
 
 impl<'a> Target for Executor<'a> {
     type Error = anyhow::Error;
@@ -23,6 +29,37 @@ impl<'a> Target for Executor<'a> {
 
     fn base_ops(&mut self) -> gdbstub::target::ext::base::BaseOps<'_, Self::Arch, Self::Error> {
         BaseOps::SingleThread(self)
+    }
+
+    fn support_breakpoints(
+        &mut self,
+    ) -> Option<gdbstub::target::ext::breakpoints::BreakpointsOps<'_, Self>> {
+        Some(self)
+    }
+}
+
+impl<'a> Breakpoints for Executor<'a> {
+    fn support_sw_breakpoint(
+        &mut self,
+    ) -> Option<gdbstub::target::ext::breakpoints::SwBreakpointOps<'_, Self>> {
+        Some(self)
+    }
+}
+
+impl<'a> SwBreakpoint for Executor<'a> {
+    fn add_sw_breakpoint(
+        &mut self,
+        addr: <Self::Arch as gdbstub::arch::Arch>::Usize,
+        kind: <Self::Arch as gdbstub::arch::Arch>::BreakpointKind,
+    ) -> gdbstub::target::TargetResult<bool, Self> {
+        todo!()
+    }
+    fn remove_sw_breakpoint(
+        &mut self,
+        addr: <Self::Arch as gdbstub::arch::Arch>::Usize,
+        kind: <Self::Arch as gdbstub::arch::Arch>::BreakpointKind,
+    ) -> gdbstub::target::TargetResult<bool, Self> {
+        todo!()
     }
 }
 
@@ -84,19 +121,23 @@ impl<'a> SingleThreadBase for Executor<'a> {
 
 impl<'a> SingleThreadResume for Executor<'a> {
     fn resume(&mut self, _signal: Option<gdbstub::common::Signal>) -> Result<(), Self::Error> {
-        todo!()
+        Ok(())
     }
 
     #[inline(always)]
-    fn support_single_step(
+    fn support_range_step(
         &mut self,
-    ) -> Option<gdbstub::target::ext::base::singlethread::SingleThreadSingleStepOps<'_, Self>> {
+    ) -> Option<gdbstub::target::ext::base::singlethread::SingleThreadRangeSteppingOps<'_, Self>>
+    {
         Some(self)
     }
 }
-
-impl<'a> SingleThreadSingleStep for Executor<'a> {
-    fn step(&mut self, _signal: Option<gdbstub::common::Signal>) -> Result<(), Self::Error> {
+impl<'a> SingleThreadRangeStepping for Executor<'a> {
+    fn resume_range_step(
+        &mut self,
+        start: <Self::Arch as gdbstub::arch::Arch>::Usize,
+        end: <Self::Arch as gdbstub::arch::Arch>::Usize,
+    ) -> core::result::Result<(), Self::Error> {
         todo!()
     }
 }
@@ -112,23 +153,46 @@ fn wait_for_tcp(port: u16) -> Result<TcpStream> {
     Ok(stream)
 }
 
-pub fn run_with_gdb<'a>(env: ExecutorEnv<'a>, elf: &[u8]) -> Result<Executor<'a>> {
+pub fn run_with_gdb<'a>(env: ExecutorEnv<'a>, elf: &[u8]) -> Result<()> {
     let mut exec = Executor::from_elf(env, elf)?;
-    let connection: TcpStream = wait_for_tcp(9000)?;
-    let gdb: GdbStub<'_, Executor, TcpStream> = GdbStub::new(connection);
+    exec.init_executor_for_gdb();
+    let connection: Box<dyn ConnectionExt<Error = std::io::Error>> = Box::new(wait_for_tcp(9000)?);
+    let gdb = GdbStub::new(connection);
 
-    Ok(exec)
+    match gdb.run_blocking::<ExecutorGdbEventLoop<'a>>(&mut exec) {
+        Ok(_) => println!("Target terminated!"),
+        Err(GdbStubError::TargetError(e)) => {
+            println!("target encountered a fatal error: {}", e)
+        }
+        Err(e) => {
+            println!("gdbstub encountered a fatal error: {}", e)
+        }
+    }
+
+    Ok(())
 }
 
-enum ExecutorGdbEventLoop {}
+pub enum GdbStatus {
+    InComingData,
+    Event(GdbEvent),
+}
 
-impl run_blocking::BlockingEventLoop for ExecutorGdbEventLoop {
-    type Target = Executor;
+pub enum GdbEvent {
+    DoneStep,
+    ExecHalted(ExitCode),
+}
+
+struct ExecutorGdbEventLoop<'a> {
+    exec: Executor<'a>,
+}
+
+impl<'a> run_blocking::BlockingEventLoop for ExecutorGdbEventLoop<'a> {
+    type Target = Executor<'a>;
     type Connection = Box<dyn ConnectionExt<Error = std::io::Error>>;
     type StopReason = SingleThreadStopReason<u32>;
 
     fn wait_for_stop_reason(
-        target: &mut Self::Target,
+        target: &mut Executor<'a>,
         conn: &mut Self::Connection,
     ) -> core::result::Result<
         run_blocking::Event<Self::StopReason>,
@@ -137,6 +201,29 @@ impl run_blocking::BlockingEventLoop for ExecutorGdbEventLoop {
             <Self::Connection as gdbstub::conn::Connection>::Error,
         >,
     > {
-        // Give executor a polling function
+        match target.run_with_gdb(conn) {
+            Ok(GdbStatus::InComingData) => {
+                let byte = conn
+                    .read()
+                    .map_err(run_blocking::WaitForStopReasonError::Connection)?;
+                Ok(run_blocking::Event::IncomingData(byte))
+            }
+            // TODO: how do we differentiate between halted and paused? Also need to send back
+            // 32-bit status value
+            Ok(GdbStatus::Event(event)) => {
+                let stop_event = match event {
+                    GdbEvent::ExecHalted(_) => SingleThreadStopReason::Exited(0),
+                    GdbEvent::DoneStep => SingleThreadStopReason::DoneStep,
+                };
+                Ok(run_blocking::Event::TargetStopped(stop_event))
+            }
+            Err(e) => Err(run_blocking::WaitForStopReasonError::Target(e)),
+        }
+    }
+
+    fn on_interrupt(
+        _target: &mut Executor<'a>,
+    ) -> core::result::Result<Option<Self::StopReason>, <Self::Target as Target>::Error> {
+        todo!()
     }
 }
