@@ -1,3 +1,4 @@
+use core::marker::PhantomData;
 use std::net::{TcpListener, TcpStream};
 
 use anyhow::Result;
@@ -159,7 +160,7 @@ pub fn run_with_gdb<'a>(env: ExecutorEnv<'a>, elf: &[u8]) -> Result<()> {
     let connection: Box<dyn ConnectionExt<Error = std::io::Error>> = Box::new(wait_for_tcp(9000)?);
     let gdb = GdbStub::new(connection);
 
-    match gdb.run_blocking::<ExecutorGdbEventLoop<'a>>(&mut exec) {
+    match gdb.run_blocking::<Executor<'a>>(&mut exec) {
         Ok(_) => println!("Target terminated!"),
         Err(GdbStubError::TargetError(e)) => {
             println!("target encountered a fatal error: {}", e)
@@ -182,11 +183,17 @@ pub enum GdbEvent {
     ExecHalted(ExitCode),
 }
 
-struct ExecutorGdbEventLoop<'a> {
-    exec: Executor<'a>,
+pub enum ExecState {
+    Step(u32),
+    Continue,
 }
 
-impl<'a> run_blocking::BlockingEventLoop for ExecutorGdbEventLoop<'a> {
+pub struct GdbExecutor<'a> {
+    exec: Executor<'a>,
+    execState: ExecState,
+}
+
+impl<'a> run_blocking::BlockingEventLoop for Executor<'a> {
     type Target = Executor<'a>;
     type Connection = Box<dyn ConnectionExt<Error = std::io::Error>>;
     type StopReason = SingleThreadStopReason<u32>;
