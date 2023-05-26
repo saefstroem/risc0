@@ -16,7 +16,7 @@ use std::{collections::BTreeMap, io::Cursor, str::from_utf8, sync::Mutex};
 
 use risc0_zkvm_methods::{
     multi_test::{MultiTestSpec, SYS_MULTI_TEST},
-    HELLO_COMMIT_ELF, MULTI_TEST_ELF, SLICE_IO_ELF, STANDARD_LIB_ELF,
+    HELLO_COMMIT_ELF, HELLO_COMMIT_PATH, MULTI_TEST_ELF, SLICE_IO_ELF, STANDARD_LIB_ELF,
 };
 use risc0_zkvm_platform::{fileno, PAGE_SIZE, WORD_SIZE};
 use test_log::test;
@@ -501,5 +501,5 @@ fn oom() {
 
 #[test]
 fn gdb() {
-    let mut exec = gdb::run_with_gdb(ExecutorEnv::default(), HELLO_COMMIT_ELF).unwrap();
+    let mut gdb_exec = gdb::GdbExecutor::init(ExecutorEnv::default(), HELLO_COMMIT_ELF).unwrap();
 }
