@@ -115,6 +115,9 @@ pub enum ExitCode {
     /// This indicates normal termination of a program with an interior exit
     /// code returned from the guest.
     Halted(u32),
+
+    /// A Fault will occurr in the indicated program counter
+    Fault(u32),
 }
 
 /// Represents the public state of a segment, needed for continuations and

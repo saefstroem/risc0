@@ -553,3 +553,11 @@ fn session_limit() {
 
     assert!(run_session(1 << 16, 15, 10).is_ok());
 }
+
+#[test]
+fn do_fault() {
+    let spec = to_vec(&MultiTestSpec::UnalignedAccess).unwrap();
+    let env = ExecutorEnv::builder().add_input(&spec).build().unwrap();
+    let mut exec = Executor::from_elf(env, MULTI_TEST_ELF).unwrap();
+    exec.run().unwrap();
+}

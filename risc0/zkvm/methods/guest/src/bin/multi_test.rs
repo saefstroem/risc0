@@ -200,5 +200,12 @@ pub fn main() {
             let len = (memory::STACK_TOP - memory::RESERVED_STACK) as usize;
             let _data = black_box(vec![0_u8; len]);
         }
+        MultiTestSpec::UnalignedAccess => unsafe {
+            // Execute an unaligned access. This is intended to cause a "fault"
+            asm!(r"
+      li x6, 0x08000000
+      sw x5, 542(x6)
+", out("x5") _, out("x6") _);
+        },
     }
 }

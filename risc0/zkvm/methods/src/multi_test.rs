@@ -63,6 +63,7 @@ pub enum MultiTestSpec {
     },
     LibM,
     Oom,
+    UnalignedAccess,
 }
 
 declare_syscall!(pub SYS_MULTI_TEST);

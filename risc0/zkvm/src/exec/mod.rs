@@ -217,7 +217,7 @@ impl<'a> Executor<'a> {
 
         let mut run_loop = || -> Result<ExitCode> {
             loop {
-                if let Some(exit_code) = self.step()? {
+                if let Some(exit_code) = self.step() {
                     let total_cycles = self.total_cycles();
                     log::debug!("exit_code: {exit_code:?}, total_cycles: {total_cycles}");
                     assert!(total_cycles <= (1 << self.env.segment_limit_po2));
@@ -254,12 +254,20 @@ impl<'a> Executor<'a> {
                             log::debug!("Halted({inner}): {}", self.segment_cycle);
                             return Ok(exit_code);
                         }
+                        ExitCode::Fault(pc) => {
+                            log::debug!("Fault: cycle:{} pc:{}", self.segment_cycle, pc);
+                            return Ok(exit_code);
+                        }
                     };
                 };
             }
         };
 
         let exit_code = run_loop()?;
+        if let ExitCode::Fault(pc) = exit_code {
+            // Create a segment that shows that the next instruction will fault
+            // get_fault_segment(pc, self.monitor)
+        }
         self.exit_code = Some(exit_code);
         Ok(Session::new(
             take(&mut self.segments),
@@ -280,18 +288,24 @@ impl<'a> Executor<'a> {
     /// Execute a single instruction.
     ///
     /// This can be directly used by debuggers.
-    pub fn step(&mut self) -> Result<Option<ExitCode>> {
+    pub fn step(&mut self) -> Option<ExitCode> {
         if let Some(limit) = self.env.get_session_limit() {
             if self.session_cycle() >= limit {
-                return Ok(Some(ExitCode::SessionLimit));
+                return Some(ExitCode::SessionLimit);
             }
         }
 
         let insn = self.monitor.load_u32(self.pc);
-        let opcode = OpCode::decode(insn, self.pc)?;
+        let opcode = match OpCode::decode(insn, self.pc) {
+            Err(_) => return Some(ExitCode::Fault(self.pc)),
+            Ok(op) => op,
+        };
 
         let op_result = if opcode.major == MajorType::ECall {
-            self.ecall()?
+            match self.ecall() {
+                Err(_) => return Some(ExitCode::Fault(self.pc)),
+                Ok(OpRes) => OpRes,
+            }
         } else {
             let registers = self.monitor.load_registers();
             let mut hart = HartState {
@@ -300,12 +314,13 @@ impl<'a> Executor<'a> {
                 last_register_write: None,
             };
 
-            InstructionExecutor {
+            let mut exec = InstructionExecutor {
                 mem: &mut self.monitor,
                 hart_state: &mut hart,
+            };
+            if let Err(_) = exec.step() {
+                return Some(ExitCode::Fault(self.pc));
             }
-            .step()
-            .map_err(|err| anyhow!("{:?}", err))?;
 
             if let Some(idx) = hart.last_register_write {
                 self.monitor.store_register(idx, hart.registers[idx]);
@@ -337,7 +352,7 @@ impl<'a> Executor<'a> {
         } else {
             self.advance(opcode, op_result)
         };
-        Ok(exit_code)
+        exit_code
     }
 
     fn advance(&mut self, opcode: OpCode, op_result: OpCodeResult) -> Option<ExitCode> {
