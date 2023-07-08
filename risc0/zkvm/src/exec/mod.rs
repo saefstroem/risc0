@@ -340,6 +340,9 @@ impl<'a> Executor<'a> {
         Ok(exit_code)
     }
 
+    /// Called after executing the given opcode at self.pc to advance the
+    /// program counter, add to the cycle accounting, and record any syscall
+    /// data.
     fn advance(&mut self, opcode: OpCode, op_result: OpCodeResult) -> Option<ExitCode> {
         log::trace!(
             "[{}] pc: 0x{:08x}, insn: 0x{:08x} => {:?}",
@@ -350,9 +353,10 @@ impl<'a> Executor<'a> {
         );
 
         if let Some(ref trace_callback) = self.env.trace_callback {
-            trace_callback.borrow_mut()(TraceEvent::InstructionStart {
+            trace_callback.borrow_mut()(TraceEvent::Instruction {
                 cycle: self.session_cycle() as u32,
                 pc: self.pc,
+                insn: opcode.insn,
             })
             .unwrap();
 
@@ -582,11 +586,13 @@ impl<'a> Executor<'a> {
 #[derive(Clone, Eq, Ord, PartialEq, PartialOrd)]
 pub enum TraceEvent {
     /// An instruction has started at the given program counter
-    InstructionStart {
+    Instruction {
         /// Cycle number since startup
         cycle: u32,
-        /// Program counter of the instruction being executed
+        /// Program counter of the instruction being executed.
         pc: u32,
+        /// Encoded instruction being executed.
+        insn: u32,
     },
 
     /// A register has been set
@@ -609,8 +615,8 @@ pub enum TraceEvent {
 impl Debug for TraceEvent {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         match self {
-            Self::InstructionStart { cycle, pc } => {
-                write!(f, "InstructionStart({cycle}, 0x{pc:08X})")
+            Self::Instruction { cycle, pc, insn } => {
+                write!(f, "Instruction({cycle}, 0x{pc:08X}, 0x{insn:08X})")
             }
             Self::RegisterSet { reg, value } => write!(f, "RegisterSet({reg}, 0x{value:08X})"),
             Self::MemorySet { addr, value } => write!(f, "MemorySet(0x{addr:08X}, 0x{value:08X})"),

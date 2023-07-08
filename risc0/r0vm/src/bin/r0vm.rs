@@ -29,6 +29,11 @@ struct Args {
     #[clap(long)]
     receipt: Option<PathBuf>,
 
+    /// Skip the proving step and only execute.
+    #[clap(long)]
+    #[arg(conflicts_with("receipt"))]
+    no_prove: bool,
+
     /// File to read initial input from.
     #[clap(long)]
     initial_input: Option<PathBuf>,
@@ -104,10 +109,16 @@ fn main() {
             .expect("Unable to write profiling output");
     }
 
+    // If the no-prove flag is set, return early without proving the execution.
+    if args.no_prove {
+        return;
+    }
+
     let receipt = session.prove().unwrap();
 
-    let receipt_data = receipt.encode();
     if let Some(receipt_file) = args.receipt.as_ref() {
+        let receipt_data = receipt.encode();
+
         fs::write(receipt_file, receipt_data.as_slice()).expect("Unable to write receipt file");
         if args.verbose > 0 {
             eprintln!(
