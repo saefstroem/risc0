@@ -1,4 +1,4 @@
-name: Benchmark Datasheet
+name: Benchmark Applications
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
       - 'risc0/**'
       - '.github/workflows/bench_*'
 
-  # uncomment for only for testing changes to this workflow while in a PR
+  # # uncomment for only for testing changes to this workflow while in a PR
   # pull_request:
   #   branches: [ main ]
   #   # Only run benchmarks on changes to following paths:
@@ -21,9 +21,6 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
-
-env:
-  RISC0_BUILD_LOCKED: 1
 
 jobs:
   bench:
@@ -62,22 +59,21 @@ jobs:
       - run: cargo run --bin cargo-risczero -- risczero install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: cargo run --release -F $FEATURE --example loop -- --json | tee ${{ matrix.os }}-${{ matrix.device }}.json
-        working-directory: risc0/zkvm
-      - run: cargo run --release -- --out ../../risc0/zkvm/cycle_count.csv
-        working-directory: benchmarks/cycle_count
-        if: matrix.feature == 'metal'
+      - run: cargo run --release --bin risc0-benchmark -F $FEATURE -- --out ${{ matrix.os }}-${{ matrix.device }}.csv all
+        working-directory: benchmarks
+      - run: cargo run --release --bin average -F $FEATURE -- --out ${{ matrix.os }}-${{ matrix.device }}.average.csv all
+        working-directory: benchmarks
       - name: Save commit hash to a file
         run: echo "${{ github.sha }}" > COMMIT_HASH.txt
-        working-directory: risc0/zkvm
+        working-directory: benchmarks
       - name: Upload benchmark result
         uses: actions/upload-artifact@v2
         with:
-          name: benchmark-result
+          name: benchmarks
           path: |
-            risc0/zkvm/${{ matrix.os }}-${{ matrix.device }}.json
-            risc0/zkvm/COMMIT_HASH.txt
-            risc0/zkvm/cycle_count.csv
+            benchmarks/${{ matrix.os }}-${{ matrix.device }}.csv
+            benchmarks/${{ matrix.os }}-${{ matrix.device }}.average.csv
+            benchmarks/COMMIT_HASH.txt
 
   push_to_ghpages:
     needs: bench
@@ -93,18 +89,21 @@ jobs:
       - name: Download benchmark
         uses: actions/download-artifact@v2
         with:
-          name: benchmark-result
-          path: dev/datasheet
+          name: benchmarks
+          path: dev/benchmarks
       - name: Push benchmark result
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add dev/datasheet/macOS-cpu.json
-          git add dev/datasheet/macOS-apple_m2_pro.json
-          git add dev/datasheet/Linux-nvidia_rtx_a5000.json
-          git add dev/datasheet/Linux-cpu.json
-          git add dev/datasheet/COMMIT_HASH.txt
-          git add dev/datasheet/cycle_count.csv
+          git add dev/benchmarks/macOS-cpu.csv
+          git add dev/benchmarks/macOS-apple_m2_pro.csv
+          git add dev/benchmarks/Linux-nvidia_rtx_a5000.csv
+          git add dev/benchmarks/Linux-cpu.csv
+          git add dev/benchmarks/macOS-cpu.average.csv
+          git add dev/benchmarks/macOS-apple_m2_pro.average.csv
+          git add dev/benchmarks/Linux-nvidia_rtx_a5000.average.csv
+          git add dev/benchmarks/Linux-cpu.average.csv
+          git add dev/benchmarks/COMMIT_HASH.txt
           if git diff --cached --exit-code; then
             echo "No changes to commit"
           else
