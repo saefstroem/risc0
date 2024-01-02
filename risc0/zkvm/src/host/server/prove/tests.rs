@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use std::rc::Rc;
-
+use crate::sha::Digestible;
+use crate::FAULT_CHECKER_ID;
 use anyhow::Result;
 use risc0_circuit_rv32im::cpu::CpuCircuitHal;
 use risc0_zkp::{
@@ -24,14 +24,18 @@ use risc0_zkp::{
 use risc0_zkvm_methods::{multi_test::MultiTestSpec, MULTI_TEST_ELF, MULTI_TEST_ID};
 use risc0_zkvm_platform::{memory, WORD_SIZE};
 use serial_test::serial;
+use std::rc::Rc;
 use test_log::test;
 
 use super::{get_prover_server, HalPair, ProverImpl};
 use crate::{
-    host::{server::testutils, CIRCUIT},
+    host::{
+        server::{session::FaultState, testutils},
+        CIRCUIT,
+    },
     serde::{from_slice, to_vec},
     ExecutorEnv, ExecutorImpl, ExitCode, ProverOpts, ProverServer, Receipt, Session,
-    VerifierContext,
+    VerifierContext, FAULT_CHECKER_ELF,
 };
 
 fn prover_opts_fast() -> ProverOpts {
@@ -493,32 +497,6 @@ mod sys_verify {
         halt_receipt
     }
 
-    fn prove_fault() -> Receipt {
-        let opts = ProverOpts {
-            hashfn: "sha-256".to_string(),
-            prove_guest_errors: true,
-        };
-
-        let env = ExecutorEnvBuilder::default()
-            .write(&MultiTestSpec::Fault)
-            .unwrap()
-            .build()
-            .unwrap();
-        let fault_receipt = get_prover_server(&opts)
-            .unwrap()
-            .prove(env, MULTI_TEST_ELF)
-            .unwrap();
-
-        // Double check that the receipt verifies with the expected image ID and exit code.
-        fault_receipt
-            .verify_integrity_with_context(&Default::default())
-            .unwrap();
-        let fault_claim = fault_receipt.get_claim().unwrap();
-        assert_eq!(fault_claim.pre.digest(), MULTI_TEST_ID.into());
-        assert_eq!(fault_claim.exit_code, ExitCode::Fault);
-        fault_receipt
-    }
-
     lazy_static::lazy_static! {
         static ref HELLO_COMMIT_RECEIPT: Receipt = prove_hello_commit();
     }
@@ -653,10 +631,11 @@ mod sys_verify {
 
     #[test]
     fn sys_verify_integrity_fault() {
+        use crate::host::server::prove::tests::prove_fault;
         // Generate a receipt for a execution ending in fault.
         // NOTE: This is not really a "proof of fault". Instead it is simply verifying a receipt
         // that ended in SystemSplit for which the host claims a fault is about to occur.
-        let fault_receipt = prove_fault();
+        let (fault_receipt, _) = prove_fault();
 
         let spec = &MultiTestSpec::SysVerifyIntegrity {
             claim_words: to_vec(&fault_receipt.get_claim().unwrap()).unwrap(),
@@ -676,4 +655,49 @@ mod sys_verify {
             .verify(MULTI_TEST_ID)
             .unwrap();
     }
+}
+
+fn prove_fault() -> (Receipt, FaultState) {
+    let env = ExecutorEnv::builder()
+        .write(&MultiTestSpec::Fault)
+        .unwrap()
+        .build()
+        .unwrap();
+    let mut exec = ExecutorImpl::from_elf(env, MULTI_TEST_ELF).unwrap();
+    let session = exec.run().unwrap();
+    assert_eq!(session.exit_code, ExitCode::Fault);
+    let fault_receipt = session.prove().unwrap();
+
+    // Double check that the receipt verifies with the expected image ID and exit code.
+    fault_receipt
+        .verify_integrity_with_context(&Default::default())
+        .unwrap();
+    let fault_claim = fault_receipt.get_claim().unwrap();
+    assert_eq!(fault_claim.pre.digest(), MULTI_TEST_ID.into());
+    assert_eq!(fault_claim.exit_code, ExitCode::Fault);
+    (fault_receipt, session.fault_state.unwrap())
+}
+
+#[test]
+fn proof_of_fault() {
+    // This test does a proof of fault by running the fault checker.
+    let (fault_receipt, fault_state) = prove_fault();
+
+    //    let spec = &MultiTestSpec::SysVerifyIntegrity {
+    //        claim_words: to_vec(&fault_receipt.get_claim().unwrap()).unwrap(),
+    //    };
+
+    // Test that proving results in a success execution and unconditional receipt.
+    let env = ExecutorEnv::builder()
+        .write(&fault_state)
+        .unwrap()
+        .add_assumption(fault_receipt.into())
+        .build()
+        .unwrap();
+    get_prover_server(&prover_opts_fast())
+        .unwrap()
+        .prove(env, FAULT_CHECKER_ELF)
+        .unwrap()
+        .verify(FAULT_CHECKER_ID)
+        .unwrap();
 }

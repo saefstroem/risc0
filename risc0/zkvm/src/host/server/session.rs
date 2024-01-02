@@ -69,7 +69,13 @@ pub struct Session {
     /// The hooks to be called during the proving phase.
     #[serde(skip)]
     pub hooks: Vec<Box<dyn SessionEvents>>,
+
+    /// State of the executor before the fault occurred.
+    pub fault_state: Option<FaultState>,
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct FaultState {}
 
 /// A reference to a [Segment].
 ///
@@ -140,6 +146,7 @@ impl Session {
             post_image,
             assumptions,
             hooks: Vec::new(),
+            fault_state: None,
         }
     }
 
