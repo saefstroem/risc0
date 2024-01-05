@@ -25,7 +25,7 @@ use serde::{Deserialize, Serialize};
 /// containing all register values. These two pages hold enough information to
 /// run a single instruction.
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct FaultCheckMonitor {
+pub struct FaultState {
     /// The program counter of the instruction to execute
     pub pc: u32,
     /// The next instruction (aka, the value referenced by the pc)
@@ -36,7 +36,7 @@ pub struct FaultCheckMonitor {
     pub post_id: Digest,
 }
 
-impl FaultCheckMonitor {
+impl FaultState {
     const LOWEST: u32 = TEXT_START;
     const HIGHEST: u32 = SYSTEM.start() as u32;
     /// Given an address, return true if the address is within the zkVM's
@@ -54,7 +54,7 @@ impl FaultCheckMonitor {
 /// instruction. The instruction at pc needs to be fetched from memory. For this
 /// implementation, a special case has been implemented to fetch the
 /// instruction.
-impl Memory for FaultCheckMonitor {
+impl Memory for FaultState {
     fn read_mem(&mut self, addr: u32, size: MemAccessSize) -> Option<u32> {
         let val: u32 = if addr == self.pc {
             match size {

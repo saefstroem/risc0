@@ -57,8 +57,8 @@ use crate::{
         server::opcode::{MajorType, OpCode},
     },
     sha::Digest,
-    Assumptions, ExecutorEnv, ExitCode, FileSegmentRef, Loader, Output, Segment, SegmentRef,
-    Session,
+    Assumptions, ExecutorEnv, ExitCode, FaultState, FileSegmentRef, Loader, Output, Segment,
+    SegmentRef, Session,
 };
 
 /// The number of cycles required to compress a SHA-256 block.
@@ -385,12 +385,23 @@ impl<'a> ExecutorImpl<'a> {
             std::fs::write(self.env.pprof_out.as_ref().unwrap(), report)?;
         }
 
+        let fault_state = match exit_code {
+            ExitCode::Fault => Some(FaultState {
+                pc: self.pc,
+                insn: self.monitor.load_u32_from_guest_addr(self.pc)?,
+                regs: self.monitor.load_registers(),
+                post_id: post_image.compute_id()?,
+            }),
+            _ => None,
+        };
+
         let session = Session::new(
             mem::take(&mut self.segments),
             session_journal,
             exit_code,
             post_image,
             assumptions,
+            fault_state,
         );
 
         tracing::info_span!("executor").in_scope(|| {

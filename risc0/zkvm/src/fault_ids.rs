@@ -17,7 +17,7 @@
 
 /// The image ID of the fault checker guest program
 #[rustfmt::skip]
-pub const FAULT_CHECKER_ID: [u32; 8] = [1419758754, 3094564905, 724715785, 1323411806, 812173780, 2092560110, 592399456, 3988838947];
+pub const FAULT_CHECKER_ID: [u32; 8] = [1983802879, 872334218, 3145691041, 858289899, 2253161543, 2649426229, 1450993137, 3102842840];
 
 /// The ELF of the fault checker guest program
 #[rustfmt::skip]

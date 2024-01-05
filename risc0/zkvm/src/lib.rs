@@ -21,7 +21,7 @@ extern crate alloc;
 
 mod fault_ids;
 #[cfg(feature = "fault-proof")]
-mod fault_monitor;
+mod fault_state;
 pub mod guest;
 #[cfg(not(target_os = "zkvm"))]
 mod host;
@@ -43,7 +43,7 @@ pub use risc0_binfmt::SystemState;
 pub use risc0_zkvm_platform::{declare_syscall, memory::GUEST_MAX_MEM, PAGE_SIZE};
 
 #[cfg(feature = "fault-proof")]
-pub use self::fault_monitor::FaultCheckMonitor;
+pub use self::fault_state::FaultState;
 #[cfg(all(not(target_os = "zkvm"), feature = "prove"))]
 pub use self::host::{
     api::server::Server as ApiServer,

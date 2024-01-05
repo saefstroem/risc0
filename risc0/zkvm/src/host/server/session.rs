@@ -23,6 +23,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
+use crate::FaultState;
 use anyhow::{anyhow, ensure, Result};
 use human_repr::HumanCount;
 use risc0_binfmt::{MemoryImage, SystemState};
@@ -73,9 +74,6 @@ pub struct Session {
     /// State of the executor before the fault occurred.
     pub fault_state: Option<FaultState>,
 }
-
-#[derive(Serialize, Deserialize)]
-pub struct FaultState {}
 
 /// A reference to a [Segment].
 ///
@@ -138,6 +136,7 @@ impl Session {
         exit_code: ExitCode,
         post_image: MemoryImage,
         assumptions: Vec<Assumption>,
+        fault_state: Option<FaultState>,
     ) -> Self {
         Self {
             segments,
@@ -146,7 +145,7 @@ impl Session {
             post_image,
             assumptions,
             hooks: Vec::new(),
-            fault_state: None,
+            fault_state,
         }
     }
 

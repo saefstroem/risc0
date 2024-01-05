@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use crate::sha::Digestible;
 use crate::FAULT_CHECKER_ID;
+use crate::{sha::Digestible, FaultState};
 use anyhow::Result;
 use risc0_circuit_rv32im::cpu::CpuCircuitHal;
 use risc0_zkp::{
@@ -29,10 +29,7 @@ use test_log::test;
 
 use super::{get_prover_server, HalPair, ProverImpl};
 use crate::{
-    host::{
-        server::{session::FaultState, testutils},
-        CIRCUIT,
-    },
+    host::{server::testutils, CIRCUIT},
     serde::{from_slice, to_vec},
     ExecutorEnv, ExecutorImpl, ExitCode, ProverOpts, ProverServer, Receipt, Session,
     VerifierContext, FAULT_CHECKER_ELF,
@@ -680,16 +677,16 @@ fn prove_fault() -> (Receipt, FaultState) {
 
 #[test]
 fn proof_of_fault() {
+    tracing::info!("running guest code");
     // This test does a proof of fault by running the fault checker.
     let (fault_receipt, fault_state) = prove_fault();
 
-    //    let spec = &MultiTestSpec::SysVerifyIntegrity {
-    //        claim_words: to_vec(&fault_receipt.get_claim().unwrap()).unwrap(),
-    //    };
-
+    tracing::info!("running fault checker");
     // Test that proving results in a success execution and unconditional receipt.
     let env = ExecutorEnv::builder()
         .write(&fault_state)
+        .unwrap()
+        .write(&fault_receipt.get_claim().unwrap())
         .unwrap()
         .add_assumption(fault_receipt.into())
         .build()
