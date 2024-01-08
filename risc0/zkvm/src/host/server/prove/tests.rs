@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+use crate::host::recursion::{lift, resolve};
+use crate::InnerReceipt;
 use crate::FAULT_CHECKER_ID;
 use crate::{sha::Digestible, FaultState};
 use anyhow::Result;
@@ -679,22 +681,41 @@ fn prove_fault() -> (Receipt, FaultState) {
 fn proof_of_fault() {
     tracing::info!("running guest code");
     // This test does a proof of fault by running the fault checker.
-    let (fault_receipt, fault_state) = prove_fault();
+    let (guest_receipt, fault_state) = prove_fault();
 
     tracing::info!("running fault checker");
     // Test that proving results in a success execution and unconditional receipt.
     let env = ExecutorEnv::builder()
         .write(&fault_state)
         .unwrap()
-        .write(&fault_receipt.get_claim().unwrap())
+        .write(&guest_receipt.get_claim().unwrap())
         .unwrap()
-        .add_assumption(fault_receipt.into())
+        .add_assumption(guest_receipt.clone().into())
         .build()
         .unwrap();
-    get_prover_server(&prover_opts_fast())
+    let receipt = get_prover_server(&prover_opts_fast())
         .unwrap()
         .prove(env, FAULT_CHECKER_ELF)
-        .unwrap()
-        .verify(FAULT_CHECKER_ID)
         .unwrap();
+
+    let composition_receipt = receipt.inner.composite().unwrap().clone();
+    assert_eq!(composition_receipt.segments.len(), 1);
+    let conditional_segment_receipt = composition_receipt.segments[0].clone();
+
+    assert_eq!(composition_receipt.assumptions.len(), 1);
+    let assumption_receipt = composition_receipt.assumptions[0]
+        .composite()
+        .unwrap()
+        .clone();
+    assert_eq!(assumption_receipt.segments.len(), 1);
+    assert_eq!(assumption_receipt.assumptions.len(), 0);
+    let assumption_segment_receipt = assumption_receipt.segments[0].clone();
+
+    // Lift and join them  all (and verify)
+    tracing::info!("Lifting assumption");
+    let lifted_assumption = lift(&assumption_segment_receipt).unwrap();
+    lifted_assumption
+        .verify_integrity_with_context(&VerifierContext::default())
+        .unwrap();
+    tracing::info!("Lift assumption claim = {:?}", lifted_assumption.claim);
 }
