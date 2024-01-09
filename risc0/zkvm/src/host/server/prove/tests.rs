@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use crate::host::recursion::{lift, resolve};
-use crate::InnerReceipt;
-use crate::FAULT_CHECKER_ID;
+use crate::host::recursion::lift;
 use crate::{sha::Digestible, FaultState};
 use anyhow::Result;
 use risc0_circuit_rv32im::cpu::CpuCircuitHal;
@@ -700,7 +698,8 @@ fn proof_of_fault() {
 
     let composition_receipt = receipt.inner.composite().unwrap().clone();
     assert_eq!(composition_receipt.segments.len(), 1);
-    let conditional_segment_receipt = composition_receipt.segments[0].clone();
+    let _conditional_segment_receipt: crate::SegmentReceipt =
+        composition_receipt.segments[0].clone();
 
     assert_eq!(composition_receipt.assumptions.len(), 1);
     let assumption_receipt = composition_receipt.assumptions[0]
