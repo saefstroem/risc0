@@ -75,7 +75,6 @@ impl Command {
 
 fn main() {
     init_logging();
-
     let cli = Cli::parse();
     let jobs = cli.command.get_jobs();
     run_jobs(&cli.out, jobs);

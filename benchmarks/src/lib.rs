@@ -22,11 +22,13 @@ use std::{
     time::{Duration, Instant},
 };
 
+use bonsai_sdk::alpha as bonsai;
 use risc0_zkvm::{sha::Digest, ExecutorEnv, ExecutorImpl, Receipt, Session};
 use serde::Serialize;
 use tracing::info;
 
 pub struct Metrics {
+    pub image_id: Option<Digest>,
     pub job_name: String,
     pub job_size: u32,
     pub exec_duration: Duration,
@@ -42,6 +44,7 @@ pub struct Metrics {
 impl Metrics {
     pub fn new(job_name: String, job_size: u32) -> Self {
         Metrics {
+            image_id: None,
             job_name,
             job_size,
             exec_duration: Duration::default(),
@@ -56,6 +59,7 @@ impl Metrics {
     }
 
     pub fn println(&self, prefix: &str) {
+        info!("{prefix}image_id:           {:?}", &self.image_id);
         info!("{prefix}job_name:           {:?}", &self.job_name);
         info!("{prefix}job_size:           {:?}", &self.job_size);
         info!("{prefix}exec_duration:      {:?}", &self.exec_duration);
@@ -149,23 +153,68 @@ impl Job {
         metrics.insn_cycles = session.user_cycles;
         metrics.exec_duration = duration;
 
-        let receipt = {
+        let receipt = if std::env::var("BONSAI_API_KEY").is_ok() {
+            info!("Proving on Bonsai");
+            let client = bonsai::Client::from_env(risc0_zkvm::VERSION).unwrap();
+            let image_id_str = &self.image_id.to_string();
+            let _ = client.upload_img(image_id_str, self.elf.to_vec());
+
+            let input_data = &self.input;
+            let input_data = bytemuck::cast_slice(&input_data).to_vec();
+            let input_id = client.upload_input(input_data).unwrap();
+            info!("Uploaded image and input to Bonsai");
+            let assumptions: Vec<String> = vec![];
+
+            let session_id = client
+                .create_session(image_id_str.clone(), input_id, assumptions)
+                .unwrap();
+
+            let start = Instant::now();
+
+            loop {
+                let res = session_id.status(&client).unwrap();
+                if res.status == "RUNNING" {
+                    std::thread::sleep(Duration::from_millis(500));
+                    continue;
+                }
+                if res.status == "SUCCEEDED" {
+                    metrics.proof_duration = start.elapsed();
+                    info!("Session completed");
+                    // Download the receipt, containing the output
+                    let receipt_url = res
+                        .receipt_url
+                        .expect("API error, missing receipt on completed session");
+
+                    let receipt_buf = client.download(&receipt_url).unwrap();
+                    // NOTE: is a SnarkReceipt, but coerced to a Receipt for convenience
+                    let receipt: Receipt = bincode::deserialize(&receipt_buf).unwrap();
+                    break receipt;
+                } else {
+                    panic!(
+                        "Workflow exited: {} - | err: {}",
+                        res.status,
+                        res.error_msg.unwrap_or_default()
+                    );
+                }
+            }
+        } else {
+            info!("Proving locally");
             let start = Instant::now();
             let receipt = session.prove().unwrap();
             metrics.proof_duration = start.elapsed();
+            metrics.proof_bytes = receipt
+                .inner
+                .composite()
+                .unwrap()
+                .segments
+                .iter()
+                .fold(0, |acc, segment| acc + segment.get_seal_bytes().len())
+                as u32;
             receipt
         };
 
         metrics.total_duration = metrics.exec_duration + metrics.proof_duration;
         metrics.output_bytes = receipt.journal.bytes.len() as u32;
-        metrics.proof_bytes = receipt
-            .inner
-            .composite()
-            .unwrap()
-            .segments
-            .iter()
-            .fold(0, |acc, segment| acc + segment.get_seal_bytes().len())
-            as u32;
 
         let verify_proof = {
             let start = Instant::now();
