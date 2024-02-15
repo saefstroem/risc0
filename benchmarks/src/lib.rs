@@ -28,7 +28,7 @@ use serde::Serialize;
 use tracing::info;
 
 pub struct Metrics {
-    pub image_id: Option<Digest>,
+    pub image_id: Digest,
     pub job_name: String,
     pub job_size: u32,
     pub exec_duration: Duration,
@@ -44,7 +44,7 @@ pub struct Metrics {
 impl Metrics {
     pub fn new(job_name: String, job_size: u32) -> Self {
         Metrics {
-            image_id: None,
+            image_id: Digest::default(),
             job_name,
             job_size,
             exec_duration: Duration::default(),
@@ -152,6 +152,7 @@ impl Job {
         metrics.cycles = session.total_cycles;
         metrics.insn_cycles = session.user_cycles;
         metrics.exec_duration = duration;
+        metrics.image_id = self.image_id;
 
         let receipt = if std::env::var("BONSAI_API_KEY").is_ok() {
             info!("Proving on Bonsai");
@@ -168,6 +169,8 @@ impl Job {
             let session_id = client
                 .create_session(image_id_str.clone(), input_id, assumptions)
                 .unwrap();
+
+            let session_uuid = session_id.uuid.clone();
 
             let start = Instant::now();
 
@@ -242,6 +245,7 @@ pub fn init_logging() {
 
 #[derive(Serialize)]
 struct CsvRow<'a> {
+    image_id: &'a str,
     job_name: &'a str,
     job_size: u32,
     exec_duration: u128,
@@ -294,6 +298,7 @@ pub fn run_jobs(out_path: &Path, jobs: Vec<Job>) -> Vec<Metrics> {
         let job_metrics = job.run();
         job_metrics.println("+ ");
         out.serialize(CsvRow {
+            image_id: &job_metrics.image_id.to_string(),
             job_name: &job_metrics.job_name,
             job_size: job_metrics.job_size,
             exec_duration: job_metrics.exec_duration.as_nanos(),
