@@ -39,6 +39,7 @@ pub struct Metrics {
     pub insn_cycles: u64,
     pub output_bytes: u32,
     pub proof_bytes: u32,
+    pub session_uuid: Option<String>,
 }
 
 impl Metrics {
@@ -55,6 +56,7 @@ impl Metrics {
             insn_cycles: 0,
             output_bytes: 0,
             proof_bytes: 0,
+            session_uuid: None,
         }
     }
 
@@ -170,7 +172,7 @@ impl Job {
                 .create_session(image_id_str.clone(), input_id, assumptions)
                 .unwrap();
 
-            let session_uuid = session_id.uuid.clone();
+            metrics.session_uuid = Some(session_id.uuid.clone());
 
             let start = Instant::now();
 
@@ -255,6 +257,7 @@ struct CsvRow<'a> {
     insn_cycles: u64,
     prove_cycles: u64,
     proof_bytes: u32,
+    session_uuid: Option<&'a str>,
 }
 
 #[derive(Serialize)]
@@ -308,6 +311,7 @@ pub fn run_jobs(out_path: &Path, jobs: Vec<Job>) -> Vec<Metrics> {
             prove_cycles: job_metrics.cycles,
             insn_cycles: job_metrics.insn_cycles,
             proof_bytes: job_metrics.proof_bytes,
+            session_uuid: job_metrics.session_uuid.as_deref(),
         })
         .expect("Could not serialize");
 
