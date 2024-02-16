@@ -1,0 +1,6 @@
+[book]
+authors = ["hans"]
+language = "en"
+multilingual = false
+src = "src"
+title = "R0 zkVM Book"
