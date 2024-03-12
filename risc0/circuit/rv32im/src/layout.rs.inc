@@ -13,12 +13,12 @@ impl risc0_zkp::layout::Component for U32Reg {
     }
 }
 pub type U32Reg8LayoutArray = [&'static U32Reg; 8];
-pub struct GlobalDigest {
+pub struct Rv32imV1GlobalDigest {
     pub word: &'static U32Reg8LayoutArray,
 }
-impl risc0_zkp::layout::Component for GlobalDigest {
+impl risc0_zkp::layout::Component for Rv32imV1GlobalDigest {
     fn ty_name(&self) -> &'static str {
-        "GlobalDigest"
+        "Rv32imV1GlobalDigest"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -26,13 +26,13 @@ impl risc0_zkp::layout::Component for GlobalDigest {
         Ok(())
     }
 }
-pub struct SystemState {
-    pub image_id: &'static GlobalDigest,
+pub struct Rv32imV1SystemState {
+    pub image_id: &'static Rv32imV1GlobalDigest,
     pub pc: &'static U32Reg,
 }
-impl risc0_zkp::layout::Component for SystemState {
+impl risc0_zkp::layout::Component for Rv32imV1SystemState {
     fn ty_name(&self) -> &'static str {
-        "SystemState"
+        "Rv32imV1SystemState"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -41,17 +41,17 @@ impl risc0_zkp::layout::Component for SystemState {
         Ok(())
     }
 }
-pub struct Global {
+pub struct Rv32imV1Global {
     pub sys_exit_code: &'static OutReg,
     pub user_exit_code: &'static OutReg,
-    pub input: &'static GlobalDigest,
-    pub output: &'static GlobalDigest,
-    pub post: &'static SystemState,
-    pub pre: &'static SystemState,
+    pub input: &'static Rv32imV1GlobalDigest,
+    pub output: &'static Rv32imV1GlobalDigest,
+    pub post: &'static Rv32imV1SystemState,
+    pub pre: &'static Rv32imV1SystemState,
 }
-impl risc0_zkp::layout::Component for Global {
+impl risc0_zkp::layout::Component for Rv32imV1Global {
     fn ty_name(&self) -> &'static str {
-        "Global"
+        "Rv32imV1Global"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -64,12 +64,12 @@ impl risc0_zkp::layout::Component for Global {
         Ok(())
     }
 }
-pub struct BodyStep {
-    pub global: &'static Global,
+pub struct Rv32imV1BodyStep {
+    pub global: &'static Rv32imV1Global,
 }
-impl risc0_zkp::layout::Component for BodyStep {
+impl risc0_zkp::layout::Component for Rv32imV1BodyStep {
     fn ty_name(&self) -> &'static str {
-        "BodyStep"
+        "Rv32imV1BodyStep"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -77,10 +77,10 @@ impl risc0_zkp::layout::Component for BodyStep {
         Ok(())
     }
 }
-pub struct BytesFiniStep {}
-impl risc0_zkp::layout::Component for BytesFiniStep {
+pub struct Rv32imV1BytesFiniStep {}
+impl risc0_zkp::layout::Component for Rv32imV1BytesFiniStep {
     fn ty_name(&self) -> &'static str {
-        "BytesFiniStep"
+        "Rv32imV1BytesFiniStep"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -88,14 +88,14 @@ impl risc0_zkp::layout::Component for BytesFiniStep {
     }
 }
 pub struct Mux {
-    pub body: &'static BodyStep,
-    pub bytes_fini: &'static BytesFiniStep,
-    pub bytes_init: &'static BytesFiniStep,
-    pub bytes_setup: &'static BytesFiniStep,
-    pub ram_fini: &'static BytesFiniStep,
-    pub ram_init: &'static BytesFiniStep,
-    pub ram_load: &'static BytesFiniStep,
-    pub reset: &'static BytesFiniStep,
+    pub body: &'static Rv32imV1BodyStep,
+    pub bytes_fini: &'static Rv32imV1BytesFiniStep,
+    pub bytes_init: &'static Rv32imV1BytesFiniStep,
+    pub bytes_setup: &'static Rv32imV1BytesFiniStep,
+    pub ram_fini: &'static Rv32imV1BytesFiniStep,
+    pub ram_init: &'static Rv32imV1BytesFiniStep,
+    pub ram_load: &'static Rv32imV1BytesFiniStep,
+    pub reset: &'static Rv32imV1BytesFiniStep,
 }
 impl risc0_zkp::layout::Component for Mux {
     fn ty_name(&self) -> &'static str {
@@ -114,13 +114,13 @@ impl risc0_zkp::layout::Component for Mux {
         Ok(())
     }
 }
-pub struct Top {
+pub struct Rv32imV1Top {
     pub halted: &'static DataReg,
     pub mux: &'static Mux,
 }
-impl risc0_zkp::layout::Component for Top {
+impl risc0_zkp::layout::Component for Rv32imV1Top {
     fn ty_name(&self) -> &'static str {
-        "Top"
+        "Rv32imV1Top"
     }
     #[allow(unused_variables)]
     fn walk<V: risc0_zkp::layout::Visitor>(&self, v: &mut V) -> core::fmt::Result {
@@ -129,14 +129,14 @@ impl risc0_zkp::layout::Component for Top {
         Ok(())
     }
 }
-pub const LAYOUT: &Top = &Top {
+pub const LAYOUT: &Rv32imV1Top = &Rv32imV1Top {
     halted: &DataReg { offset: 2 },
     mux: &Mux {
-        body: &BodyStep {
-            global: &Global {
+        body: &Rv32imV1BodyStep {
+            global: &Rv32imV1Global {
                 sys_exit_code: &OutReg { offset: 104 },
                 user_exit_code: &OutReg { offset: 105 },
-                input: &GlobalDigest {
+                input: &Rv32imV1GlobalDigest {
                     word: &[
                         &U32Reg {
                             byte: &[
@@ -204,7 +204,7 @@ pub const LAYOUT: &Top = &Top {
                         },
                     ],
                 },
-                output: &GlobalDigest {
+                output: &Rv32imV1GlobalDigest {
                     word: &[
                         &U32Reg {
                             byte: &[
@@ -272,8 +272,8 @@ pub const LAYOUT: &Top = &Top {
                         },
                     ],
                 },
-                post: &SystemState {
-                    image_id: &GlobalDigest {
+                post: &Rv32imV1SystemState {
+                    image_id: &Rv32imV1GlobalDigest {
                         word: &[
                             &U32Reg {
                                 byte: &[
@@ -350,8 +350,8 @@ pub const LAYOUT: &Top = &Top {
                         ],
                     },
                 },
-                pre: &SystemState {
-                    image_id: &GlobalDigest {
+                pre: &Rv32imV1SystemState {
+                    image_id: &Rv32imV1GlobalDigest {
                         word: &[
                             &U32Reg {
                                 byte: &[
@@ -430,12 +430,12 @@ pub const LAYOUT: &Top = &Top {
                 },
             },
         },
-        bytes_fini: &BytesFiniStep {},
-        bytes_init: &BytesFiniStep {},
-        bytes_setup: &BytesFiniStep {},
-        ram_fini: &BytesFiniStep {},
-        ram_init: &BytesFiniStep {},
-        ram_load: &BytesFiniStep {},
-        reset: &BytesFiniStep {},
+        bytes_fini: &Rv32imV1BytesFiniStep {},
+        bytes_init: &Rv32imV1BytesFiniStep {},
+        bytes_setup: &Rv32imV1BytesFiniStep {},
+        ram_fini: &Rv32imV1BytesFiniStep {},
+        ram_init: &Rv32imV1BytesFiniStep {},
+        ram_load: &Rv32imV1BytesFiniStep {},
+        reset: &Rv32imV1BytesFiniStep {},
     },
 };

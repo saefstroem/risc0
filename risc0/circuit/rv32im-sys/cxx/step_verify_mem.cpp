@@ -49,22 +49,22 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   Fp x6(0);
   // loc(unknown)
   Fp x7(1);
-  // loc("Top/Code/OneHot/hot[1](Reg)"("./zirgen/components/mux.h":49:25))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[1](Reg)"("./zirgen/components/mux.h":49:25))
   auto x8 = args[0][2 * steps + ((cycle - 0) & mask)];
   assert(x8 != Fp::invalid());
-  // loc("Top/Code/OneHot/hot[3](Reg)"("./zirgen/components/mux.h":49:25))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[3](Reg)"("./zirgen/components/mux.h":49:25))
   auto x9 = args[0][4 * steps + ((cycle - 0) & mask)];
   assert(x9 != Fp::invalid());
-  // loc("Top/Code/OneHot/hot[4](Reg)"("./zirgen/components/mux.h":49:25))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[4](Reg)"("./zirgen/components/mux.h":49:25))
   auto x10 = args[0][5 * steps + ((cycle - 0) & mask)];
   assert(x10 != Fp::invalid());
-  // loc("Top/Code/OneHot/hot[5](Reg)"("./zirgen/components/mux.h":49:25))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[5](Reg)"("./zirgen/components/mux.h":49:25))
   auto x11 = args[0][6 * steps + ((cycle - 0) & mask)];
   assert(x11 != Fp::invalid());
-  // loc("Top/Code/OneHot/hot[6](Reg)"("./zirgen/components/mux.h":49:25))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[6](Reg)"("./zirgen/components/mux.h":49:25))
   auto x12 = args[0][7 * steps + ((cycle - 0) & mask)];
   assert(x12 != Fp::invalid());
-  // loc("Top/Code/OneHot/hot[2](Reg)"("zirgen/circuit/rv32im/top.cpp":78:27))
+  // loc("rv32im_v1::Top/rv32im_v1::Code/OneHot/hot[2](Reg)"("zirgen/circuit/rv32im/v1/edsl/top.cpp":78:27))
   auto x13 = args[0][3 * steps + ((cycle - 0) & mask)];
   assert(x13 != Fp::invalid());
   if (x13 != 0) {
@@ -356,46 +356,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x41;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/Global/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/rv32im_v1::Global/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x42 = args[1][104];
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x43 = args[2][89 * steps + ((cycle - 1) & mask)];
     assert(x43 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x44 = args[2][90 * steps + ((cycle - 1) & mask)];
     assert(x44 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
     auto x45 = args[2][91 * steps + ((cycle - 1) & mask)];
     assert(x45 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x46 = args[2][92 * steps + ((cycle - 1) & mask)];
     assert(x46 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x47 = args[2][93 * steps + ((cycle - 1) & mask)];
     assert(x47 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x48 = args[2][94 * steps + ((cycle - 1) & mask)];
     assert(x48 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x49 = args[2][95 * steps + ((cycle - 1) & mask)];
     assert(x49 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x50 = args[2][145 * steps + ((cycle - 0) & mask)];
     assert(x50 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x51 = args[2][146 * steps + ((cycle - 0) & mask)];
     assert(x51 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x52 = args[2][147 * steps + ((cycle - 0) & mask)];
     assert(x52 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x53 = args[2][148 * steps + ((cycle - 0) & mask)];
     assert(x53 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x54 = args[2][97 * steps + ((cycle - 1) & mask)];
     assert(x54 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x55 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x55 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -411,18 +411,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x58;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x59 = args[2][163 * steps + ((cycle - 0) & mask)];
     assert(x59 != Fp::invalid());
     if (x59 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x60 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x60 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x61 = x6 - x60;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x61 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x62 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x62 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -439,7 +439,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x65;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x66 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x66 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -456,7 +456,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x69;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x70 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x70 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -473,7 +473,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x73;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x74 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x74 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -494,19 +494,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x78 = x7 - x59;
     if (x78 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x79 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x79 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x80 = x43 - x79;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x80 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x81 = args[2][143 * steps + ((cycle - 0) & mask)];
       assert(x81 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x82 = x81 * x2;
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x83 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x83 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -527,7 +527,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x88;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x89 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x89 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -544,7 +544,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x92;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x93 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x93 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -561,7 +561,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x96;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x97 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x97 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -595,7 +595,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x104 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x105 = args[2][144 * steps + ((cycle - 0) & mask)];
     assert(x105 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -634,29 +634,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x54;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x112 = args[2][142 * steps + ((cycle - 0) & mask)];
     assert(x112 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x113 = args[2][143 * steps + ((cycle - 0) & mask)];
     assert(x113 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x114 = args[2][152 * steps + ((cycle - 0) & mask)];
     assert(x114 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x115 = args[2][153 * steps + ((cycle - 0) & mask)];
     assert(x115 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x116 = args[2][154 * steps + ((cycle - 0) & mask)];
     assert(x116 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x117 = args[2][155 * steps + ((cycle - 0) & mask)];
     assert(x117 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x118 = args[2][164 * steps + ((cycle - 0) & mask)];
     assert(x118 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x119 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x119 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -672,18 +672,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x122;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x123 = args[2][165 * steps + ((cycle - 0) & mask)];
     assert(x123 != Fp::invalid());
     if (x123 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x124 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x124 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x125 = x6 - x124;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x125 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x126 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x126 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -700,7 +700,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x129;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x130 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x130 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -717,7 +717,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x133;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x134 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x134 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -734,7 +734,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x137;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x138 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x138 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -755,19 +755,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x142 = x7 - x123;
     if (x142 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x143 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x143 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x144 = x112 - x143;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x144 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x145 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x145 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x146 = x145 * x2;
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x147 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x147 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -788,7 +788,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x152;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x153 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x153 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -805,7 +805,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x156;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x157 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x157 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -822,7 +822,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x160;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x161 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x161 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -856,7 +856,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x168 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x169 = args[2][151 * steps + ((cycle - 0) & mask)];
     assert(x169 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -895,29 +895,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x118;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x176 = args[2][149 * steps + ((cycle - 0) & mask)];
     assert(x176 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x177 = args[2][150 * steps + ((cycle - 0) & mask)];
     assert(x177 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x178 = args[2][159 * steps + ((cycle - 0) & mask)];
     assert(x178 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x179 = args[2][160 * steps + ((cycle - 0) & mask)];
     assert(x179 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x180 = args[2][161 * steps + ((cycle - 0) & mask)];
     assert(x180 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x181 = args[2][162 * steps + ((cycle - 0) & mask)];
     assert(x181 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x182 = args[2][166 * steps + ((cycle - 0) & mask)];
     assert(x182 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x183 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x183 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -933,18 +933,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x186;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x187 = args[2][167 * steps + ((cycle - 0) & mask)];
     assert(x187 != Fp::invalid());
     if (x187 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x188 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x188 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x189 = x6 - x188;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x189 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x190 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x190 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -961,7 +961,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x193;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x194 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x194 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -978,7 +978,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x197;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x198 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x198 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -995,7 +995,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x201;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x202 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x202 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1016,19 +1016,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x206 = x7 - x187;
     if (x206 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x207 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x207 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x208 = x176 - x207;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x208 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x209 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x209 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x210 = x209 * x2;
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x211 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x211 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -1049,7 +1049,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x216;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x217 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x217 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1066,7 +1066,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x220;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x221 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x221 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1083,7 +1083,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x224;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x225 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x225 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1117,7 +1117,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x232 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x233 = args[2][158 * steps + ((cycle - 0) & mask)];
     assert(x233 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -1156,29 +1156,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x182;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x240 = args[2][156 * steps + ((cycle - 0) & mask)];
     assert(x240 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x241 = args[2][157 * steps + ((cycle - 0) & mask)];
     assert(x241 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x242 = args[2][92 * steps + ((cycle - 0) & mask)];
     assert(x242 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x243 = args[2][93 * steps + ((cycle - 0) & mask)];
     assert(x243 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x244 = args[2][94 * steps + ((cycle - 0) & mask)];
     assert(x244 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x245 = args[2][95 * steps + ((cycle - 0) & mask)];
     assert(x245 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x246 = args[2][168 * steps + ((cycle - 0) & mask)];
     assert(x246 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x247 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x247 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -1194,18 +1194,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x250;
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x251 = args[2][96 * steps + ((cycle - 0) & mask)];
     assert(x251 != Fp::invalid());
     if (x251 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x252 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x252 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x253 = x6 - x252;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x253 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x254 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x254 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -1222,7 +1222,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x257;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x258 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x258 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1239,7 +1239,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x261;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x262 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x262 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1256,7 +1256,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x265;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x266 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x266 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1277,19 +1277,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x270 = x7 - x251;
     if (x270 != 0) {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x271 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x271 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x272 = x240 - x271;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x272 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x273 = args[2][90 * steps + ((cycle - 0) & mask)];
       assert(x273 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x274 = x273 * x2;
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x275 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x275 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -1310,7 +1310,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x280;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x281 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x281 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1327,7 +1327,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x284;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x285 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x285 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1344,7 +1344,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x288;
         }
       }
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x289 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x289 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1378,7 +1378,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x296 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/ram_load(RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x297 = args[2][91 * steps + ((cycle - 0) & mask)];
     assert(x297 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -1621,46 +1621,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x331;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/Global/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/rv32im_v1::Global/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x332 = args[1][104];
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x333 = args[2][89 * steps + ((cycle - 1) & mask)];
     assert(x333 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x334 = args[2][90 * steps + ((cycle - 1) & mask)];
     assert(x334 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
     auto x335 = args[2][91 * steps + ((cycle - 1) & mask)];
     assert(x335 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x336 = args[2][92 * steps + ((cycle - 1) & mask)];
     assert(x336 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x337 = args[2][93 * steps + ((cycle - 1) & mask)];
     assert(x337 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x338 = args[2][94 * steps + ((cycle - 1) & mask)];
     assert(x338 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x339 = args[2][95 * steps + ((cycle - 1) & mask)];
     assert(x339 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x340 = args[2][145 * steps + ((cycle - 0) & mask)];
     assert(x340 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x341 = args[2][146 * steps + ((cycle - 0) & mask)];
     assert(x341 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x342 = args[2][147 * steps + ((cycle - 0) & mask)];
     assert(x342 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x343 = args[2][148 * steps + ((cycle - 0) & mask)];
     assert(x343 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x344 = args[2][97 * steps + ((cycle - 1) & mask)];
     assert(x344 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x345 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x345 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -1676,18 +1676,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x348;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x349 = args[2][163 * steps + ((cycle - 0) & mask)];
     assert(x349 != Fp::invalid());
     if (x349 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x350 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x350 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x351 = x6 - x350;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x351 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x352 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x352 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -1704,7 +1704,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x355;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x356 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x356 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1721,7 +1721,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x359;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x360 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x360 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1738,7 +1738,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x363;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x364 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x364 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1759,19 +1759,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x368 = x7 - x349;
     if (x368 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x369 = args[2][142 * steps + ((cycle - 0) & mask)];
       assert(x369 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x370 = x333 - x369;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x370 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x371 = args[2][143 * steps + ((cycle - 0) & mask)];
       assert(x371 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x372 = x371 * x2;
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x373 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x373 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -1792,7 +1792,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x378;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x379 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x379 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1809,7 +1809,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x382;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x383 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x383 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1826,7 +1826,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x386;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x387 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x387 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1860,7 +1860,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x394 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x395 = args[2][144 * steps + ((cycle - 0) & mask)];
     assert(x395 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -1899,29 +1899,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x344;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x402 = args[2][142 * steps + ((cycle - 0) & mask)];
     assert(x402 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x403 = args[2][143 * steps + ((cycle - 0) & mask)];
     assert(x403 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x404 = args[2][152 * steps + ((cycle - 0) & mask)];
     assert(x404 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x405 = args[2][153 * steps + ((cycle - 0) & mask)];
     assert(x405 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x406 = args[2][154 * steps + ((cycle - 0) & mask)];
     assert(x406 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x407 = args[2][155 * steps + ((cycle - 0) & mask)];
     assert(x407 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x408 = args[2][164 * steps + ((cycle - 0) & mask)];
     assert(x408 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x409 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x409 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -1937,18 +1937,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x412;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x413 = args[2][165 * steps + ((cycle - 0) & mask)];
     assert(x413 != Fp::invalid());
     if (x413 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x414 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x414 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x415 = x6 - x414;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x415 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x416 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x416 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -1965,7 +1965,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x419;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x420 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x420 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1982,7 +1982,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x423;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x424 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x424 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -1999,7 +1999,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x427;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x428 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x428 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2020,19 +2020,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x432 = x7 - x413;
     if (x432 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x433 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x433 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x434 = x402 - x433;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x434 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x435 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x435 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x436 = x435 * x2;
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x437 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x437 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -2053,7 +2053,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x442;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x443 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x443 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2070,7 +2070,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x446;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x447 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x447 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2087,7 +2087,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x450;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x451 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x451 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2121,7 +2121,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x458 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x459 = args[2][151 * steps + ((cycle - 0) & mask)];
     assert(x459 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -2160,29 +2160,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x408;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x466 = args[2][149 * steps + ((cycle - 0) & mask)];
     assert(x466 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x467 = args[2][150 * steps + ((cycle - 0) & mask)];
     assert(x467 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x468 = args[2][159 * steps + ((cycle - 0) & mask)];
     assert(x468 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x469 = args[2][160 * steps + ((cycle - 0) & mask)];
     assert(x469 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x470 = args[2][161 * steps + ((cycle - 0) & mask)];
     assert(x470 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x471 = args[2][162 * steps + ((cycle - 0) & mask)];
     assert(x471 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x472 = args[2][166 * steps + ((cycle - 0) & mask)];
     assert(x472 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x473 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x473 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -2198,18 +2198,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x476;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x477 = args[2][167 * steps + ((cycle - 0) & mask)];
     assert(x477 != Fp::invalid());
     if (x477 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x478 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x478 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x479 = x6 - x478;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x479 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x480 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x480 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -2226,7 +2226,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x483;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x484 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x484 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2243,7 +2243,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x487;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x488 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x488 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2260,7 +2260,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x491;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x492 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x492 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2281,19 +2281,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x496 = x7 - x477;
     if (x496 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x497 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x497 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x498 = x466 - x497;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x498 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x499 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x499 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x500 = x499 * x2;
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x501 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x501 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -2314,7 +2314,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x506;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x507 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x507 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2331,7 +2331,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x510;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x511 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x511 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2348,7 +2348,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x514;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x515 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x515 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2382,7 +2382,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x522 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x523 = args[2][158 * steps + ((cycle - 0) & mask)];
     assert(x523 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -2421,29 +2421,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x472;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x530 = args[2][156 * steps + ((cycle - 0) & mask)];
     assert(x530 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x531 = args[2][157 * steps + ((cycle - 0) & mask)];
     assert(x531 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x532 = args[2][92 * steps + ((cycle - 0) & mask)];
     assert(x532 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x533 = args[2][93 * steps + ((cycle - 0) & mask)];
     assert(x533 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x534 = args[2][94 * steps + ((cycle - 0) & mask)];
     assert(x534 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x535 = args[2][95 * steps + ((cycle - 0) & mask)];
     assert(x535 != Fp::invalid());
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x536 = args[2][168 * steps + ((cycle - 0) & mask)];
     assert(x536 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x537 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x537 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -2459,18 +2459,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x540;
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x541 = args[2][96 * steps + ((cycle - 0) & mask)];
     assert(x541 != Fp::invalid());
     if (x541 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x542 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x542 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x543 = x6 - x542;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x543 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x544 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x544 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -2487,7 +2487,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x547;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x548 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x548 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2504,7 +2504,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x551;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x552 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x552 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2521,7 +2521,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x555;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x556 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x556 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2542,19 +2542,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x560 = x7 - x541;
     if (x560 != 0) {
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x561 = args[2][89 * steps + ((cycle - 0) & mask)];
       assert(x561 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x562 = x530 - x561;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x562 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x563 = args[2][90 * steps + ((cycle - 0) & mask)];
       assert(x563 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x564 = x563 * x2;
-      // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x565 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x565 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -2575,7 +2575,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x570;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x571 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x571 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2592,7 +2592,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x574;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x575 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x575 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2609,7 +2609,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x578;
         }
       }
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x579 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x579 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -2643,7 +2643,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x586 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/reset(ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x587 = args[2][91 * steps + ((cycle - 0) & mask)];
     assert(x587 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -2890,46 +2890,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x622;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x623 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x624 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x624 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x625 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x625 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x626 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x626 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x627 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x627 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x628 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x628 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x629 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x629 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x630 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x630 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x631 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x631 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x632 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x632 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x633 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x633 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x634 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x634 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x635 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x635 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x636 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x636 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -2945,18 +2945,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x639;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x640 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x640 != Fp::invalid());
       if (x640 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x641 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x641 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x642 = x6 - x641;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x642 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x643 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x643 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -2973,7 +2973,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x646;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x647 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x647 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -2990,7 +2990,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x650;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x651 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x651 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3007,7 +3007,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x654;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x655 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x655 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3028,19 +3028,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x659 = x7 - x640;
       if (x659 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x660 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x660 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x661 = x624 - x660;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x661 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x662 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x662 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x663 = x662 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x664 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x664 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -3061,7 +3061,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x669;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x670 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x670 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3078,7 +3078,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x673;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x674 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x674 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3095,7 +3095,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x677;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x678 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x678 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3129,7 +3129,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x685 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x686 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x686 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -3168,29 +3168,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x635;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x693 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x693 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x694 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x694 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x695 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x695 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x696 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x696 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x697 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x697 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x698 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x698 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x699 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x699 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x700 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x700 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -3206,18 +3206,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x703;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x704 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x704 != Fp::invalid());
       if (x704 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x705 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x705 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x706 = x6 - x705;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x706 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x707 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x707 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -3234,7 +3234,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x710;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x711 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x711 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3251,7 +3251,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x714;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x715 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x715 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3268,7 +3268,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x718;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x719 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x719 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3289,19 +3289,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x723 = x7 - x704;
       if (x723 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x724 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x724 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x725 = x693 - x724;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x725 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x726 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x726 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x727 = x726 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x728 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x728 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -3322,7 +3322,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x733;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x734 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x734 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3339,7 +3339,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x737;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x738 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x738 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3356,7 +3356,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x741;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x742 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x742 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3390,7 +3390,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x749 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x750 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x750 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -3429,29 +3429,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x699;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x757 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x757 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x758 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x758 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x759 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x759 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x760 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x760 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x761 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x761 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x762 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x762 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x763 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x763 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x764 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x764 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -3467,18 +3467,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x767;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x768 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x768 != Fp::invalid());
       if (x768 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x769 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x769 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x770 = x6 - x769;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x770 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x771 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x771 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -3495,7 +3495,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x774;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x775 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x775 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3512,7 +3512,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x778;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x779 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x779 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3529,7 +3529,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x782;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x783 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x783 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3550,19 +3550,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x787 = x7 - x768;
       if (x787 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x788 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x788 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x789 = x757 - x788;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x789 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x790 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x790 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x791 = x790 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x792 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x792 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -3583,7 +3583,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x797;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x798 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x798 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3600,7 +3600,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x801;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x802 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x802 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3617,7 +3617,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x805;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x806 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x806 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3651,7 +3651,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x813 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x814 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x814 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -3690,29 +3690,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x763;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x821 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x821 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x822 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x822 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x823 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x823 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x824 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x824 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x825 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x825 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x826 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x826 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/0(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x827 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x827 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x828 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x828 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -3728,18 +3728,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x831;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x832 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x832 != Fp::invalid());
       if (x832 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x833 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x833 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x834 = x6 - x833;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x834 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x835 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x835 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -3756,7 +3756,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x838;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x839 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x839 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3773,7 +3773,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x842;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x843 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x843 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3790,7 +3790,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x846;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x847 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x847 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3811,19 +3811,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x851 = x7 - x832;
       if (x851 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x852 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x852 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x853 = x821 - x852;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x853 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x854 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x854 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x855 = x854 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x856 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x856 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -3844,7 +3844,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x861;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x862 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x862 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3861,7 +3861,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x865;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x866 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x866 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3878,7 +3878,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x869;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x870 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x870 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -3912,7 +3912,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x877 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x878 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x878 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -4158,46 +4158,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x913;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x914 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x915 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x915 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x916 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x916 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x917 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x917 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x918 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x918 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x919 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x919 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x920 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x920 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x921 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x921 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x922 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x922 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x923 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x923 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x924 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x924 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x925 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x925 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x926 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x926 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x927 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x927 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -4213,18 +4213,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x930;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x931 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x931 != Fp::invalid());
       if (x931 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x932 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x932 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x933 = x6 - x932;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x933 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x934 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x934 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -4241,7 +4241,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x937;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x938 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x938 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4258,7 +4258,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x941;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x942 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x942 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4275,7 +4275,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x945;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x946 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x946 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4296,19 +4296,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x950 = x7 - x931;
       if (x950 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x951 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x951 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x952 = x915 - x951;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x952 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x953 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x953 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x954 = x953 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x955 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x955 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -4329,7 +4329,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x960;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x961 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x961 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4346,7 +4346,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x964;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x965 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x965 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4363,7 +4363,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x968;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x969 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x969 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4397,7 +4397,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x976 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x977 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x977 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -4436,29 +4436,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x926;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x984 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x984 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x985 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x985 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x986 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x986 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x987 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x987 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x988 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x988 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x989 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x989 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x990 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x990 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x991 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x991 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -4474,18 +4474,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x994;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x995 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x995 != Fp::invalid());
       if (x995 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x996 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x996 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x997 = x6 - x996;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x997 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x998 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x998 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -4502,7 +4502,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1001;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1002 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1002 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4519,7 +4519,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1005;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1006 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1006 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4536,7 +4536,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1009;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1010 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1010 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4557,19 +4557,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1014 = x7 - x995;
       if (x1014 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1015 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1015 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1016 = x984 - x1015;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1016 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1017 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x1017 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1018 = x1017 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1019 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1019 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -4590,7 +4590,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1024;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1025 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1025 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4607,7 +4607,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1028;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1029 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1029 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4624,7 +4624,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1032;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1033 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1033 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4658,7 +4658,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1040 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1041 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x1041 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -4697,29 +4697,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x990;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1048 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x1048 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1049 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x1049 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1050 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x1050 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1051 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x1051 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1052 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x1052 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1053 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x1053 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1054 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x1054 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1055 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1055 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -4735,18 +4735,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1058;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1059 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x1059 != Fp::invalid());
       if (x1059 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1060 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1060 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1061 = x6 - x1060;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1061 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1062 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1062 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -4763,7 +4763,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1065;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1066 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1066 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4780,7 +4780,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1069;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1070 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1070 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4797,7 +4797,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1073;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1074 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1074 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4818,19 +4818,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1078 = x7 - x1059;
       if (x1078 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1079 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1079 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1080 = x1048 - x1079;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1080 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1081 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x1081 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1082 = x1081 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1083 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1083 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -4851,7 +4851,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1088;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1089 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1089 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4868,7 +4868,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1092;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1093 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1093 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4885,7 +4885,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1096;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1097 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1097 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -4919,7 +4919,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1104 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1105 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x1105 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -4958,29 +4958,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1054;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1112 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x1112 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1113 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x1113 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1114 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x1114 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1115 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x1115 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1116 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x1116 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1117 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x1117 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/1(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1118 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x1118 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1119 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1119 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -4996,18 +4996,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1122;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1123 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x1123 != Fp::invalid());
       if (x1123 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1124 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1124 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1125 = x6 - x1124;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1125 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1126 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1126 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -5024,7 +5024,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1129;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1130 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1130 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5041,7 +5041,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1133;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1134 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1134 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5058,7 +5058,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1137;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1138 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1138 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5079,19 +5079,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1142 = x7 - x1123;
       if (x1142 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1143 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1143 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1144 = x1112 - x1143;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1144 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1145 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x1145 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1146 = x1145 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1147 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1147 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -5112,7 +5112,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1152;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1153 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1153 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5129,7 +5129,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1156;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1157 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1157 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5146,7 +5146,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1160;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1161 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1161 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5180,7 +5180,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1168 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1169 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x1169 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -5426,46 +5426,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1204;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1205 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1206 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x1206 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1207 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x1207 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x1208 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x1208 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1209 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x1209 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1210 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x1210 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1211 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x1211 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1212 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x1212 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1213 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x1213 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1214 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x1214 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1215 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x1215 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1216 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x1216 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1217 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x1217 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1218 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1218 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -5481,18 +5481,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1221;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1222 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x1222 != Fp::invalid());
       if (x1222 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1223 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x1223 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1224 = x6 - x1223;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1224 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1225 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1225 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -5509,7 +5509,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1228;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1229 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1229 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5526,7 +5526,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1232;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1233 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1233 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5543,7 +5543,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1236;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1237 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1237 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5564,19 +5564,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1241 = x7 - x1222;
       if (x1241 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1242 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1242 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1243 = x1206 - x1242;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1243 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1244 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x1244 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1245 = x1244 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1246 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x1246 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -5597,7 +5597,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1251;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1252 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1252 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5614,7 +5614,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1255;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1256 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1256 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5631,7 +5631,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1259;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1260 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1260 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5665,7 +5665,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1267 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1268 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x1268 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -5704,29 +5704,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1217;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1275 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x1275 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1276 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x1276 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1277 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x1277 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1278 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x1278 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1279 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x1279 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1280 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x1280 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1281 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x1281 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1282 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1282 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -5742,18 +5742,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1285;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1286 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x1286 != Fp::invalid());
       if (x1286 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1287 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1287 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1288 = x6 - x1287;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1288 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1289 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1289 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -5770,7 +5770,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1292;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1293 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1293 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5787,7 +5787,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1296;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1297 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1297 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5804,7 +5804,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1300;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1301 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1301 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5825,19 +5825,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1305 = x7 - x1286;
       if (x1305 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1306 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1306 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1307 = x1275 - x1306;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1307 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1308 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x1308 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1309 = x1308 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1310 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1310 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -5858,7 +5858,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1315;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1316 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1316 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5875,7 +5875,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1319;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1320 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1320 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5892,7 +5892,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1323;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1324 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1324 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -5926,7 +5926,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1331 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1332 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x1332 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -5965,29 +5965,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1281;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1339 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x1339 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1340 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x1340 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1341 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x1341 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1342 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x1342 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1343 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x1343 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1344 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x1344 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1345 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x1345 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1346 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1346 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -6003,18 +6003,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1349;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1350 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x1350 != Fp::invalid());
       if (x1350 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1351 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1351 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1352 = x6 - x1351;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1352 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1353 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1353 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -6031,7 +6031,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1356;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1357 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1357 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6048,7 +6048,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1360;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1361 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1361 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6065,7 +6065,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1364;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1365 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1365 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6086,19 +6086,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1369 = x7 - x1350;
       if (x1369 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1370 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1370 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1371 = x1339 - x1370;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1371 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1372 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x1372 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1373 = x1372 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1374 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1374 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -6119,7 +6119,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1379;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1380 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1380 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6136,7 +6136,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1383;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1384 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1384 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6153,7 +6153,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1387;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1388 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1388 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6187,7 +6187,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1395 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1396 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x1396 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -6226,29 +6226,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1345;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1403 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x1403 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1404 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x1404 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1405 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x1405 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1406 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x1406 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1407 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x1407 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1408 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x1408 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/2(rv32im_v1::ComputeWrap)/rv32im_v1::ComputeCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1409 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x1409 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1410 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1410 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -6264,18 +6264,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1413;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1414 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x1414 != Fp::invalid());
       if (x1414 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1415 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1415 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1416 = x6 - x1415;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1416 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1417 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1417 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -6292,7 +6292,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1420;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1421 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1421 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6309,7 +6309,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1424;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1425 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1425 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6326,7 +6326,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1428;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1429 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1429 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6347,19 +6347,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1433 = x7 - x1414;
       if (x1433 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1434 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1434 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1435 = x1403 - x1434;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1435 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1436 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x1436 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1437 = x1436 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1438 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1438 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -6380,7 +6380,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1443;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1444 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1444 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6397,7 +6397,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1447;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1448 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1448 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6414,7 +6414,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1451;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1452 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1452 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6448,7 +6448,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1459 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1460 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x1460 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -6744,46 +6744,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1502;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1503 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1504 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x1504 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1505 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x1505 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x1506 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x1506 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1507 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x1507 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1508 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x1508 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1509 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x1509 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1510 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x1510 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1511 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x1511 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1512 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x1512 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1513 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x1513 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1514 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x1514 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1515 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x1515 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1516 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1516 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -6799,18 +6799,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1519;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1520 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x1520 != Fp::invalid());
       if (x1520 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1521 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1521 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1522 = x6 - x1521;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1522 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1523 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1523 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -6827,7 +6827,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1526;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1527 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1527 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6844,7 +6844,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1530;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1531 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1531 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6861,7 +6861,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1534;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1535 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1535 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6882,19 +6882,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1539 = x7 - x1520;
       if (x1539 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1540 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1540 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1541 = x1504 - x1540;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1541 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1542 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x1542 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1543 = x1542 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1544 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1544 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -6915,7 +6915,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1549;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1550 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1550 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6932,7 +6932,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1553;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1554 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1554 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6949,7 +6949,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1557;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1558 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1558 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -6983,7 +6983,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1565 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1566 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x1566 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -7022,29 +7022,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1515;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1573 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x1573 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1574 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x1574 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1575 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x1575 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1576 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x1576 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1577 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x1577 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1578 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x1578 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1579 = args[2][180 * steps + ((cycle - 0) & mask)];
       assert(x1579 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1580 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1580 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -7060,18 +7060,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1583;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1584 = args[2][181 * steps + ((cycle - 0) & mask)];
       assert(x1584 != Fp::invalid());
       if (x1584 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1585 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1585 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1586 = x6 - x1585;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1586 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1587 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1587 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -7088,7 +7088,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1590;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1591 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1591 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7105,7 +7105,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1594;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1595 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1595 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7122,7 +7122,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1598;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1599 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1599 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7143,19 +7143,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1603 = x7 - x1584;
       if (x1603 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1604 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1604 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1605 = x1573 - x1604;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1605 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1606 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x1606 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1607 = x1606 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1608 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x1608 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -7176,7 +7176,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1613;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1614 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1614 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7193,7 +7193,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1617;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1618 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1618 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7210,7 +7210,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1621;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1622 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1622 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7244,7 +7244,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1629 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1630 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x1630 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -7283,29 +7283,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1579;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1637 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x1637 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1638 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x1638 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1639 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x1639 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1640 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x1640 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1641 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x1641 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1642 = args[2][171 * steps + ((cycle - 0) & mask)];
       assert(x1642 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1643 = args[2][182 * steps + ((cycle - 0) & mask)];
       assert(x1643 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1644 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x1644 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -7321,18 +7321,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1647;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1648 = args[2][183 * steps + ((cycle - 0) & mask)];
       assert(x1648 != Fp::invalid());
       if (x1648 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1649 = args[2][167 * steps + ((cycle - 0) & mask)];
         assert(x1649 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1650 = x6 - x1649;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1650 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1651 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x1651 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -7349,7 +7349,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1654;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1655 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1655 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7366,7 +7366,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1658;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1659 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1659 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7383,7 +7383,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1662;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1663 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1663 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7404,19 +7404,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1667 = x7 - x1648;
       if (x1667 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1668 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x1668 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1669 = x1637 - x1668;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1669 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1670 = args[2][166 * steps + ((cycle - 0) & mask)];
         assert(x1670 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1671 = x1670 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1672 = args[2][167 * steps + ((cycle - 0) & mask)];
         assert(x1672 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -7437,7 +7437,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1677;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1678 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x1678 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7454,7 +7454,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1681;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1682 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x1682 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7471,7 +7471,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1685;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1686 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x1686 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7505,7 +7505,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1693 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1694 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x1694 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -7544,29 +7544,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1643;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1701 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x1701 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1702 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x1702 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1703 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x1703 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1704 = args[2][176 * steps + ((cycle - 0) & mask)];
       assert(x1704 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1705 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x1705 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1706 = args[2][178 * steps + ((cycle - 0) & mask)];
       assert(x1706 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1707 = args[2][184 * steps + ((cycle - 0) & mask)];
       assert(x1707 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1708 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x1708 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -7582,18 +7582,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1711;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1712 = args[2][185 * steps + ((cycle - 0) & mask)];
       assert(x1712 != Fp::invalid());
       if (x1712 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1713 = args[2][174 * steps + ((cycle - 0) & mask)];
         assert(x1713 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1714 = x6 - x1713;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1714 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1715 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x1715 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -7610,7 +7610,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1718;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1719 = args[2][18 * steps + ((cycle - 0) & mask)];
         assert(x1719 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7627,7 +7627,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1722;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1723 = args[2][19 * steps + ((cycle - 0) & mask)];
         assert(x1723 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7644,7 +7644,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1726;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1727 = args[2][20 * steps + ((cycle - 0) & mask)];
         assert(x1727 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7665,19 +7665,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1731 = x7 - x1712;
       if (x1731 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1732 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x1732 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1733 = x1701 - x1732;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1733 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1734 = args[2][173 * steps + ((cycle - 0) & mask)];
         assert(x1734 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1735 = x1734 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1736 = args[2][174 * steps + ((cycle - 0) & mask)];
         assert(x1736 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -7698,7 +7698,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1741;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1742 = args[2][18 * steps + ((cycle - 0) & mask)];
         assert(x1742 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7715,7 +7715,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1745;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1746 = args[2][19 * steps + ((cycle - 0) & mask)];
         assert(x1746 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7732,7 +7732,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1749;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1750 = args[2][20 * steps + ((cycle - 0) & mask)];
         assert(x1750 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7766,7 +7766,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1757 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1758 = args[2][174 * steps + ((cycle - 0) & mask)];
       assert(x1758 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -7805,29 +7805,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1707;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1765 = args[2][172 * steps + ((cycle - 0) & mask)];
       assert(x1765 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1766 = args[2][173 * steps + ((cycle - 0) & mask)];
       assert(x1766 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1767 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x1767 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1768 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x1768 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1769 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x1769 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1770 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x1770 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/3(rv32im_v1::MemIOCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1771 = args[2][186 * steps + ((cycle - 0) & mask)];
       assert(x1771 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1772 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1772 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -7843,18 +7843,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1775;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1776 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x1776 != Fp::invalid());
       if (x1776 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1777 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1777 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1778 = x6 - x1777;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1778 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1779 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1779 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -7871,7 +7871,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1782;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1783 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1783 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7888,7 +7888,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1786;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1787 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1787 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7905,7 +7905,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1790;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1791 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1791 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7926,19 +7926,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1795 = x7 - x1776;
       if (x1795 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1796 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x1796 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1797 = x1765 - x1796;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1797 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1798 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x1798 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1799 = x1798 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1800 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x1800 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -7959,7 +7959,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1805;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1806 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x1806 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7976,7 +7976,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1809;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1810 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x1810 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -7993,7 +7993,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1813;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1814 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x1814 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8027,7 +8027,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1821 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1822 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x1822 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -8273,46 +8273,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1857;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1858 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1859 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x1859 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1860 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x1860 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x1861 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x1861 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1862 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x1862 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1863 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x1863 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1864 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x1864 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1865 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x1865 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1866 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x1866 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1867 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x1867 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1868 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x1868 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1869 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x1869 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1870 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x1870 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1871 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1871 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -8328,18 +8328,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1874;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1875 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x1875 != Fp::invalid());
       if (x1875 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1876 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x1876 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1877 = x6 - x1876;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1877 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1878 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1878 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -8356,7 +8356,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1881;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1882 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1882 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8373,7 +8373,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1885;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1886 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1886 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8390,7 +8390,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1889;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1890 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1890 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8411,19 +8411,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1894 = x7 - x1875;
       if (x1894 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1895 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x1895 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1896 = x1859 - x1895;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1896 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1897 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x1897 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1898 = x1897 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1899 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x1899 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -8444,7 +8444,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1904;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1905 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x1905 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8461,7 +8461,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1908;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1909 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x1909 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8478,7 +8478,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1912;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1913 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x1913 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8512,7 +8512,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1920 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1921 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x1921 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -8551,29 +8551,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1870;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1928 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x1928 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1929 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x1929 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1930 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x1930 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1931 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x1931 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1932 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x1932 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1933 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x1933 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1934 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x1934 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1935 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1935 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -8589,18 +8589,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1938;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1939 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x1939 != Fp::invalid());
       if (x1939 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1940 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1940 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x1941 = x6 - x1940;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x1941 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1942 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1942 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -8617,7 +8617,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1945;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1946 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1946 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8634,7 +8634,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1949;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1950 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1950 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8651,7 +8651,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1953;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1954 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1954 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8672,19 +8672,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x1958 = x7 - x1939;
       if (x1958 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1959 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x1959 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x1960 = x1928 - x1959;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x1960 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1961 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x1961 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x1962 = x1961 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1963 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x1963 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -8705,7 +8705,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1968;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1969 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x1969 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8722,7 +8722,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1972;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1973 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x1973 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8739,7 +8739,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x1976;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x1977 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x1977 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8773,7 +8773,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x1984 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x1985 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x1985 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -8812,29 +8812,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1934;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x1992 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x1992 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x1993 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x1993 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1994 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x1994 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1995 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x1995 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1996 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x1996 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x1997 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x1997 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x1998 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x1998 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x1999 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x1999 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -8850,18 +8850,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2002;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2003 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x2003 != Fp::invalid());
       if (x2003 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2004 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2004 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2005 = x6 - x2004;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2005 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2006 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2006 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -8878,7 +8878,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2009;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2010 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2010 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8895,7 +8895,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2013;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2014 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2014 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8912,7 +8912,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2017;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2018 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2018 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8933,19 +8933,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2022 = x7 - x2003;
       if (x2022 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2023 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2023 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2024 = x1992 - x2023;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2024 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2025 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x2025 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2026 = x2025 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2027 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2027 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -8966,7 +8966,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2032;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2033 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2033 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -8983,7 +8983,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2036;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2037 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2037 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9000,7 +9000,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2040;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2041 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2041 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9034,7 +9034,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2048 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2049 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x2049 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -9073,29 +9073,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x1998;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2056 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x2056 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2057 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x2057 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2058 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x2058 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2059 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x2059 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2060 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x2060 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2061 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x2061 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/4(rv32im_v1::MultiplyCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2062 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x2062 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2063 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2063 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -9111,18 +9111,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2066;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2067 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x2067 != Fp::invalid());
       if (x2067 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2068 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2068 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2069 = x6 - x2068;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2069 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2070 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2070 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -9139,7 +9139,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2073;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2074 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2074 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9156,7 +9156,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2077;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2078 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2078 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9173,7 +9173,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2081;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2082 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2082 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9194,19 +9194,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2086 = x7 - x2067;
       if (x2086 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2087 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2087 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2088 = x2056 - x2087;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2088 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2089 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x2089 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2090 = x2089 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2091 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2091 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -9227,7 +9227,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2096;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2097 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2097 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9244,7 +9244,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2100;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2101 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2101 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9261,7 +9261,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2104;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2105 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2105 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9295,7 +9295,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2112 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2113 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x2113 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -9541,46 +9541,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2148;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2149 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2150 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2150 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2151 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2151 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x2152 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2152 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2153 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2153 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2154 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2154 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2155 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2155 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2156 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2156 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2157 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x2157 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2158 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x2158 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2159 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x2159 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2160 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x2160 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2161 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2161 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2162 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x2162 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -9596,18 +9596,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2165;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2166 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x2166 != Fp::invalid());
       if (x2166 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2167 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x2167 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2168 = x6 - x2167;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2168 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2169 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x2169 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -9624,7 +9624,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2172;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2173 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2173 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9641,7 +9641,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2176;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2177 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2177 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9658,7 +9658,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2180;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2181 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2181 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9679,19 +9679,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2185 = x7 - x2166;
       if (x2185 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2186 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x2186 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2187 = x2150 - x2186;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2187 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2188 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x2188 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2189 = x2188 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2190 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x2190 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -9712,7 +9712,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2195;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2196 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2196 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9729,7 +9729,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2199;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2200 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2200 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9746,7 +9746,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2203;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2204 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2204 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9780,7 +9780,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2211 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2212 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x2212 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -9819,29 +9819,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2161;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2219 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x2219 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2220 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x2220 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2221 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x2221 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2222 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x2222 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2223 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x2223 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2224 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x2224 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2225 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x2225 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2226 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2226 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -9857,18 +9857,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2229;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2230 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x2230 != Fp::invalid());
       if (x2230 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2231 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x2231 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2232 = x6 - x2231;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2232 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2233 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2233 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -9885,7 +9885,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2236;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2237 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x2237 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9902,7 +9902,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2240;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2241 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x2241 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9919,7 +9919,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2244;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2245 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x2245 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9940,19 +9940,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2249 = x7 - x2230;
       if (x2249 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2250 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2250 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2251 = x2219 - x2250;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2251 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2252 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x2252 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2253 = x2252 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2254 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x2254 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -9973,7 +9973,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2259;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2260 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x2260 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -9990,7 +9990,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2263;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2264 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x2264 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10007,7 +10007,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2267;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2268 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x2268 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10041,7 +10041,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2275 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2276 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x2276 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -10080,29 +10080,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2225;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2283 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x2283 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2284 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x2284 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2285 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x2285 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2286 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x2286 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2287 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x2287 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2288 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x2288 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2289 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x2289 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2290 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2290 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -10118,18 +10118,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2293;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2294 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x2294 != Fp::invalid());
       if (x2294 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2295 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2295 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2296 = x6 - x2295;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2296 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2297 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2297 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -10146,7 +10146,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2300;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2301 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2301 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10163,7 +10163,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2304;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2305 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2305 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10180,7 +10180,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2308;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2309 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2309 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10201,19 +10201,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2313 = x7 - x2294;
       if (x2313 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2314 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2314 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2315 = x2283 - x2314;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2315 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2316 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x2316 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2317 = x2316 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2318 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2318 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -10234,7 +10234,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2323;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2324 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2324 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10251,7 +10251,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2327;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2328 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2328 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10268,7 +10268,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2331;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2332 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2332 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10302,7 +10302,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2339 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2340 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x2340 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -10341,29 +10341,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2289;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2347 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x2347 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2348 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x2348 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2349 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x2349 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2350 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x2350 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2351 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x2351 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2352 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x2352 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/5(rv32im_v1::DivideCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2353 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x2353 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2354 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2354 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -10379,18 +10379,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2357;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2358 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x2358 != Fp::invalid());
       if (x2358 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2359 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2359 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2360 = x6 - x2359;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2360 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2361 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2361 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -10407,7 +10407,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2364;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2365 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2365 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10424,7 +10424,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2368;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2369 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2369 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10441,7 +10441,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2372;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2373 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2373 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10462,19 +10462,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2377 = x7 - x2358;
       if (x2377 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2378 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2378 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2379 = x2347 - x2378;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2379 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2380 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x2380 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2381 = x2380 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2382 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2382 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -10495,7 +10495,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2387;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2388 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2388 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10512,7 +10512,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2391;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2392 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2392 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10529,7 +10529,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2395;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2396 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2396 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -10563,7 +10563,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2403 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2404 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x2404 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -10607,25 +10607,25 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     auto x2411 = args[2][106 * steps + ((cycle - 0) & mask)];
     assert(x2411 != Fp::invalid());
     if (x2411 != 0) {
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2412 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2412 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2413 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2413 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2414 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2414 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2415 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2415 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2416 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2416 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2417 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2417 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2418 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2418 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":36:3)
@@ -10670,22 +10670,22 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         assert(reg == Fp::invalid() || reg == x2418);
         reg = x2418;
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2419 = args[2][96 * steps + ((cycle - 1) & mask)];
       assert(x2419 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2420 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2420 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2421 = args[2][3 * steps + ((cycle - 1) & mask)];
       assert(x2421 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2422 = args[2][4 * steps + ((cycle - 1) & mask)];
       assert(x2422 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2423 = args[2][5 * steps + ((cycle - 1) & mask)];
       assert(x2423 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2424 = args[2][69 * steps + ((cycle - 1) & mask)];
       assert(x2424 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":128:3)
@@ -10741,25 +10741,25 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     auto x2428 = args[2][107 * steps + ((cycle - 0) & mask)];
     assert(x2428 != Fp::invalid());
     if (x2428 != 0) {
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2429 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2429 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2430 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2430 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2431 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2431 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2432 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2432 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2433 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2433 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2434 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2434 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2435 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2435 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":36:3)
@@ -10804,22 +10804,22 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         assert(reg == Fp::invalid() || reg == x2435);
         reg = x2435;
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2436 = args[2][96 * steps + ((cycle - 1) & mask)];
       assert(x2436 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2437 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2437 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2438 = args[2][3 * steps + ((cycle - 1) & mask)];
       assert(x2438 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2439 = args[2][4 * steps + ((cycle - 1) & mask)];
       assert(x2439 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x2440 = args[2][5 * steps + ((cycle - 1) & mask)];
       assert(x2440 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2441 = args[2][69 * steps + ((cycle - 1) & mask)];
       assert(x2441 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":128:3)
@@ -11127,46 +11127,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2480;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2481 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2482 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2482 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2483 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2483 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x2484 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2484 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2485 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2485 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2486 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2486 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2487 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2487 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2488 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2488 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2489 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x2489 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2490 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x2490 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2491 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x2491 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2492 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x2492 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2493 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2493 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2494 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2494 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -11182,18 +11182,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2497;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2498 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x2498 != Fp::invalid());
       if (x2498 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2499 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x2499 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2500 = x6 - x2499;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2500 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2501 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2501 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -11210,7 +11210,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2504;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2505 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2505 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11227,7 +11227,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2508;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2509 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2509 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11244,7 +11244,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2512;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2513 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2513 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11265,19 +11265,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2517 = x7 - x2498;
       if (x2517 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2518 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x2518 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2519 = x2482 - x2518;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2519 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2520 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x2520 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2521 = x2520 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2522 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x2522 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -11298,7 +11298,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2527;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2528 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2528 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11315,7 +11315,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2531;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2532 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2532 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11332,7 +11332,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2535;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2536 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2536 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11366,7 +11366,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2543 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2544 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x2544 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -11405,29 +11405,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2493;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2551 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x2551 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2552 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x2552 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2553 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x2553 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2554 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x2554 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2555 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x2555 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2556 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x2556 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2557 = args[2][180 * steps + ((cycle - 0) & mask)];
       assert(x2557 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2558 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2558 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -11443,18 +11443,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2561;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2562 = args[2][181 * steps + ((cycle - 0) & mask)];
       assert(x2562 != Fp::invalid());
       if (x2562 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2563 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2563 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2564 = x6 - x2563;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2564 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2565 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2565 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -11471,7 +11471,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2568;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2569 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x2569 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11488,7 +11488,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2572;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2573 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x2573 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11505,7 +11505,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2576;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2577 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x2577 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11526,19 +11526,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2581 = x7 - x2562;
       if (x2581 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2582 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x2582 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2583 = x2551 - x2582;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2583 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2584 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x2584 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2585 = x2584 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2586 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x2586 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -11559,7 +11559,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2591;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2592 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x2592 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11576,7 +11576,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2595;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2596 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x2596 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11593,7 +11593,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2599;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2600 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x2600 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11627,7 +11627,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2607 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2608 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x2608 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -11666,29 +11666,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2557;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2615 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x2615 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2616 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x2616 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2617 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x2617 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2618 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x2618 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2619 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x2619 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2620 = args[2][171 * steps + ((cycle - 0) & mask)];
       assert(x2620 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2621 = args[2][182 * steps + ((cycle - 0) & mask)];
       assert(x2621 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2622 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x2622 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -11704,18 +11704,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2625;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2626 = args[2][183 * steps + ((cycle - 0) & mask)];
       assert(x2626 != Fp::invalid());
       if (x2626 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2627 = args[2][167 * steps + ((cycle - 0) & mask)];
         assert(x2627 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2628 = x6 - x2627;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2628 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2629 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x2629 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -11732,7 +11732,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2632;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2633 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2633 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11749,7 +11749,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2636;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2637 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2637 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11766,7 +11766,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2640;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2641 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2641 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11787,19 +11787,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2645 = x7 - x2626;
       if (x2645 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2646 = args[2][165 * steps + ((cycle - 0) & mask)];
         assert(x2646 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2647 = x2615 - x2646;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2647 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2648 = args[2][166 * steps + ((cycle - 0) & mask)];
         assert(x2648 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2649 = x2648 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2650 = args[2][167 * steps + ((cycle - 0) & mask)];
         assert(x2650 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -11820,7 +11820,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2655;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2656 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x2656 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11837,7 +11837,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2659;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2660 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x2660 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11854,7 +11854,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2663;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2664 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x2664 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -11888,7 +11888,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2671 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2672 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x2672 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -11927,29 +11927,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2621;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2679 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x2679 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2680 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x2680 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2681 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x2681 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2682 = args[2][176 * steps + ((cycle - 0) & mask)];
       assert(x2682 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2683 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x2683 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2684 = args[2][178 * steps + ((cycle - 0) & mask)];
       assert(x2684 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2685 = args[2][184 * steps + ((cycle - 0) & mask)];
       assert(x2685 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2686 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x2686 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -11965,18 +11965,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2689;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2690 = args[2][185 * steps + ((cycle - 0) & mask)];
       assert(x2690 != Fp::invalid());
       if (x2690 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2691 = args[2][174 * steps + ((cycle - 0) & mask)];
         assert(x2691 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2692 = x6 - x2691;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2692 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2693 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x2693 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -11993,7 +11993,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2696;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2697 = args[2][18 * steps + ((cycle - 0) & mask)];
         assert(x2697 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12010,7 +12010,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2700;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2701 = args[2][19 * steps + ((cycle - 0) & mask)];
         assert(x2701 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12027,7 +12027,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2704;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2705 = args[2][20 * steps + ((cycle - 0) & mask)];
         assert(x2705 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12048,19 +12048,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2709 = x7 - x2690;
       if (x2709 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2710 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x2710 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2711 = x2679 - x2710;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2711 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2712 = args[2][173 * steps + ((cycle - 0) & mask)];
         assert(x2712 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2713 = x2712 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2714 = args[2][174 * steps + ((cycle - 0) & mask)];
         assert(x2714 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -12081,7 +12081,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2719;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2720 = args[2][18 * steps + ((cycle - 0) & mask)];
         assert(x2720 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12098,7 +12098,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2723;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2724 = args[2][19 * steps + ((cycle - 0) & mask)];
         assert(x2724 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12115,7 +12115,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2727;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2728 = args[2][20 * steps + ((cycle - 0) & mask)];
         assert(x2728 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12149,7 +12149,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2735 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2736 = args[2][174 * steps + ((cycle - 0) & mask)];
       assert(x2736 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -12188,29 +12188,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2685;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2743 = args[2][172 * steps + ((cycle - 0) & mask)];
       assert(x2743 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2744 = args[2][173 * steps + ((cycle - 0) & mask)];
       assert(x2744 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2745 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x2745 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2746 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x2746 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2747 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x2747 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2748 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x2748 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/8(rv32im_v1::ECallCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2749 = args[2][186 * steps + ((cycle - 0) & mask)];
       assert(x2749 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2750 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2750 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -12226,18 +12226,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2753;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2754 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x2754 != Fp::invalid());
       if (x2754 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2755 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2755 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2756 = x6 - x2755;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2756 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2757 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2757 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -12254,7 +12254,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2760;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2761 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2761 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12271,7 +12271,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2764;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2765 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2765 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12288,7 +12288,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2768;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2769 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2769 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12309,19 +12309,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2773 = x7 - x2754;
       if (x2773 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2774 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2774 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2775 = x2743 - x2774;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2775 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2776 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x2776 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2777 = x2776 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2778 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2778 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -12342,7 +12342,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2783;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2784 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2784 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12359,7 +12359,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2787;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2788 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2788 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12376,7 +12376,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2791;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2792 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2792 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12410,7 +12410,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2799 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2800 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x2800 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -12556,46 +12556,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2821;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2822 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2823 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2823 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2824 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2824 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x2825 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2825 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2826 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2826 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2827 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2827 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2828 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2828 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2829 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2829 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2830 = args[2][133 * steps + ((cycle - 0) & mask)];
       assert(x2830 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2831 = args[2][134 * steps + ((cycle - 0) & mask)];
       assert(x2831 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2832 = args[2][135 * steps + ((cycle - 0) & mask)];
       assert(x2832 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2833 = args[2][136 * steps + ((cycle - 0) & mask)];
       assert(x2833 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2834 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2834 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2835 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x2835 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -12611,18 +12611,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2838;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2839 = args[2][137 * steps + ((cycle - 0) & mask)];
       assert(x2839 != Fp::invalid());
       if (x2839 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2840 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x2840 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2841 = x6 - x2840;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2841 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2842 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x2842 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -12639,7 +12639,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2845;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2846 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2846 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12656,7 +12656,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2849;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2850 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2850 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12673,7 +12673,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2853;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2854 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2854 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12694,19 +12694,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2858 = x7 - x2839;
       if (x2858 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2859 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x2859 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2860 = x2823 - x2859;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2860 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2861 = args[2][131 * steps + ((cycle - 0) & mask)];
         assert(x2861 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2862 = x2861 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2863 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x2863 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -12727,7 +12727,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2868;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2869 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2869 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12744,7 +12744,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2872;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2873 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2873 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12761,7 +12761,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2876;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2877 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x2877 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12795,7 +12795,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2884 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2885 = args[2][132 * steps + ((cycle - 0) & mask)];
       assert(x2885 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -12834,29 +12834,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2834;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2892 = args[2][130 * steps + ((cycle - 0) & mask)];
       assert(x2892 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2893 = args[2][131 * steps + ((cycle - 0) & mask)];
       assert(x2893 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2894 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x2894 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2895 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x2895 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2896 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x2896 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2897 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x2897 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/9(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2898 = args[2][138 * steps + ((cycle - 0) & mask)];
       assert(x2898 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2899 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2899 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -12872,18 +12872,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2902;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2903 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x2903 != Fp::invalid());
       if (x2903 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2904 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2904 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2905 = x6 - x2904;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2905 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2906 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2906 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -12900,7 +12900,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2909;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2910 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2910 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12917,7 +12917,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2913;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2914 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2914 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12934,7 +12934,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2917;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2918 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2918 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -12955,19 +12955,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x2922 = x7 - x2903;
       if (x2922 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2923 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x2923 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x2924 = x2892 - x2923;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x2924 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2925 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x2925 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x2926 = x2925 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2927 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x2927 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -12988,7 +12988,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2932;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2933 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x2933 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13005,7 +13005,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2936;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2937 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x2937 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13022,7 +13022,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2940;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2941 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x2941 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13056,7 +13056,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x2948 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x2949 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x2949 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -13202,46 +13202,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2970;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2971 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x2972 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x2972 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x2973 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x2973 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x2974 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x2974 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2975 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x2975 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2976 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x2976 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2977 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x2977 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2978 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x2978 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2979 = args[2][133 * steps + ((cycle - 0) & mask)];
       assert(x2979 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2980 = args[2][134 * steps + ((cycle - 0) & mask)];
       assert(x2980 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2981 = args[2][135 * steps + ((cycle - 0) & mask)];
       assert(x2981 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2982 = args[2][136 * steps + ((cycle - 0) & mask)];
       assert(x2982 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x2983 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x2983 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2984 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x2984 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -13257,18 +13257,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2987;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x2988 = args[2][137 * steps + ((cycle - 0) & mask)];
       assert(x2988 != Fp::invalid());
       if (x2988 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2989 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x2989 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x2990 = x6 - x2989;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x2990 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x2991 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x2991 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -13285,7 +13285,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2994;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2995 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x2995 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13302,7 +13302,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x2998;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x2999 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x2999 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13319,7 +13319,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3002;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3003 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3003 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13340,19 +13340,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3007 = x7 - x2988;
       if (x3007 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3008 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x3008 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3009 = x2972 - x3008;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3009 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3010 = args[2][131 * steps + ((cycle - 0) & mask)];
         assert(x3010 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3011 = x3010 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3012 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x3012 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -13373,7 +13373,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3017;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3018 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3018 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13390,7 +13390,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3021;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3022 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3022 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13407,7 +13407,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3025;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3026 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3026 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13441,7 +13441,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3033 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3034 = args[2][132 * steps + ((cycle - 0) & mask)];
       assert(x3034 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -13480,29 +13480,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x2983;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3041 = args[2][130 * steps + ((cycle - 0) & mask)];
       assert(x3041 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3042 = args[2][131 * steps + ((cycle - 0) & mask)];
       assert(x3042 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3043 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x3043 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3044 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x3044 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3045 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x3045 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3046 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x3046 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/10(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3047 = args[2][138 * steps + ((cycle - 0) & mask)];
       assert(x3047 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3048 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3048 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -13518,18 +13518,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3051;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3052 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x3052 != Fp::invalid());
       if (x3052 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3053 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3053 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3054 = x6 - x3053;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3054 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3055 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3055 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -13546,7 +13546,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3058;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3059 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3059 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13563,7 +13563,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3062;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3063 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3063 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13580,7 +13580,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3066;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3067 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3067 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13601,19 +13601,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3071 = x7 - x3052;
       if (x3071 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3072 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3072 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3073 = x3041 - x3072;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3073 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3074 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x3074 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3075 = x3074 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3076 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3076 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -13634,7 +13634,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3081;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3082 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3082 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13651,7 +13651,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3085;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3086 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3086 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13668,7 +13668,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3089;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3090 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3090 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13702,7 +13702,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3097 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3098 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x3098 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -13848,46 +13848,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3119;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3120 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3121 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x3121 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3122 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x3122 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x3123 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x3123 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3124 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x3124 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3125 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x3125 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3126 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x3126 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3127 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x3127 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3128 = args[2][133 * steps + ((cycle - 0) & mask)];
       assert(x3128 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3129 = args[2][134 * steps + ((cycle - 0) & mask)];
       assert(x3129 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3130 = args[2][135 * steps + ((cycle - 0) & mask)];
       assert(x3130 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3131 = args[2][136 * steps + ((cycle - 0) & mask)];
       assert(x3131 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3132 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x3132 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3133 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x3133 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -13903,18 +13903,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3136;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3137 = args[2][137 * steps + ((cycle - 0) & mask)];
       assert(x3137 != Fp::invalid());
       if (x3137 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3138 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x3138 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3139 = x6 - x3138;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3139 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3140 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x3140 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -13931,7 +13931,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3143;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3144 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3144 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13948,7 +13948,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3147;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3148 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3148 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13965,7 +13965,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3151;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3152 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3152 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -13986,19 +13986,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3156 = x7 - x3137;
       if (x3156 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3157 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x3157 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3158 = x3121 - x3157;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3158 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3159 = args[2][131 * steps + ((cycle - 0) & mask)];
         assert(x3159 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3160 = x3159 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3161 = args[2][132 * steps + ((cycle - 0) & mask)];
         assert(x3161 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -14019,7 +14019,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3166;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3167 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3167 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14036,7 +14036,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3170;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3171 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3171 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14053,7 +14053,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3174;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3175 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3175 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14087,7 +14087,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3182 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3183 = args[2][132 * steps + ((cycle - 0) & mask)];
       assert(x3183 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -14126,29 +14126,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3132;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3190 = args[2][130 * steps + ((cycle - 0) & mask)];
       assert(x3190 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3191 = args[2][131 * steps + ((cycle - 0) & mask)];
       assert(x3191 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3192 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x3192 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3193 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x3193 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3194 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x3194 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3195 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x3195 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/11(rv32im_v1::ShaWrap)/rv32im_v1::ShaCycle/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3196 = args[2][138 * steps + ((cycle - 0) & mask)];
       assert(x3196 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3197 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3197 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -14164,18 +14164,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3200;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3201 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x3201 != Fp::invalid());
       if (x3201 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3202 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3202 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3203 = x6 - x3202;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3203 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3204 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3204 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -14192,7 +14192,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3207;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3208 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3208 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14209,7 +14209,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3211;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3212 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3212 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14226,7 +14226,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3215;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3216 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3216 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14247,19 +14247,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3220 = x7 - x3201;
       if (x3220 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3221 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3221 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3222 = x3190 - x3221;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3222 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3223 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x3223 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3224 = x3223 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3225 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3225 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -14280,7 +14280,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3230;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3231 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3231 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14297,7 +14297,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3234;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3235 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3235 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14314,7 +14314,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3238;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3239 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3239 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14348,7 +14348,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3246 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3247 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x3247 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -14392,25 +14392,25 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     auto x3254 = args[2][112 * steps + ((cycle - 0) & mask)];
     assert(x3254 != Fp::invalid());
     if (x3254 != 0) {
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3255 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x3255 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3256 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x3256 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3257 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x3257 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3258 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x3258 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3259 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x3259 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3260 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x3260 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3261 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x3261 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":36:3)
@@ -14455,22 +14455,22 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         assert(reg == Fp::invalid() || reg == x3261);
         reg = x3261;
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3262 = args[2][96 * steps + ((cycle - 1) & mask)];
       assert(x3262 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3263 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x3263 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3264 = args[2][3 * steps + ((cycle - 1) & mask)];
       assert(x3264 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3265 = args[2][4 * steps + ((cycle - 1) & mask)];
       assert(x3265 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3266 = args[2][5 * steps + ((cycle - 1) & mask)];
       assert(x3266 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3267 = args[2][69 * steps + ((cycle - 1) & mask)];
       assert(x3267 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":128:3)
@@ -14728,46 +14728,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3299;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3300 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3301 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x3301 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3302 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x3302 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x3303 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x3303 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3304 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x3304 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3305 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x3305 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3306 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x3306 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3307 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x3307 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3308 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x3308 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3309 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x3309 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3310 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x3310 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3311 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x3311 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3312 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x3312 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3313 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3313 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -14783,18 +14783,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3316;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3317 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x3317 != Fp::invalid());
       if (x3317 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3318 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x3318 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3319 = x6 - x3318;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3319 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3320 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3320 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -14811,7 +14811,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3323;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3324 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3324 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14828,7 +14828,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3327;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3328 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3328 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14845,7 +14845,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3331;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3332 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3332 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14866,19 +14866,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3336 = x7 - x3317;
       if (x3336 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3337 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3337 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3338 = x3301 - x3337;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3338 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3339 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x3339 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3340 = x3339 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3341 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x3341 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -14899,7 +14899,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3346;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3347 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3347 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14916,7 +14916,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3350;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3351 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3351 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14933,7 +14933,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3354;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3355 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3355 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -14967,7 +14967,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3362 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3363 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x3363 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -15006,29 +15006,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3312;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3370 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x3370 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3371 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x3371 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3372 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x3372 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3373 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x3373 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3374 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x3374 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3375 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x3375 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3376 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x3376 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3377 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3377 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -15044,18 +15044,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3380;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3381 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x3381 != Fp::invalid());
       if (x3381 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3382 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x3382 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3383 = x6 - x3382;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3383 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3384 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3384 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -15072,7 +15072,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3387;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3388 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x3388 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15089,7 +15089,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3391;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3392 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x3392 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15106,7 +15106,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3395;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3396 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x3396 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15127,19 +15127,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3400 = x7 - x3381;
       if (x3400 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3401 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3401 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3402 = x3370 - x3401;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3402 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3403 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x3403 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3404 = x3403 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3405 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x3405 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -15160,7 +15160,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3410;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3411 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x3411 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15177,7 +15177,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3414;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3415 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x3415 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15194,7 +15194,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3418;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3419 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x3419 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15228,7 +15228,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3426 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3427 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x3427 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -15267,29 +15267,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3376;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3434 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x3434 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3435 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x3435 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3436 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x3436 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3437 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x3437 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3438 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x3438 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3439 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x3439 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3440 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x3440 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3441 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3441 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -15305,18 +15305,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3444;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3445 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x3445 != Fp::invalid());
       if (x3445 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3446 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x3446 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3447 = x6 - x3446;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3447 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3448 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3448 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -15333,7 +15333,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3451;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3452 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x3452 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15350,7 +15350,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3455;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3456 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x3456 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15367,7 +15367,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3459;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3460 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x3460 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15388,19 +15388,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3464 = x7 - x3445;
       if (x3464 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3465 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3465 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3466 = x3434 - x3465;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3466 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3467 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x3467 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3468 = x3467 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3469 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x3469 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -15421,7 +15421,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3474;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3475 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x3475 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15438,7 +15438,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3478;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3479 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x3479 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15455,7 +15455,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3482;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3483 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x3483 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15489,7 +15489,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3490 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3491 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x3491 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -15528,29 +15528,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3440;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3498 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x3498 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3499 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x3499 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3500 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x3500 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3501 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x3501 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3502 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x3502 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3503 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x3503 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/13(rv32im_v1::ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3504 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x3504 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3505 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3505 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -15566,18 +15566,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3508;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3509 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x3509 != Fp::invalid());
       if (x3509 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3510 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3510 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3511 = x6 - x3510;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3511 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3512 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3512 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -15594,7 +15594,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3515;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3516 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3516 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15611,7 +15611,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3519;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3520 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3520 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15628,7 +15628,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3523;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3524 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3524 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15649,19 +15649,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3528 = x7 - x3509;
       if (x3528 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3529 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3529 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3530 = x3498 - x3529;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3530 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3531 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x3531 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3532 = x3531 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3533 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3533 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -15682,7 +15682,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3538;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3539 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3539 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15699,7 +15699,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3542;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3543 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3543 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15716,7 +15716,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3546;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3547 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3547 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -15750,7 +15750,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3554 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3555 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x3555 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -15996,46 +15996,46 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3590;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/global(Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/global(rv32im_v1::Global)/sys_exit_code(Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3591 = args[1][104];
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3592 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x3592 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3593 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x3593 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
       auto x3594 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x3594 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3595 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x3595 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3596 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x3596 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3597 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x3597 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3598 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x3598 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3599 = args[2][147 * steps + ((cycle - 0) & mask)];
       assert(x3599 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3600 = args[2][148 * steps + ((cycle - 0) & mask)];
       assert(x3600 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3601 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x3601 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3602 = args[2][150 * steps + ((cycle - 0) & mask)];
       assert(x3602 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3603 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x3603 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3604 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3604 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -16051,18 +16051,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3607;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3608 = args[2][165 * steps + ((cycle - 0) & mask)];
       assert(x3608 != Fp::invalid());
       if (x3608 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3609 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x3609 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3610 = x6 - x3609;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3610 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3611 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3611 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -16079,7 +16079,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3614;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3615 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3615 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16096,7 +16096,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3618;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3619 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3619 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16113,7 +16113,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3622;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3623 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3623 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16134,19 +16134,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3627 = x7 - x3608;
       if (x3627 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3628 = args[2][144 * steps + ((cycle - 0) & mask)];
         assert(x3628 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3629 = x3592 - x3628;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3629 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3630 = args[2][145 * steps + ((cycle - 0) & mask)];
         assert(x3630 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3631 = x3630 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3632 = args[2][146 * steps + ((cycle - 0) & mask)];
         assert(x3632 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -16167,7 +16167,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3637;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3638 = args[2][9 * steps + ((cycle - 0) & mask)];
         assert(x3638 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16184,7 +16184,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3641;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3642 = args[2][10 * steps + ((cycle - 0) & mask)];
         assert(x3642 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16201,7 +16201,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3645;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3646 = args[2][11 * steps + ((cycle - 0) & mask)];
         assert(x3646 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16235,7 +16235,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3653 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3654 = args[2][146 * steps + ((cycle - 0) & mask)];
       assert(x3654 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -16274,29 +16274,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3603;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3661 = args[2][144 * steps + ((cycle - 0) & mask)];
       assert(x3661 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3662 = args[2][145 * steps + ((cycle - 0) & mask)];
       assert(x3662 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3663 = args[2][154 * steps + ((cycle - 0) & mask)];
       assert(x3663 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3664 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x3664 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3665 = args[2][156 * steps + ((cycle - 0) & mask)];
       assert(x3665 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3666 = args[2][157 * steps + ((cycle - 0) & mask)];
       assert(x3666 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3667 = args[2][166 * steps + ((cycle - 0) & mask)];
       assert(x3667 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3668 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3668 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -16312,18 +16312,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3671;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3672 = args[2][167 * steps + ((cycle - 0) & mask)];
       assert(x3672 != Fp::invalid());
       if (x3672 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3673 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x3673 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3674 = x6 - x3673;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3674 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3675 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3675 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -16340,7 +16340,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3678;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3679 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x3679 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16357,7 +16357,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3682;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3683 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x3683 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16374,7 +16374,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3686;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3687 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x3687 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16395,19 +16395,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3691 = x7 - x3672;
       if (x3691 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3692 = args[2][151 * steps + ((cycle - 0) & mask)];
         assert(x3692 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3693 = x3661 - x3692;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3693 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3694 = args[2][152 * steps + ((cycle - 0) & mask)];
         assert(x3694 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3695 = x3694 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3696 = args[2][153 * steps + ((cycle - 0) & mask)];
         assert(x3696 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -16428,7 +16428,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3701;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3702 = args[2][12 * steps + ((cycle - 0) & mask)];
         assert(x3702 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16445,7 +16445,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3705;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3706 = args[2][13 * steps + ((cycle - 0) & mask)];
         assert(x3706 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16462,7 +16462,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3709;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3710 = args[2][14 * steps + ((cycle - 0) & mask)];
         assert(x3710 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16496,7 +16496,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3717 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3718 = args[2][153 * steps + ((cycle - 0) & mask)];
       assert(x3718 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -16535,29 +16535,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3667;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3725 = args[2][151 * steps + ((cycle - 0) & mask)];
       assert(x3725 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3726 = args[2][152 * steps + ((cycle - 0) & mask)];
       assert(x3726 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3727 = args[2][161 * steps + ((cycle - 0) & mask)];
       assert(x3727 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3728 = args[2][162 * steps + ((cycle - 0) & mask)];
       assert(x3728 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3729 = args[2][163 * steps + ((cycle - 0) & mask)];
       assert(x3729 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3730 = args[2][164 * steps + ((cycle - 0) & mask)];
       assert(x3730 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3731 = args[2][168 * steps + ((cycle - 0) & mask)];
       assert(x3731 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3732 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3732 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -16573,18 +16573,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3735;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3736 = args[2][169 * steps + ((cycle - 0) & mask)];
       assert(x3736 != Fp::invalid());
       if (x3736 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3737 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x3737 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3738 = x6 - x3737;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3738 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3739 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3739 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -16601,7 +16601,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3742;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3743 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x3743 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16618,7 +16618,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3746;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3747 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x3747 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16635,7 +16635,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3750;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3751 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x3751 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16656,19 +16656,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3755 = x7 - x3736;
       if (x3755 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3756 = args[2][158 * steps + ((cycle - 0) & mask)];
         assert(x3756 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3757 = x3725 - x3756;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3757 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3758 = args[2][159 * steps + ((cycle - 0) & mask)];
         assert(x3758 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3759 = x3758 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3760 = args[2][160 * steps + ((cycle - 0) & mask)];
         assert(x3760 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -16689,7 +16689,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3765;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3766 = args[2][15 * steps + ((cycle - 0) & mask)];
         assert(x3766 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16706,7 +16706,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3769;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3770 = args[2][16 * steps + ((cycle - 0) & mask)];
         assert(x3770 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16723,7 +16723,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3773;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3774 = args[2][17 * steps + ((cycle - 0) & mask)];
         assert(x3774 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16757,7 +16757,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3781 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3782 = args[2][160 * steps + ((cycle - 0) & mask)];
       assert(x3782 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -16796,29 +16796,29 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3731;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
       auto x3789 = args[2][158 * steps + ((cycle - 0) & mask)];
       assert(x3789 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
       auto x3790 = args[2][159 * steps + ((cycle - 0) & mask)];
       assert(x3790 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3791 = args[2][92 * steps + ((cycle - 0) & mask)];
       assert(x3791 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3792 = args[2][93 * steps + ((cycle - 0) & mask)];
       assert(x3792 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3793 = args[2][94 * steps + ((cycle - 0) & mask)];
       assert(x3793 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3794 = args[2][95 * steps + ((cycle - 0) & mask)];
       assert(x3794 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/Mux/14(rv32im_v1::BigIntCycle)/RamBody/PlonkBody/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
       auto x3795 = args[2][170 * steps + ((cycle - 0) & mask)];
       assert(x3795 != Fp::invalid());
       {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3796 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3796 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":75:35)
@@ -16834,18 +16834,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3799;
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3800 = args[2][96 * steps + ((cycle - 0) & mask)];
       assert(x3800 != Fp::invalid());
       if (x3800 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3801 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3801 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":87:9)
         auto x3802 = x6 - x3801;
         // loc("zirgen/components/ram.cpp":87:9)
         if (x3802 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3803 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3803 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":89:17)
@@ -16862,7 +16862,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3806;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3807 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3807 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16879,7 +16879,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3810;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3811 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3811 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16896,7 +16896,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3814;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3815 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3815 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16917,19 +16917,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       // loc("zirgen/components/ram.cpp":95:19)
       auto x3819 = x7 - x3800;
       if (x3819 != 0) {
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3820 = args[2][89 * steps + ((cycle - 0) & mask)];
         assert(x3820 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":97:9)
         auto x3821 = x3789 - x3820;
         // loc("zirgen/components/ram.cpp":97:9)
         if (x3821 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3822 = args[2][90 * steps + ((cycle - 0) & mask)];
         assert(x3822 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
         auto x3823 = x3822 * x2;
-        // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
         auto x3824 = args[2][91 * steps + ((cycle - 0) & mask)];
         assert(x3824 != Fp::invalid());
         // loc("zirgen/components/ram.cpp":99:17)
@@ -16950,7 +16950,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3829;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3830 = args[2][3 * steps + ((cycle - 0) & mask)];
         assert(x3830 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16967,7 +16967,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3833;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3834 = args[2][4 * steps + ((cycle - 0) & mask)];
         assert(x3834 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -16984,7 +16984,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
             reg = x3837;
           }
         }
-        // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+        // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
         auto x3838 = args[2][5 * steps + ((cycle - 0) & mask)];
         assert(x3838 != Fp::invalid());
         // loc("zirgen/components/bytes.cpp":97:11)
@@ -17018,7 +17018,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           if (x3845 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
         }
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3846 = args[2][91 * steps + ((cycle - 0) & mask)];
       assert(x3846 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":104:18)
@@ -17062,25 +17062,25 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     auto x3853 = args[2][115 * steps + ((cycle - 0) & mask)];
     assert(x3853 != Fp::invalid());
     if (x3853 != 0) {
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3854 = args[2][89 * steps + ((cycle - 1) & mask)];
       assert(x3854 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3855 = args[2][90 * steps + ((cycle - 1) & mask)];
       assert(x3855 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3856 = args[2][91 * steps + ((cycle - 1) & mask)];
       assert(x3856 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3857 = args[2][92 * steps + ((cycle - 1) & mask)];
       assert(x3857 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3858 = args[2][93 * steps + ((cycle - 1) & mask)];
       assert(x3858 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3859 = args[2][94 * steps + ((cycle - 1) & mask)];
       assert(x3859 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3860 = args[2][95 * steps + ((cycle - 1) & mask)];
       assert(x3860 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":36:3)
@@ -17125,22 +17125,22 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         assert(reg == Fp::invalid() || reg == x3860);
         reg = x3860;
       }
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3861 = args[2][96 * steps + ((cycle - 1) & mask)];
       assert(x3861 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3862 = args[2][97 * steps + ((cycle - 1) & mask)];
       assert(x3862 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3863 = args[2][3 * steps + ((cycle - 1) & mask)];
       assert(x3863 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3864 = args[2][4 * steps + ((cycle - 1) & mask)];
       assert(x3864 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":92:10))
       auto x3865 = args[2][5 * steps + ((cycle - 1) & mask)];
       assert(x3865 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/RamHeader/RamPlonkVerifier/Twit/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3866 = args[2][69 * steps + ((cycle - 1) & mask)];
       assert(x3866 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":128:3)
@@ -17236,44 +17236,44 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
       assert(reg == Fp::invalid() || reg == x6);
       reg = x6;
     }
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":55:40))
     auto x3870 = args[2][89 * steps + ((cycle - 1) & mask)];
     assert(x3870 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":56:42))
     auto x3871 = args[2][90 * steps + ((cycle - 1) & mask)];
     assert(x3871 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/Reg"("zirgen/components/ram.cpp":57:42))
     auto x3872 = args[2][91 * steps + ((cycle - 1) & mask)];
     assert(x3872 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3873 = args[2][92 * steps + ((cycle - 1) & mask)];
     assert(x3873 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3874 = args[2][93 * steps + ((cycle - 1) & mask)];
     assert(x3874 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3875 = args[2][94 * steps + ((cycle - 1) & mask)];
     assert(x3875 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3876 = args[2][95 * steps + ((cycle - 1) & mask)];
     assert(x3876 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[0](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3877 = args[2][101 * steps + ((cycle - 0) & mask)];
     assert(x3877 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[1](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3878 = args[2][102 * steps + ((cycle - 0) & mask)];
     assert(x3878 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[2](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3879 = args[2][103 * steps + ((cycle - 0) & mask)];
     assert(x3879 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/U32Reg/byte[3](Reg)"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3880 = args[2][104 * steps + ((cycle - 0) & mask)];
     assert(x3880 != Fp::invalid());
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkVerifier/Reg"("zirgen/components/ram.cpp":60:56))
     auto x3881 = args[2][97 * steps + ((cycle - 1) & mask)];
     assert(x3881 != Fp::invalid());
     {
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3882 = args[2][98 * steps + ((cycle - 0) & mask)];
       assert(x3882 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":75:35)
@@ -17289,18 +17289,18 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         reg = x3885;
       }
     }
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/RamHeader/RamPlonkVerifier/Reg"("./zirgen/compiler/edsl/component.h":154:27))
     auto x3886 = args[2][96 * steps + ((cycle - 0) & mask)];
     assert(x3886 != Fp::invalid());
     if (x3886 != 0) {
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3887 = args[2][100 * steps + ((cycle - 0) & mask)];
       assert(x3887 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":87:9)
       auto x3888 = x6 - x3887;
       // loc("zirgen/components/ram.cpp":87:9)
       if (x3888 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:87");
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3889 = args[2][98 * steps + ((cycle - 0) & mask)];
       assert(x3889 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":89:17)
@@ -17317,7 +17317,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3892;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3893 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x3893 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17334,7 +17334,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3896;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3897 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x3897 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17351,7 +17351,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3900;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3901 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x3901 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17368,19 +17368,19 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
     // loc("zirgen/components/ram.cpp":95:19)
     auto x3904 = x7 - x3886;
     if (x3904 != 0) {
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3905 = args[2][98 * steps + ((cycle - 0) & mask)];
       assert(x3905 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":97:9)
       auto x3906 = x3870 - x3905;
       // loc("zirgen/components/ram.cpp":97:9)
       if (x3906 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:97");
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3907 = args[2][99 * steps + ((cycle - 0) & mask)];
       assert(x3907 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
       auto x3908 = x3907 * x2;
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
       auto x3909 = args[2][100 * steps + ((cycle - 0) & mask)];
       assert(x3909 != Fp::invalid());
       // loc("zirgen/components/ram.cpp":99:17)
@@ -17401,7 +17401,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3914;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3915 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x3915 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17418,7 +17418,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3918;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3919 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x3919 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17435,7 +17435,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
           reg = x3922;
         }
       }
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("zirgen/components/bytes.cpp":97:16))
       auto x3923 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x3923 != Fp::invalid());
       // loc("zirgen/components/bytes.cpp":97:11)
@@ -17469,7 +17469,7 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
         if (x3930 != 0) throw std::runtime_error("eqz failed at: zirgen/components/ram.cpp:101");
       }
     }
-    // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
+    // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/PlonkFini/RamPlonkElement/Reg"("./zirgen/compiler/edsl/edsl.h":117:61))
     auto x3931 = args[2][100 * steps + ((cycle - 0) & mask)];
     assert(x3931 != Fp::invalid());
     // loc("zirgen/components/ram.cpp":104:18)
@@ -17511,190 +17511,190 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x8 != 0) {
     {
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3938 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x3938 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3939 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x3939 != Fp::invalid());
       host_args.at(0) = x3938;
       host_args.at(1) = x3939;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3940 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x3940 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3941 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x3941 != Fp::invalid());
       host_args.at(0) = x3940;
       host_args.at(1) = x3941;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3942 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x3942 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3943 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x3943 != Fp::invalid());
       host_args.at(0) = x3942;
       host_args.at(1) = x3943;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3944 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x3944 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3945 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x3945 != Fp::invalid());
       host_args.at(0) = x3944;
       host_args.at(1) = x3945;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3946 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x3946 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3947 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x3947 != Fp::invalid());
       host_args.at(0) = x3946;
       host_args.at(1) = x3947;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3948 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x3948 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3949 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x3949 != Fp::invalid());
       host_args.at(0) = x3948;
       host_args.at(1) = x3949;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3950 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x3950 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3951 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x3951 != Fp::invalid());
       host_args.at(0) = x3950;
       host_args.at(1) = x3951;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3952 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x3952 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3953 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x3953 != Fp::invalid());
       host_args.at(0) = x3952;
       host_args.at(1) = x3953;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3954 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x3954 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3955 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x3955 != Fp::invalid());
       host_args.at(0) = x3954;
       host_args.at(1) = x3955;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3956 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x3956 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3957 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x3957 != Fp::invalid());
       host_args.at(0) = x3956;
       host_args.at(1) = x3957;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3958 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x3958 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3959 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x3959 != Fp::invalid());
       host_args.at(0) = x3958;
       host_args.at(1) = x3959;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3960 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x3960 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3961 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x3961 != Fp::invalid());
       host_args.at(0) = x3960;
       host_args.at(1) = x3961;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3962 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x3962 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3963 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x3963 != Fp::invalid());
       host_args.at(0) = x3962;
       host_args.at(1) = x3963;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3964 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x3964 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3965 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x3965 != Fp::invalid());
       host_args.at(0) = x3964;
       host_args.at(1) = x3965;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3966 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x3966 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3967 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x3967 != Fp::invalid());
       host_args.at(0) = x3966;
       host_args.at(1) = x3967;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3968 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x3968 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3969 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x3969 != Fp::invalid());
       host_args.at(0) = x3968;
       host_args.at(1) = x3969;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3970 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x3970 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3971 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x3971 != Fp::invalid());
       host_args.at(0) = x3970;
       host_args.at(1) = x3971;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3972 = args[2][37 * steps + ((cycle - 0) & mask)];
       assert(x3972 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3973 = args[2][38 * steps + ((cycle - 0) & mask)];
       assert(x3973 != Fp::invalid());
       host_args.at(0) = x3972;
       host_args.at(1) = x3973;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3974 = args[2][39 * steps + ((cycle - 0) & mask)];
       assert(x3974 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3975 = args[2][40 * steps + ((cycle - 0) & mask)];
       assert(x3975 != Fp::invalid());
       host_args.at(0) = x3974;
       host_args.at(1) = x3975;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3976 = args[2][41 * steps + ((cycle - 0) & mask)];
       assert(x3976 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3977 = args[2][42 * steps + ((cycle - 0) & mask)];
       assert(x3977 != Fp::invalid());
       host_args.at(0) = x3976;
       host_args.at(1) = x3977;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3978 = args[2][43 * steps + ((cycle - 0) & mask)];
       assert(x3978 != Fp::invalid());
-      // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/bytes_setup(rv32im_v1::BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3979 = args[2][44 * steps + ((cycle - 0) & mask)];
       assert(x3979 != Fp::invalid());
       host_args.at(0) = x3978;
@@ -17704,154 +17704,154 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x13 != 0) {
     {
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3980 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x3980 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3981 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x3981 != Fp::invalid());
       host_args.at(0) = x3980;
       host_args.at(1) = x3981;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3982 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x3982 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3983 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x3983 != Fp::invalid());
       host_args.at(0) = x3982;
       host_args.at(1) = x3983;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3984 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x3984 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3985 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x3985 != Fp::invalid());
       host_args.at(0) = x3984;
       host_args.at(1) = x3985;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3986 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x3986 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3987 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x3987 != Fp::invalid());
       host_args.at(0) = x3986;
       host_args.at(1) = x3987;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3988 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x3988 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3989 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x3989 != Fp::invalid());
       host_args.at(0) = x3988;
       host_args.at(1) = x3989;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3990 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x3990 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3991 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x3991 != Fp::invalid());
       host_args.at(0) = x3990;
       host_args.at(1) = x3991;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3992 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x3992 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3993 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x3993 != Fp::invalid());
       host_args.at(0) = x3992;
       host_args.at(1) = x3993;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3994 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x3994 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3995 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x3995 != Fp::invalid());
       host_args.at(0) = x3994;
       host_args.at(1) = x3995;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3996 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x3996 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3997 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x3997 != Fp::invalid());
       host_args.at(0) = x3996;
       host_args.at(1) = x3997;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3998 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x3998 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x3999 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x3999 != Fp::invalid());
       host_args.at(0) = x3998;
       host_args.at(1) = x3999;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4000 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x4000 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4001 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x4001 != Fp::invalid());
       host_args.at(0) = x4000;
       host_args.at(1) = x4001;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4002 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x4002 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4003 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x4003 != Fp::invalid());
       host_args.at(0) = x4002;
       host_args.at(1) = x4003;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4004 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x4004 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4005 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x4005 != Fp::invalid());
       host_args.at(0) = x4004;
       host_args.at(1) = x4005;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4006 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x4006 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4007 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x4007 != Fp::invalid());
       host_args.at(0) = x4006;
       host_args.at(1) = x4007;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4008 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x4008 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4009 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x4009 != Fp::invalid());
       host_args.at(0) = x4008;
       host_args.at(1) = x4009;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4010 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x4010 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4011 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x4011 != Fp::invalid());
       host_args.at(0) = x4010;
       host_args.at(1) = x4011;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4012 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x4012 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_init(RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_init(rv32im_v1::RamInitStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4013 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x4013 != Fp::invalid());
       host_args.at(0) = x4012;
@@ -17861,154 +17861,154 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x9 != 0) {
     {
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4014 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x4014 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4015 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x4015 != Fp::invalid());
       host_args.at(0) = x4014;
       host_args.at(1) = x4015;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4016 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x4016 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4017 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x4017 != Fp::invalid());
       host_args.at(0) = x4016;
       host_args.at(1) = x4017;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4018 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x4018 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4019 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x4019 != Fp::invalid());
       host_args.at(0) = x4018;
       host_args.at(1) = x4019;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4020 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x4020 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4021 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x4021 != Fp::invalid());
       host_args.at(0) = x4020;
       host_args.at(1) = x4021;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4022 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x4022 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4023 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x4023 != Fp::invalid());
       host_args.at(0) = x4022;
       host_args.at(1) = x4023;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4024 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x4024 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4025 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x4025 != Fp::invalid());
       host_args.at(0) = x4024;
       host_args.at(1) = x4025;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4026 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x4026 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4027 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x4027 != Fp::invalid());
       host_args.at(0) = x4026;
       host_args.at(1) = x4027;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4028 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x4028 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4029 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x4029 != Fp::invalid());
       host_args.at(0) = x4028;
       host_args.at(1) = x4029;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4030 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x4030 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4031 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x4031 != Fp::invalid());
       host_args.at(0) = x4030;
       host_args.at(1) = x4031;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4032 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x4032 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4033 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x4033 != Fp::invalid());
       host_args.at(0) = x4032;
       host_args.at(1) = x4033;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4034 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x4034 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4035 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x4035 != Fp::invalid());
       host_args.at(0) = x4034;
       host_args.at(1) = x4035;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4036 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x4036 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4037 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x4037 != Fp::invalid());
       host_args.at(0) = x4036;
       host_args.at(1) = x4037;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4038 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x4038 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4039 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x4039 != Fp::invalid());
       host_args.at(0) = x4038;
       host_args.at(1) = x4039;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4040 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x4040 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4041 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x4041 != Fp::invalid());
       host_args.at(0) = x4040;
       host_args.at(1) = x4041;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4042 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x4042 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4043 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x4043 != Fp::invalid());
       host_args.at(0) = x4042;
       host_args.at(1) = x4043;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4044 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x4044 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4045 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x4045 != Fp::invalid());
       host_args.at(0) = x4044;
       host_args.at(1) = x4045;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4046 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x4046 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_load(RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_load(rv32im_v1::RamLoadStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4047 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x4047 != Fp::invalid());
       host_args.at(0) = x4046;
@@ -18018,154 +18018,154 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x10 != 0) {
     {
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4048 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x4048 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4049 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x4049 != Fp::invalid());
       host_args.at(0) = x4048;
       host_args.at(1) = x4049;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4050 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x4050 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4051 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x4051 != Fp::invalid());
       host_args.at(0) = x4050;
       host_args.at(1) = x4051;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4052 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x4052 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4053 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x4053 != Fp::invalid());
       host_args.at(0) = x4052;
       host_args.at(1) = x4053;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4054 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x4054 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4055 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x4055 != Fp::invalid());
       host_args.at(0) = x4054;
       host_args.at(1) = x4055;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4056 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x4056 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4057 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x4057 != Fp::invalid());
       host_args.at(0) = x4056;
       host_args.at(1) = x4057;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4058 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x4058 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4059 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x4059 != Fp::invalid());
       host_args.at(0) = x4058;
       host_args.at(1) = x4059;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4060 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x4060 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4061 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x4061 != Fp::invalid());
       host_args.at(0) = x4060;
       host_args.at(1) = x4061;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4062 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x4062 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4063 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x4063 != Fp::invalid());
       host_args.at(0) = x4062;
       host_args.at(1) = x4063;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4064 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x4064 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4065 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x4065 != Fp::invalid());
       host_args.at(0) = x4064;
       host_args.at(1) = x4065;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4066 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x4066 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4067 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x4067 != Fp::invalid());
       host_args.at(0) = x4066;
       host_args.at(1) = x4067;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4068 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x4068 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4069 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x4069 != Fp::invalid());
       host_args.at(0) = x4068;
       host_args.at(1) = x4069;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4070 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x4070 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4071 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x4071 != Fp::invalid());
       host_args.at(0) = x4070;
       host_args.at(1) = x4071;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4072 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x4072 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4073 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x4073 != Fp::invalid());
       host_args.at(0) = x4072;
       host_args.at(1) = x4073;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4074 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x4074 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4075 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x4075 != Fp::invalid());
       host_args.at(0) = x4074;
       host_args.at(1) = x4075;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4076 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x4076 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4077 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x4077 != Fp::invalid());
       host_args.at(0) = x4076;
       host_args.at(1) = x4077;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4078 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x4078 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4079 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x4079 != Fp::invalid());
       host_args.at(0) = x4078;
       host_args.at(1) = x4079;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4080 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x4080 != Fp::invalid());
-      // loc("Top/mux(Mux)/reset(ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/reset(rv32im_v1::ResetStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4081 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x4081 != Fp::invalid());
       host_args.at(0) = x4080;
@@ -18175,154 +18175,154 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x11 != 0) {
     {
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4082 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x4082 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4083 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x4083 != Fp::invalid());
       host_args.at(0) = x4082;
       host_args.at(1) = x4083;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4084 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x4084 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4085 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x4085 != Fp::invalid());
       host_args.at(0) = x4084;
       host_args.at(1) = x4085;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4086 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x4086 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4087 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x4087 != Fp::invalid());
       host_args.at(0) = x4086;
       host_args.at(1) = x4087;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4088 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x4088 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4089 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x4089 != Fp::invalid());
       host_args.at(0) = x4088;
       host_args.at(1) = x4089;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4090 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x4090 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4091 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x4091 != Fp::invalid());
       host_args.at(0) = x4090;
       host_args.at(1) = x4091;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4092 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x4092 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4093 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x4093 != Fp::invalid());
       host_args.at(0) = x4092;
       host_args.at(1) = x4093;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4094 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x4094 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4095 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x4095 != Fp::invalid());
       host_args.at(0) = x4094;
       host_args.at(1) = x4095;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4096 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x4096 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4097 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x4097 != Fp::invalid());
       host_args.at(0) = x4096;
       host_args.at(1) = x4097;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4098 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x4098 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4099 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x4099 != Fp::invalid());
       host_args.at(0) = x4098;
       host_args.at(1) = x4099;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4100 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x4100 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4101 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x4101 != Fp::invalid());
       host_args.at(0) = x4100;
       host_args.at(1) = x4101;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4102 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x4102 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4103 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x4103 != Fp::invalid());
       host_args.at(0) = x4102;
       host_args.at(1) = x4103;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4104 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x4104 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4105 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x4105 != Fp::invalid());
       host_args.at(0) = x4104;
       host_args.at(1) = x4105;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4106 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x4106 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4107 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x4107 != Fp::invalid());
       host_args.at(0) = x4106;
       host_args.at(1) = x4107;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4108 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x4108 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4109 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x4109 != Fp::invalid());
       host_args.at(0) = x4108;
       host_args.at(1) = x4109;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4110 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x4110 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4111 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x4111 != Fp::invalid());
       host_args.at(0) = x4110;
       host_args.at(1) = x4111;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4112 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x4112 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4113 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x4113 != Fp::invalid());
       host_args.at(0) = x4112;
       host_args.at(1) = x4113;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4114 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x4114 != Fp::invalid());
-      // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/body(rv32im_v1::BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4115 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x4115 != Fp::invalid());
       host_args.at(0) = x4114;
@@ -18332,154 +18332,154 @@ Fp step_verify_mem(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** 
   }
   if (x12 != 0) {
     {
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4116 = args[2][3 * steps + ((cycle - 0) & mask)];
       assert(x4116 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4117 = args[2][4 * steps + ((cycle - 0) & mask)];
       assert(x4117 != Fp::invalid());
       host_args.at(0) = x4116;
       host_args.at(1) = x4117;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4118 = args[2][5 * steps + ((cycle - 0) & mask)];
       assert(x4118 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4119 = args[2][6 * steps + ((cycle - 0) & mask)];
       assert(x4119 != Fp::invalid());
       host_args.at(0) = x4118;
       host_args.at(1) = x4119;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4120 = args[2][7 * steps + ((cycle - 0) & mask)];
       assert(x4120 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4121 = args[2][8 * steps + ((cycle - 0) & mask)];
       assert(x4121 != Fp::invalid());
       host_args.at(0) = x4120;
       host_args.at(1) = x4121;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4122 = args[2][9 * steps + ((cycle - 0) & mask)];
       assert(x4122 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4123 = args[2][10 * steps + ((cycle - 0) & mask)];
       assert(x4123 != Fp::invalid());
       host_args.at(0) = x4122;
       host_args.at(1) = x4123;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4124 = args[2][11 * steps + ((cycle - 0) & mask)];
       assert(x4124 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4125 = args[2][12 * steps + ((cycle - 0) & mask)];
       assert(x4125 != Fp::invalid());
       host_args.at(0) = x4124;
       host_args.at(1) = x4125;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4126 = args[2][13 * steps + ((cycle - 0) & mask)];
       assert(x4126 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4127 = args[2][14 * steps + ((cycle - 0) & mask)];
       assert(x4127 != Fp::invalid());
       host_args.at(0) = x4126;
       host_args.at(1) = x4127;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4128 = args[2][15 * steps + ((cycle - 0) & mask)];
       assert(x4128 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4129 = args[2][16 * steps + ((cycle - 0) & mask)];
       assert(x4129 != Fp::invalid());
       host_args.at(0) = x4128;
       host_args.at(1) = x4129;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4130 = args[2][17 * steps + ((cycle - 0) & mask)];
       assert(x4130 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4131 = args[2][18 * steps + ((cycle - 0) & mask)];
       assert(x4131 != Fp::invalid());
       host_args.at(0) = x4130;
       host_args.at(1) = x4131;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4132 = args[2][19 * steps + ((cycle - 0) & mask)];
       assert(x4132 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4133 = args[2][20 * steps + ((cycle - 0) & mask)];
       assert(x4133 != Fp::invalid());
       host_args.at(0) = x4132;
       host_args.at(1) = x4133;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4134 = args[2][21 * steps + ((cycle - 0) & mask)];
       assert(x4134 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4135 = args[2][22 * steps + ((cycle - 0) & mask)];
       assert(x4135 != Fp::invalid());
       host_args.at(0) = x4134;
       host_args.at(1) = x4135;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4136 = args[2][23 * steps + ((cycle - 0) & mask)];
       assert(x4136 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4137 = args[2][24 * steps + ((cycle - 0) & mask)];
       assert(x4137 != Fp::invalid());
       host_args.at(0) = x4136;
       host_args.at(1) = x4137;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4138 = args[2][25 * steps + ((cycle - 0) & mask)];
       assert(x4138 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4139 = args[2][26 * steps + ((cycle - 0) & mask)];
       assert(x4139 != Fp::invalid());
       host_args.at(0) = x4138;
       host_args.at(1) = x4139;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4140 = args[2][27 * steps + ((cycle - 0) & mask)];
       assert(x4140 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4141 = args[2][28 * steps + ((cycle - 0) & mask)];
       assert(x4141 != Fp::invalid());
       host_args.at(0) = x4140;
       host_args.at(1) = x4141;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4142 = args[2][29 * steps + ((cycle - 0) & mask)];
       assert(x4142 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4143 = args[2][30 * steps + ((cycle - 0) & mask)];
       assert(x4143 != Fp::invalid());
       host_args.at(0) = x4142;
       host_args.at(1) = x4143;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4144 = args[2][31 * steps + ((cycle - 0) & mask)];
       assert(x4144 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4145 = args[2][32 * steps + ((cycle - 0) & mask)];
       assert(x4145 != Fp::invalid());
       host_args.at(0) = x4144;
       host_args.at(1) = x4145;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4146 = args[2][33 * steps + ((cycle - 0) & mask)];
       assert(x4146 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4147 = args[2][34 * steps + ((cycle - 0) & mask)];
       assert(x4147 != Fp::invalid());
       host_args.at(0) = x4146;
       host_args.at(1) = x4147;
       host(ctx, "plonkWrite", "bytes", host_args.data(), 2, host_outs.data(), 0);
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4148 = args[2][35 * steps + ((cycle - 0) & mask)];
       assert(x4148 != Fp::invalid());
-      // loc("Top/mux(Mux)/ram_fini(RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
+      // loc("rv32im_v1::Top/mux(Mux)/ram_fini(rv32im_v1::RamFiniStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("./zirgen/compiler/edsl/component.h":154:27))
       auto x4149 = args[2][36 * steps + ((cycle - 0) & mask)];
       assert(x4149 != Fp::invalid());
       host_args.at(0) = x4148;
