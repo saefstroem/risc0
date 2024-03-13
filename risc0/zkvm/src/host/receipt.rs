@@ -741,7 +741,7 @@ pub struct VerifierContext {
 
 fn decode_system_state_from_io(
     io: layout::OutBuffer,
-    sys_state: &layout::SystemState,
+    sys_state: &layout::Rv32imV1SystemState,
 ) -> Result<SystemState, VerificationError> {
     let bytes: Vec<u8> = io
         .tree(sys_state.image_id)

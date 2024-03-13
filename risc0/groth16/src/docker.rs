@@ -28,9 +28,11 @@ use crate::{to_json, ProofJson, Seal};
 /// Compact a given seal of an `identity_p254` receipt into a Groth16 `Seal`.
 /// Requires running Docker on an x86 architecture.
 pub fn stark_to_snark(identity_p254_seal_bytes: &[u8]) -> Result<Seal> {
+    /*
     if !is_x86_architecture() {
         bail!("stark_to_snark is only supported on x86 architecture.")
     }
+    */
     if !is_docker_installed() {
         bail!("Please install docker first.")
     }
@@ -54,8 +56,8 @@ pub fn stark_to_snark(identity_p254_seal_bytes: &[u8]) -> Result<Seal> {
     let status = Command::new("docker")
         .arg("run")
         .arg("--rm")
-        .arg("-v")
-        .arg(&format!("{}:/mnt", work_dir.to_string_lossy()))
+        .arg("--platform=linux/amd64")
+        .arg(&format!("--volume={}:/mnt", work_dir.to_string_lossy()))
         .arg("risczero/risc0-groth16-prover:v2024-02-07.1")
         .status()?;
     if !status.success() {
@@ -78,6 +80,7 @@ fn is_docker_installed() -> bool {
         .unwrap_or(false)
 }
 
+#[allow(dead_code)]
 fn is_x86_architecture() -> bool {
     ARCH == "x86_64" || ARCH == "x86"
 }

@@ -86,6 +86,8 @@ fn bootstrap_verifying_key() {
         "IC1_X", "IC1_Y", "IC2_X", "IC2_Y", "IC3_X", "IC3_Y", "IC4_X", "IC4_Y",
     ];
 
+    // Extract the verifier key values from the Groth16Verifier.sol contract and put them in the
+    // generated Rust code.
     for (i, constant) in solidity_constants.into_iter().enumerate() {
         let re = Regex::new(&format!(r"uint256 constant\s+{}\s*=\s*(\d+);", constant)).unwrap();
         if let Some(caps) = re.captures(&solidity_code) {
