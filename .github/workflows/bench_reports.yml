@@ -1,14 +1,14 @@
-name: Benchmark Datasheet
+name: Benchmark Reports
 
 on:
-  push:
-    branches: [ main, release-* ]
-    # Only run benchmarks on changes to following paths:
-    paths:
-      - 'risc0/**'
-      - '.github/workflows/bench_datasheet.yml'
+  schedule:
+    - cron: '0 7 * * *' # Nightly (ish) Pacific
 
   workflow_dispatch:
+
+  # uncomment for only for testing changes to this workflow while in a PR
+  # pull_request:
+  #   branches: [ main ]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -23,11 +23,6 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   RISC0_BUILD_LOCKED: 1
   RISC0_TOOLCHAIN_VERSION: v2024-04-22.0
-
-defaults:
-  run:
-    # This ensures `-eo pipefail`, which is important for catching errors
-    shell: bash
 
 jobs:
   bench:
@@ -49,6 +44,7 @@ jobs:
 
     env:
       FEATURE: ${{ matrix.feature }}
+      EXTRA: ""
 
     steps:
       - uses: actions/checkout@v4
@@ -58,37 +54,66 @@ jobs:
       - uses: ./.github/actions/sccache
         with:
           key: ${{ matrix.os }}-${{ matrix.feature }}
+
       - run: cargo run --bin cargo-risczero --no-default-features -- risczero install --version $RISC0_TOOLCHAIN_VERSION
-      - run: cargo run --release -F $FEATURE --example loop -- --json | tee ${{ matrix.os }}-${{ matrix.device }}.json
-        working-directory: risc0/zkvm
+
       - name: Save commit hash to a file
-        run: echo "${{ github.sha }}" > COMMIT_HASH.txt
-        working-directory: risc0/zkvm
-      - name: Upload benchmark result
-        uses: actions/upload-artifact@v2
+        run: |
+          echo "${{ github.sha }}" > benchmarks/COMMIT_HASH.txt
+          echo "${{ github.sha }}" > risc0/zkvm/COMMIT_HASH.txt
+
+      - run: cargo run --release -F $FEATURE -- --out ${{ matrix.os }}-${{ matrix.device }}.csv
+        working-directory: benchmarks
+
+      - name: Upload benchmarks
+        uses: actions/upload-artifact@v4
         with:
-          name: benchmark-result
+          name: benchmark-result-${{ matrix.os }}-${{ matrix.device }}
           path: |
-            risc0/zkvm/${{ matrix.os }}-${{ matrix.device }}.json
+            benchmarks/COMMIT_HASH.txt
+            benchmarks/${{ matrix.os }}-${{ matrix.device }}.json
+
+      - if: matrix.feature == 'cuda'
+        run: echo "EXTRA=-F docker" >> $GITHUB_ENV
+
+      - name: Generate datasheet
+        run: cargo run --release -F $FEATURE $EXTRA --example datasheet -- --json risc0/zkvm/${{ matrix.os }}-${{ matrix.device }}.json
+
+      - name: Upload datasheet
+        uses: actions/upload-artifact@v4
+        with:
+          name: datasheet-result-${{ matrix.os }}-${{ matrix.device }}
+          path: |
             risc0/zkvm/COMMIT_HASH.txt
+            risc0/zkvm/${{ matrix.os }}-${{ matrix.device }}.json
 
   publish:
     needs: bench
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout gh-pages repository branch ${{ github.ref_name }}
+      - name: Checkout gh-pages repository branch ${{ github.base_ref || github.ref_name }}
         uses: actions/checkout@v4
         with:
           repository: risc0/ghpages
           token: ${{ secrets.BENCHMARK_TOKEN }}
-          ref: ${{ github.ref_name }}
-      - name: Download benchmark
-        uses: actions/download-artifact@v2
+          ref: ${{ github.base_ref || github.ref_name }}
+
+      - name: Download benchmarks
+        uses: actions/download-artifact@v4
         with:
-          name: benchmark-result
+          pattern: benchmark-result-*
+          path: dev/benchmarks
+          merge-multiple: true
+
+      - name: Download datasheet
+        uses: actions/download-artifact@v4
+        with:
+          pattern: datasheet-result-*
           path: dev/datasheet
-      - name: Push benchmark result
+          merge-multiple: true
+
+      - name: Push results
         run: |
           git config user.name "r0-ghbot"
           git config user.email "r0-ghbot@users.noreply.github.com"
