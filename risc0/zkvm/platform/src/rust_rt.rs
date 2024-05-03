@@ -37,7 +37,7 @@ pub fn panic_fault(panic_info: &PanicInfo) -> ! {
     unsafe { sys_panic(msg.as_ptr(), msg.len()) }
 }
 
-#[cfg(feature = "entrypoint")]
+cfg_entrypoint! {
 mod entrypoint {
     use crate::syscall::sys_halt;
 
@@ -78,6 +78,7 @@ mod entrypoint {
     "#,
         sym STACK_TOP
     );
+}
 }
 
 struct BumpPointerAlloc;

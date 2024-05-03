@@ -325,12 +325,13 @@ pub extern "C" fn sys_input(index: u32) -> u32 {
     }
 }
 
+cfg_export_syscalls! {
 /// # Safety
 ///
 /// `out_state`, `in_state`, `block1_ptr`, and `block2_ptr` must be aligned and
 /// dereferenceable.
 #[inline(always)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[no_mangle]
 pub unsafe extern "C" fn sys_sha_compress(
     out_state: *mut [u32; DIGEST_WORDS],
     in_state: *const [u32; DIGEST_WORDS],
@@ -345,6 +346,7 @@ pub unsafe extern "C" fn sys_sha_compress(
         block2_ptr as u32,
         1,
     );
+}
 }
 
 /// # Safety
