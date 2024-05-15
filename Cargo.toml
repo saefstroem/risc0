@@ -24,7 +24,7 @@ members = [
   "website/doc-test/main",
   "xtask",
 ]
-exclude = ["tools/crates-validator"]
+exclude = ["tools/crates-validator", "templates"]
 
 [workspace.package]
 version = "1.0.0-rc.4"
