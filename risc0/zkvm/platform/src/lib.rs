@@ -15,6 +15,7 @@
 #![doc = include_str!("../README.md")]
 #![no_std]
 #![allow(unused_variables)]
+#![cfg_attr(docsrs, feature(doc_auto_cfg))]
 
 pub mod memory;
 #[macro_use]

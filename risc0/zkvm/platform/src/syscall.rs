@@ -276,8 +276,9 @@ fn ecall_4(t0: u32, a0: u32, a1: u32, a2: u32, a3: u32, a4: u32) {
 // through the final value of the program counter (pc) on halt where there is more than one
 // location in the program where `sys_halt` is called. As long as the halt instruction only exists
 // in one place within the program, the pc will always be the same invariant with input.
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 #[inline(never)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
 pub extern "C" fn sys_halt(user_exit: u8, out_state: *const [u32; DIGEST_WORDS]) -> ! {
     ecall_1(
         ecall::HALT,
@@ -294,8 +295,9 @@ pub extern "C" fn sys_halt(user_exit: u8, out_state: *const [u32; DIGEST_WORDS])
 // through the final value of the program counter (pc) on pause where there is more than one
 // location in the program where `sys_pause` is called. As long as the pause instruction only exists
 // in one place within the program, the pc will always be the same invariant with input.
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 #[inline(never)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
 pub unsafe extern "C" fn sys_pause(user_exit: u8, out_state: *const [u32; DIGEST_WORDS]) {
     ecall_1(
         ecall::HALT,
@@ -304,7 +306,8 @@ pub unsafe extern "C" fn sys_pause(user_exit: u8, out_state: *const [u32; DIGEST
     );
 }
 
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub extern "C" fn sys_input(index: u32) -> u32 {
     let t0 = ecall::INPUT;
     let index = index & 0x07;
@@ -329,8 +332,9 @@ pub extern "C" fn sys_input(index: u32) -> u32 {
 ///
 /// `out_state`, `in_state`, `block1_ptr`, and `block2_ptr` must be aligned and
 /// dereferenceable.
+#[cfg(feature = "export-syscalls")]
 #[inline(always)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[no_mangle]
 pub unsafe extern "C" fn sys_sha_compress(
     out_state: *mut [u32; DIGEST_WORDS],
     in_state: *const [u32; DIGEST_WORDS],
@@ -350,8 +354,9 @@ pub unsafe extern "C" fn sys_sha_compress(
 /// # Safety
 ///
 /// `out_state`, `in_state`, and `buf` must be aligned and dereferenceable.
+#[cfg(feature = "export-syscalls")]
 #[inline(always)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[no_mangle]
 pub unsafe extern "C" fn sys_sha_buffer(
     out_state: *mut [u32; DIGEST_WORDS],
     in_state: *const [u32; DIGEST_WORDS],
@@ -380,8 +385,9 @@ pub unsafe extern "C" fn sys_sha_buffer(
 /// # Safety
 ///
 /// `result`, `x`, `y`, and `modulus` must be aligned and dereferenceable.
+#[cfg(feature = "export-syscalls")]
 #[inline(always)]
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[no_mangle]
 pub unsafe extern "C" fn sys_bigint(
     result: *mut [u32; bigint::WIDTH_WORDS],
     op: u32,
@@ -402,7 +408,8 @@ pub unsafe extern "C" fn sys_bigint(
 /// # Safety
 ///
 /// `recv_buf` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_rand(recv_buf: *mut u32, words: usize) {
     syscall_0(nr::SYS_RANDOM, recv_buf, words);
 }
@@ -410,7 +417,8 @@ pub unsafe extern "C" fn sys_rand(recv_buf: *mut u32, words: usize) {
 /// # Safety
 ///
 /// `msg_ptr` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_panic(msg_ptr: *const u8, len: usize) -> ! {
     syscall_2(nr::SYS_PANIC, null_mut(), 0, msg_ptr as u32, len as u32);
 
@@ -423,12 +431,14 @@ pub unsafe extern "C" fn sys_panic(msg_ptr: *const u8, len: usize) -> ! {
 /// # Safety
 ///
 /// `msg_ptr` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_log(msg_ptr: *const u8, len: usize) {
     syscall_2(nr::SYS_LOG, null_mut(), 0, msg_ptr as u32, len as u32);
 }
 
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub extern "C" fn sys_cycle_count() -> u64 {
     let Return(hi, lo) = unsafe { syscall_0(nr::SYS_CYCLE_COUNT, null_mut(), 0) };
     ((hi as u64) << 32) + lo as u64
@@ -446,7 +456,8 @@ pub extern "C" fn sys_cycle_count() -> u64 {
 /// # Safety
 ///
 /// `recv_ptr` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_read(fd: u32, recv_ptr: *mut u8, nread: usize) -> usize {
     // The SYS_READ system call can do a given number of word-aligned reads
     // efficiently. The semantics of the system call are:
@@ -531,7 +542,8 @@ pub unsafe extern "C" fn sys_read(fd: u32, recv_ptr: *mut u8, nread: usize) -> u
 ///
 /// `recv_ptr' must be a word-aligned pointer and point to a region of
 /// `nwords' size.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_read_words(fd: u32, recv_ptr: *mut u32, nwords: usize) -> usize {
     sys_read_internal(fd, recv_ptr, nwords, nwords * WORD_SIZE).0
 }
@@ -575,7 +587,8 @@ fn sys_read_internal(fd: u32, recv_ptr: *mut u32, nwords: usize, nbytes: usize) 
 /// # Safety
 ///
 /// `write_ptr` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_write(fd: u32, write_ptr: *const u8, nbytes: usize) {
     let mut nbytes_remain = nbytes;
     let mut write_ptr = write_ptr;
@@ -611,7 +624,8 @@ pub unsafe extern "C" fn sys_write(fd: u32, write_ptr: *const u8, nbytes: usize)
 /// # Safety
 ///
 /// `out_words` and `varname` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_getenv(
     out_words: *mut u32,
     out_nwords: usize,
@@ -636,7 +650,8 @@ pub unsafe extern "C" fn sys_getenv(
 ///
 /// NOTE: Repeated calls to sys_argc are not guaranteed to result in the same
 /// data being returned. Returned data is entirely in the control of the host.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub extern "C" fn sys_argc() -> usize {
     let Return(a0, _) = unsafe { syscall_0(nr::SYS_ARGC, null_mut(), 0) };
     a0 as usize
@@ -659,7 +674,8 @@ pub extern "C" fn sys_argc() -> usize {
 /// # Safety
 ///
 /// `out_words` must be aligned and dereferenceable.
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub unsafe extern "C" fn sys_argv(
     out_words: *mut u32,
     out_nwords: usize,
@@ -669,7 +685,8 @@ pub unsafe extern "C" fn sys_argv(
     a0 as usize
 }
 
-#[cfg_attr(feature = "export-syscalls", no_mangle)]
+#[cfg(feature = "export-syscalls")]
+#[no_mangle]
 pub extern "C" fn sys_alloc_words(nwords: usize) -> *mut u32 {
     unsafe { sys_alloc_aligned(WORD_SIZE * nwords, WORD_SIZE) as *mut u32 }
 }
