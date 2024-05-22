@@ -91,7 +91,7 @@ impl SegmentReceipt {
                 .find(|x| x == control_id)
                 .map(|_| ())
                 .ok_or(VerificationError::ControlVerificationError {
-                    control_id: *control_id,
+                    control_id: *control_id,  // TODO: This is the one with the mismatch
                 })
         };
         let suite = ctx
