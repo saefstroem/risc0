@@ -15,6 +15,8 @@
 //! Groth16 prover and verifier integration for RISC Zero.
 
 #![cfg_attr(not(feature = "std"), no_std)]
+#![cfg_attr(docsrs, allow(dead_code, unused_variables))]
+#![cfg_attr(docsrs, feature(doc_auto_cfg))]
 
 extern crate alloc;
 

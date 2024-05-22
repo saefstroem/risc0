@@ -32,6 +32,11 @@ tracing = { version = "0.1", optional = true }
 serde_json = { version = "1.0" }
 test-log = { version = "0.2", default-features = false, features = ["trace"] }
 
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+rustc-args = ["--cfg", "docsrs"]
+
 [features]
 default = ["std"]
 docker = ["prove"]
