@@ -49,6 +49,9 @@ use crate::{
 /// which means that the normal NTT evaluation domain does not reveal anything
 /// about the original datapoints (i.e. is zero knowledge) so long as the number
 /// of queries is less than the randomized padding.
+
+// TODO: This documentation needs an update (and potentially the code too)
+
 pub struct PolyGroup<H: Hal> {
     pub coeffs: H::Buffer<H::Elem>,
     pub count: usize,
