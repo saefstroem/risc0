@@ -296,6 +296,8 @@ mod tests {
         );
     }
 
+    // TODO: Do we want to test over randomizing ZK_CYCLES too? Not sure it's necessary
+
     fn randomize_sizes() -> (usize, usize, usize) {
         // Chooses random values of `rows`, `cols`, and `queries` such that:
         // `rows` is a power of 2
