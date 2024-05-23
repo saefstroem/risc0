@@ -82,6 +82,7 @@ where
             for i in 0..ZK_CYCLES {
                 let cycle = steps - ZK_CYCLES + i;
                 // Set data to random for the ZK_CYCLES
+                // TODO: So if this _isn't_ parallel, how does the data noise get added?
                 for j in 0..CIRCUIT.data_size() {
                     data[j * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
@@ -111,6 +112,7 @@ where
             &data,
         );
 
+        // TODO: Randomize the final data columns here??
         // Zero out 'invalid' entries in data and output.
         nvtx::range_push!("zeroize");
         hal.eltwise_zeroize_elem(&data);
