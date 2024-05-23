@@ -139,6 +139,7 @@ where
             // Add random noise to end of accum
             nvtx::range_push!("noise");
             let mut rng = thread_rng();
+            // TODO: This randomizes accum ... shouldn't we also randomize data & mix?
             for i in steps - ZK_CYCLES..steps {
                 for j in 0..CIRCUIT.accum_size() {
                     accum[j * steps + i] = BabyBearElem::random(&mut rng);
