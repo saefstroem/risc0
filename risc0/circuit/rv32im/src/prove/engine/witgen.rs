@@ -111,6 +111,28 @@ where
             }
 
             nvtx::range_pop!();
+        } else {
+            // TODO: Mask size should ideally be plumbed through the circuit, not defined again here
+            const MASK_SIZE: usize = 4;
+            // TODO: Is randomizing here appropriate?
+            // for cycle in 0..steps - ZK_CYCLES {
+            //     for j in 0..MASK_SIZE {
+            //         let col = CIRCUIT.data_size() - MASK_SIZE + j;
+            //         data[col * steps + cycle] = BabyBearElem::random(&mut rng);
+            //     }
+            // }
+            // TODO: This version is shortened to just one change to see what happens
+            tracing::warn!("steps: {}", steps);
+            tracing::warn!("data length: {}", data.len()); // Why is this 16384 (= steps) * 223 ?? Shouldn't it be * 227???
+                                                        // seem to be fine at 1k, broken at 2k, very broken somewhere above 10k?
+                                                        // Is this consistently ok at 1593-, broken at 1594+?
+            for cycle in 0..steps - QUERIES {  // TODO ZK_CYCLES not queries
+                for j in 0..MASK_SIZE {
+                    // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
+                    let col = CIRCUIT.data_size() - MASK_SIZE + j;
+                    data[col * steps + cycle] = BabyBearElem::ZERO;
+                }
+            }   
         }
 
         nvtx::range_push!("copy(ctrl)");
