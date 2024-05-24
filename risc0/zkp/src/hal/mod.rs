@@ -225,7 +225,7 @@ mod testutil {
     };
 
     const COUNTS: [usize; 7] = [1, 9, 12, 1001, 1024, 1025, 1024 * 1024];
-    const DATA_SIZE: usize = 223;
+    const DATA_SIZE: usize = 223 + 4;  // TODO
 
     fn generate_elem<H: Hal, R: RngCore>(hal: &H, rng: &mut R, size: usize) -> H::Buffer<H::Elem> {
         let values: Vec<H::Elem> = (0..size).map(|_| H::Elem::random(rng)).collect();
@@ -261,7 +261,7 @@ mod testutil {
         let hal = DualHal::new(Rc::new(hal_cpu), Rc::new(hal_gpu));
 
         let eval_size = 865;
-        let poly_count = 223;
+        let poly_count = 223 + 4;  // TODO
         let steps = 1 << 16;
         let coeffs_size = steps * poly_count;
 
