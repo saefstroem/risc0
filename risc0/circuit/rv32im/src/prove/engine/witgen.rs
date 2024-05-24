@@ -102,8 +102,7 @@ where
             tracing::warn!("data length: {}", data.len()); // Why is this 16384 (= steps) * 223 ?? Shouldn't it be * 227???
                                                            // seem to be fine at 1k, broken at 2k, very broken somewhere above 10k?
                                                            // Is this consistently ok at 1593-, broken at 1594+?
-            for cycle in 0..1594 {
-                // steps - ZK_CYCLES {
+            for cycle in 0..steps - ZK_CYCLES {
                 for j in 0..MASK_SIZE {
                     // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
                     let col = CIRCUIT.data_size() - MASK_SIZE + j;
