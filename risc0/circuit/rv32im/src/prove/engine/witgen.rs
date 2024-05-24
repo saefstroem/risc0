@@ -87,7 +87,7 @@ where
                 // Set data to random for the ZK_CYCLES
                 // TODO: So if this _isn't_ parallel, how does the data noise get added?
                 for j in 0..CIRCUIT.data_size() {
-                    data[j * steps + cycle] = BabyBearElem::random(&mut rng);
+                    data[j * steps + cycle] = BabyBearElem::random(&mut rng).valid_or_zero();
                 }
             }
             // TODO: Mask size should ideally be plumbed through the circuit, not defined again here
@@ -108,7 +108,7 @@ where
                 for j in 0..MASK_SIZE {
                     // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
                     let col = CIRCUIT.data_size() - MASK_SIZE + j;
-                    data[col * steps + cycle] = BabyBearElem::random(&mut rng);
+                    data[col * steps + cycle] = BabyBearElem::random(&mut rng).valid_or_zero();
                 }
             }
 
