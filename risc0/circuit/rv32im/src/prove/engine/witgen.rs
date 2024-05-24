@@ -60,6 +60,7 @@ where
         nvtx::range_push!("load");
         let mut loader = Loader::new(steps, CIRCUIT.ctrl_size());
         let last_cycle = loader.load();
+        tracing::warn!("last_cycle: {}", last_cycle);
         nvtx::range_pop!();
         tracing::debug!("last_cycle: {last_cycle}");
 
@@ -87,6 +88,27 @@ where
                     data[j * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
             }
+            // TODO: Mask size should ideally be plumbed through the circuit, not defined again here
+            const MASK_SIZE: usize = 4;
+            // TODO: Is randomizing here appropriate?
+            // for cycle in 0..steps - ZK_CYCLES {
+            //     for j in 0..MASK_SIZE {
+            //         let col = CIRCUIT.data_size() - MASK_SIZE + j;
+            //         data[col * steps + cycle] = BabyBearElem::random(&mut rng);
+            //     }
+            // }
+            // TODO: This version is shortened to just one change to see what happens
+            tracing::warn!("steps: {}", steps);
+            tracing::warn!("data length: {}", data.len());
+            // seem to be fine at 1k, broken at 2k, very broken somewhere above 10k?
+            // Is this consistently ok at 1593-, broken at 1594+?
+            for cycle in 0..1594 {  // steps - ZK_CYCLES {
+                for j in 0..MASK_SIZE { // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
+                    let col = CIRCUIT.data_size() - MASK_SIZE + j;
+                    data[col * steps + cycle] = BabyBearElem::random(&mut rng);
+                }
+            }
+
             nvtx::range_pop!();
         }
 
