@@ -20,8 +20,7 @@ use risc0_zkp::{
         Elem as _,
     },
     hal::Hal,
-    QUERIES,
-    ZK_CYCLES,
+    QUERIES, ZK_CYCLES,
 };
 
 use super::machine::MachineContext;
@@ -81,7 +80,8 @@ where
         if mode == StepMode::Parallel {
             nvtx::range_push!("noise");
             let mut rng = thread_rng();
-            for i in 0..QUERIES {  // TODO: Should be ZK_CYCLES  // n.b. using just queries to try to isolate the broken part
+            for i in 0..QUERIES {
+                // TODO: Should be ZK_CYCLES  // n.b. using just queries to try to isolate the broken part
                 let cycle = steps - QUERIES + i;
                 // Set data to random for the ZK_CYCLES
                 // TODO: So if this _isn't_ parallel, how does the data noise get added?
