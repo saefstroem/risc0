@@ -105,7 +105,7 @@ where
                     let col = CIRCUIT.data_size() - MASK_SIZE + j;
                     data[col * steps + cycle] = BabyBearElem::ZERO;
                 }
-            }   
+            }
         }
 
         nvtx::range_push!("copy(ctrl)");
