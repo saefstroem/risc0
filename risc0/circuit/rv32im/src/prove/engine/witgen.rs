@@ -77,34 +77,19 @@ where
             nvtx::range_pop!();
         }
 
+        const MASK_SIZE: usize = 4;
         if mode == StepMode::Parallel {
             nvtx::range_push!("noise");
             let mut rng = thread_rng();
             for i in 0..ZK_CYCLES {
                 let cycle = steps - ZK_CYCLES + i;
                 // Set data to random for the ZK_CYCLES
-                // TODO: So if this _isn't_ parallel, how does the data noise get added?
                 for j in 0..CIRCUIT.data_size() {
                     data[j * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
             }
-            // TODO: Mask size should ideally be plumbed through the circuit, not defined again here
-            const MASK_SIZE: usize = 4;
-            // TODO: Is randomizing here appropriate?
-            // for cycle in 0..steps - ZK_CYCLES {
-            //     for j in 0..MASK_SIZE {
-            //         let col = CIRCUIT.data_size() - MASK_SIZE + j;
-            //         data[col * steps + cycle] = BabyBearElem::random(&mut rng);
-            //     }
-            // }
-            // TODO: This version is shortened to just one change to see what happens
-            tracing::warn!("steps: {}", steps);
-            tracing::warn!("data length: {}", data.len()); // Why is this 16384 (= steps) * 223 ?? Shouldn't it be * 227???
-                                                           // seem to be fine at 1k, broken at 2k, very broken somewhere above 10k?
-                                                           // Is this consistently ok at 1593-, broken at 1594+?
             for cycle in 0..steps - ZK_CYCLES {
                 for j in 0..MASK_SIZE {
-                    // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
                     let col = CIRCUIT.data_size() - MASK_SIZE + j;
                     data[col * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
@@ -112,23 +97,11 @@ where
 
             nvtx::range_pop!();
         } else {
-            // TODO: Mask size should ideally be plumbed through the circuit, not defined again here
-            const MASK_SIZE: usize = 4;
-            // TODO: Is randomizing here appropriate?
-            // for cycle in 0..steps - ZK_CYCLES {
-            //     for j in 0..MASK_SIZE {
-            //         let col = CIRCUIT.data_size() - MASK_SIZE + j;
-            //         data[col * steps + cycle] = BabyBearElem::random(&mut rng);
-            //     }
-            // }
-            // TODO: This version is shortened to just one change to see what happens
-            tracing::warn!("steps: {}", steps);
-            tracing::warn!("data length: {}", data.len()); // Why is this 16384 (= steps) * 223 ?? Shouldn't it be * 227???
-                                                        // seem to be fine at 1k, broken at 2k, very broken somewhere above 10k?
-                                                        // Is this consistently ok at 1593-, broken at 1594+?
-            for cycle in 0..steps - QUERIES {  // TODO ZK_CYCLES not queries
+            // In the non-parallel case, we are worried about testing not production randomization
+            // Therefore, set the mask random values consistently to 0
+            // (the tests don't cover the ZK_CYCLES area and so we can skip that portion)
+            for cycle in 0..steps - ZK_CYCLES {
                 for j in 0..MASK_SIZE {
-                    // TODO: Going up to MASK_SIZE on cycle up to 51 seems ok
                     let col = CIRCUIT.data_size() - MASK_SIZE + j;
                     data[col * steps + cycle] = BabyBearElem::ZERO;
                 }
