@@ -17,7 +17,7 @@
 #include "extern.h"
 
 void step_verify_accum(
-    device void* ctx, uint32_t steps, uint32_t cycle, device Fp* arg0, device Fp* arg1, device Fp* arg2, device Fp* arg3, device Fp* arg4) {
+    device void* ctx, uint32_t steps, uint32_t cycle, device Fp* arg0, device Fp* arg1, device Fp* arg2, device Fp* arg3, device Fp* arg4, device Fp* arg5) {
   uint32_t mask = steps - 1;
   Fp extern_args[96];
   Fp extern_outs[32];
