@@ -4528,8 +4528,8 @@ pub const TAPSET: &TapSet = &TapSet::<'static> {
     combo_begin: &[0, 1, 3, 9, 15, 20],
     group_begin: &[0, 16, 39, 643],
     combos_count: 5,
-    reg_count: 163,
+    reg_count: 163,  // TODO: Does _this_ need to get updated back in WIP?
     tot_combo_backs: 20,
     // TODO: Generate these instead of hardcoding:
-    group_names: &["accum", "code", "data"],
+    group_names: &["accum", "code", "data", "noise"],   // TODO this needs to get updated back in WIP
 };

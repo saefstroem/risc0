@@ -28,6 +28,7 @@ use crate::{hal::cpu::SyncSlice, taps::TapSet};
 pub const REGISTER_GROUP_ACCUM: usize = 0;
 pub const REGISTER_GROUP_CODE: usize = 1;
 pub const REGISTER_GROUP_DATA: usize = 2;
+pub const REGISTER_GROUP_NOISE: usize = 3;
 
 #[derive(Clone, Copy)]
 pub struct MixState<EE: ExtElem> {
@@ -126,6 +127,10 @@ pub trait TapsProvider {
 
     fn data_size(&self) -> usize {
         self.get_taps().group_size(REGISTER_GROUP_DATA)
+    }
+
+    fn noise_size(&self) -> usize {
+        self.get_taps().group_size(REGISTER_GROUP_NOISE)
     }
 }
 

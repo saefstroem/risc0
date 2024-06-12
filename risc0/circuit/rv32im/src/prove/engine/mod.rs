@@ -37,7 +37,7 @@ use self::witgen::WitnessGenerator;
 use super::{hal::CircuitWitnessGenerator, segment::Segment, Seal, SegmentProver};
 use crate::{
     prove::hal::StepMode, CircuitImpl, CIRCUIT, REGISTER_GROUP_ACCUM, REGISTER_GROUP_CTRL,
-    REGISTER_GROUP_DATA,
+    REGISTER_GROUP_DATA, REGISTER_GROUP_NOISE,
 };
 
 pub(crate) struct SegmentProverImpl<H, C>
@@ -120,6 +120,7 @@ where
 
             prover.commit_group(REGISTER_GROUP_CTRL, &witgen.ctrl);
             prover.commit_group(REGISTER_GROUP_DATA, &witgen.data);
+            prover.commit_group(REGISTER_GROUP_NOISE, &witgen.noise);
 
             // Make the mixing values
             nvtx::range_push!("mix");

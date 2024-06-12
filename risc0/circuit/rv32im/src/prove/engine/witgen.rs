@@ -41,6 +41,7 @@ where
     pub ctrl: H::Buffer<H::Elem>,
     pub data: H::Buffer<H::Elem>,
     pub io: H::Buffer<H::Elem>,
+    pub noise: H::Buffer<H::Elem>,
 }
 
 impl<H> WitnessGenerator<H>
@@ -67,6 +68,10 @@ where
         let mut data = vec![BabyBearElem::INVALID; steps * CIRCUIT.data_size()];
         nvtx::range_pop!();
 
+        nvtx::range_push!("alloc(noise)");
+        let mut noise = vec![BabyBearElem::INVALID; steps * CIRCUIT.noise_size()];
+        nvtx::range_pop!();
+
         let machine = MachineContext::new(trace);
         if mode != StepMode::SeqForward {
             nvtx::range_push!("inject_exec_backs");
@@ -86,6 +91,10 @@ where
                     data[j * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
             }
+            // Randomize everything in the noise columns
+            for i in 0..steps * CIRCUIT.noise_size() {
+                noise[i] = BabyBearElem::random(&mut rng);
+            }
             nvtx::range_pop!();
         }
 
@@ -95,6 +104,10 @@ where
 
         nvtx::range_push!("copy(data)");
         let data = hal.copy_from_elem("data", &data);
+        nvtx::range_pop!();
+
+        nvtx::range_push!("copy(noise)");
+        let noise = hal.copy_from_elem("noise", &noise);
         nvtx::range_pop!();
 
         nvtx::range_push!("copy(io)");
@@ -122,6 +135,7 @@ where
             ctrl,
             data,
             io,
+            noise,
         }
     }
 }

@@ -107,6 +107,8 @@ impl<'a> TapSet<'a> {
     }
 
     pub fn group_size(&self, group_id: usize) -> usize {
+        // TODO: This assert is pretty silly here, just doing temporary sanity check
+        assert_eq!(["accum", "code", "data", "noise"], self.group_names);
         let idx = self.group_begin[group_id + 1] - 1;
         let last = self.taps[idx].offset as usize;
         last + 1

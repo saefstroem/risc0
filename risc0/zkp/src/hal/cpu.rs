@@ -448,6 +448,11 @@ impl<F: Field> Hal for CpuHal<F> {
             .par_chunks_exact_mut(count)
             .enumerate()
             .for_each(|(id, out_chunk): (usize, &mut [Self::ExtElem])| {
+                // TODO: Just sanity checks, delete long term
+                // assert!(id < 4);  // nope...
+                // if id == 3 {
+                //     assert_eq!(input_size, 0);
+                // }
                 for i in 0..input_size {
                     if combos[i] != id as u32 {
                         continue;

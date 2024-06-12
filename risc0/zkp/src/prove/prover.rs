@@ -280,6 +280,7 @@ impl<'a, H: Hal> Prover<'a, H> {
             let mut cur_mix = H::ExtElem::ONE;
 
             for (id, pg) in self.groups.iter().enumerate() {
+                tracing::debug!("group id: {id}");  // TODO: Get better logging between here and mix_poly_coeffs
                 let pg = pg.as_ref().unwrap();
 
                 let group_size = self.taps.group_size(id);
