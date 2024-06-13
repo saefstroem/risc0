@@ -289,6 +289,7 @@ impl<'a, H: Hal> Prover<'a, H> {
                     which.push(reg.combo_id() as u32);
                 }
                 let which = self.hal.copy_from_u32("which", which.as_slice());
+                // tracing::debug!("Passing combos {combos_log:?}");  // TODO
                 self.hal.mix_poly_coeffs(
                     &combos,
                     &cur_mix,

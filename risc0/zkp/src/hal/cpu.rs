@@ -440,6 +440,7 @@ impl<F: Field> Hal for CpuHal<F> {
 
         // Make everything into plain slices so we can pass them between threads.
         let combos: &[u32] = &combos.as_slice();
+        tracing::debug!("Passed combos {combos:?}");  // TODO
         let mix_pows: &[Self::ExtElem] = mix_pows.as_slice();
         let input: &[Self::Elem] = &input.as_slice();
 

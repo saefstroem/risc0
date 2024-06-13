@@ -6505,11 +6505,11 @@ pub const TAPSET: &TapSet = &TapSet::<'static> {
     ],
     combo_taps: &[
         0, 0, 1, 0, 1, 2, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 7, 15, 16, 0, 1, 2, 3, 4, 5, 68, 0, 1, 2,
-        3, 4, 68, 0, 1, 2, 5, 0, 1, 2, 7, 0, 2, 7, 0, 2, 7, 15, 16,
+        3, 4, 68, 0, 1, 2, 5, 0, 1, 2, 7, 0, 2, 7, 0, 2, 7, 15, 16,      147,
     ],
-    combo_begin: &[0, 1, 3, 6, 10, 19, 26, 32, 36, 40, 43, 48, 48],  // TODO: I added combo, should I have?
+    combo_begin: &[0, 1, 3, 6, 10, 19, 26, 32, 36, 40, 43, 48,    149],  // TODO: I added combo, should I have?
     group_begin: &[0, 44, 61, 926, 926],  // TODO: Noise shouldn't have taps, so maybe duplication is ok?
-    combos_count: 11,
+    combos_count: 47,     // Original:    11,
     reg_count: 275,  // TODO: Does _this_ need to get updated back in WIP?
     tot_combo_backs: 48,
     // TODO: Generate these instead of hardcoding:
