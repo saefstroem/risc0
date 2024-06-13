@@ -64,7 +64,7 @@ where
         tracing::debug!("last_cycle: {last_cycle}");
 
         nvtx::range_push!("alloc(data)");
-        let mut data = vec![BabyBearElem::INVALID; steps * CIRCUIT.data_size()];
+        let mut data = vec![BabyBearElem::INVALID; steps * (CIRCUIT.data_size() + 4)];  // TODO: Update strides on kernels
         nvtx::range_pop!();
 
         let machine = MachineContext::new(trace);
@@ -82,7 +82,7 @@ where
             for i in 0..ZK_CYCLES {
                 let cycle = steps - ZK_CYCLES + i;
                 // Set data to random for the ZK_CYCLES
-                for j in 0..CIRCUIT.data_size() {
+                for j in 0..CIRCUIT.data_size() {  // TODO: Plus 4?
                     data[j * steps + cycle] = BabyBearElem::random(&mut rng);
                 }
             }
