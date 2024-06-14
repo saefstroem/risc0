@@ -1,15 +1,15 @@
-import * as v from "valibot";
+import { number as vNumber, object as vObject, type Output as vOutput, string as vString } from "@valibot/valibot";
 
-const datasheetTableSchema = v.object({
-  cycles: v.number(),
-  duration: v.number(),
-  hashfn: v.string(),
-  name: v.string(),
-  ram: v.number(),
-  seal: v.number(),
-  throughput: v.number(),
-  total_cycles: v.number(),
-  user_cycles: v.number(),
+const datasheetTableSchema = vObject({
+  cycles: vNumber(),
+  duration: vNumber(),
+  hashfn: vString(),
+  name: vString(),
+  ram: vNumber(),
+  seal: vNumber(),
+  throughput: vNumber(),
+  total_cycles: vNumber(),
+  user_cycles: vNumber(),
 });
 
-export type DatasheetTableSchema = v.InferOutput<typeof datasheetTableSchema>;
+export type DatasheetTableSchema = vOutput<typeof datasheetTableSchema>;

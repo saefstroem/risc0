@@ -1,11 +1,17 @@
-import * as v from "valibot";
+import {
+  object as vObject,
+  optional as vOptional,
+  type Output as vOutput,
+  picklist as vPicklist,
+  string as vString,
+} from "@valibot/valibot";
 
-const cratesIoValidationTableSchema = v.object({
-  name: v.string(),
-  version: v.string(),
-  status: v.picklist(["Success", "BuildFail", "RunFail", "Skipped"]),
-  custom_profile: v.string(),
-  build_errors: v.optional(v.string()),
+const cratesIoValidationTableSchema = vObject({
+  name: vString(),
+  version: vString(),
+  status: vPicklist(["Success", "BuildFail", "RunFail", "Skipped"]),
+  custom_profile: vString(),
+  build_errors: vOptional(vString()),
 });
 
-export type CratesIoValidationTableSchema = v.InferOutput<typeof cratesIoValidationTableSchema>;
+export type CratesIoValidationTableSchema = vOutput<typeof cratesIoValidationTableSchema>;
