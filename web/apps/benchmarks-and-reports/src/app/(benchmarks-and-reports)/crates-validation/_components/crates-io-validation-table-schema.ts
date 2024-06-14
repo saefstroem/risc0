@@ -1,11 +1,11 @@
-import { z } from "zod";
+import * as v from "valibot";
 
-const cratesIoValidationTableSchema = z.object({
-  name: z.string(),
-  version: z.string(),
-  status: z.enum(["Success", "BuildFail", "RunFail", "Skipped"]),
-  custom_profile: z.string(),
-  build_errors: z.string().optional(),
+const cratesIoValidationTableSchema = v.object({
+  name: v.string(),
+  version: v.string(),
+  status: v.picklist(["Success", "BuildFail", "RunFail", "Skipped"]),
+  custom_profile: v.string(),
+  build_errors: v.optional(v.string()),
 });
 
-export type CratesIoValidationTableSchema = z.infer<typeof cratesIoValidationTableSchema>;
+export type CratesIoValidationTableSchema = v.InferOutput<typeof cratesIoValidationTableSchema>;

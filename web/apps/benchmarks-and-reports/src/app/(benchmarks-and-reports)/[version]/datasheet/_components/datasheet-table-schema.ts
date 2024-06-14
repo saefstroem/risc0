@@ -1,15 +1,15 @@
-import { z } from "zod";
+import * as v from "valibot";
 
-const datasheetTableSchema = z.object({
-  cycles: z.number(),
-  duration: z.number(),
-  hashfn: z.string(),
-  name: z.string(),
-  ram: z.number(),
-  seal: z.number(),
-  throughput: z.number(),
-  total_cycles: z.number(),
-  user_cycles: z.number(),
+const datasheetTableSchema = v.object({
+  cycles: v.number(),
+  duration: v.number(),
+  hashfn: v.string(),
+  name: v.string(),
+  ram: v.number(),
+  seal: v.number(),
+  throughput: v.number(),
+  total_cycles: v.number(),
+  user_cycles: v.number(),
 });
 
-export type DatasheetTableSchema = z.infer<typeof datasheetTableSchema>;
+export type DatasheetTableSchema = v.InferOutput<typeof datasheetTableSchema>;

@@ -1,37 +1,37 @@
-import { z } from "zod";
+import * as v from "valibot";
 
 const applicationsBenchmarksTableSchema = {
-  main: z.object({
-    name: z.string(),
-    size: z.string(),
-    speed: z.string(),
-    total_duration: z.string(),
-    total_cycles: z.string(),
-    user_cycles: z.string(),
-    proof_bytes: z.string(),
+  main: v.object({
+    name: v.string(),
+    size: v.string(),
+    speed: v.string(),
+    total_duration: v.string(),
+    total_cycles: v.string(),
+    user_cycles: v.string(),
+    proof_bytes: v.string(),
   }),
-  "release-0.21": z.object({
-    job_name: z.string(),
-    job_size: z.string(),
-    exec_duration: z.string(),
-    proof_duration: z.string(),
-    total_duration: z.string(),
-    verify_duration: z.string(),
-    insn_cycles: z.string(),
-    prove_cycles: z.string(),
-    proof_bytes: z.string(),
+  "release-0.21": v.object({
+    job_name: v.string(),
+    job_size: v.string(),
+    exec_duration: v.string(),
+    proof_duration: v.string(),
+    total_duration: v.string(),
+    verify_duration: v.string(),
+    insn_cycles: v.string(),
+    prove_cycles: v.string(),
+    proof_bytes: v.string(),
   }),
-  "release-1.0": z.object({
-    name: z.string(),
-    size: z.string(),
-    speed: z.string(),
-    total_duration: z.string(),
-    total_cycles: z.string(),
-    user_cycles: z.string(),
-    proof_bytes: z.string(),
+  "release-1.0": v.object({
+    name: v.string(),
+    size: v.string(),
+    speed: v.string(),
+    total_duration: v.string(),
+    total_cycles: v.string(),
+    user_cycles: v.string(),
+    proof_bytes: v.string(),
   }),
 };
 
-export type ApplicationsBenchmarksTableSchema<T extends keyof typeof applicationsBenchmarksTableSchema> = z.infer<
+export type ApplicationsBenchmarksTableSchema<T extends keyof typeof applicationsBenchmarksTableSchema> = v.InferOutput<
   (typeof applicationsBenchmarksTableSchema)[T]
 >;
