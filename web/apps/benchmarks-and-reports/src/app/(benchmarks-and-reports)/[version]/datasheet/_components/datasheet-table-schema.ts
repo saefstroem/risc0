@@ -1,4 +1,4 @@
-import { number as vNumber, object as vObject, type Output as vOutput, string as vString } from "@valibot/valibot";
+import { type InferOutput as vInferOutput, number as vNumber, object as vObject, string as vString } from "valibot";
 
 const datasheetTableSchema = vObject({
   cycles: vNumber(),
@@ -12,4 +12,4 @@ const datasheetTableSchema = vObject({
   user_cycles: vNumber(),
 });
 
-export type DatasheetTableSchema = vOutput<typeof datasheetTableSchema>;
+export type DatasheetTableSchema = vInferOutput<typeof datasheetTableSchema>;

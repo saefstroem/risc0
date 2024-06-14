@@ -1,10 +1,10 @@
 import {
+  type InferOutput as vInferOutput,
   object as vObject,
   optional as vOptional,
-  type Output as vOutput,
   picklist as vPicklist,
   string as vString,
-} from "@valibot/valibot";
+} from "valibot";
 
 const cratesIoValidationTableSchema = vObject({
   name: vString(),
@@ -14,4 +14,4 @@ const cratesIoValidationTableSchema = vObject({
   build_errors: vOptional(vString()),
 });
 
-export type CratesIoValidationTableSchema = vOutput<typeof cratesIoValidationTableSchema>;
+export type CratesIoValidationTableSchema = vInferOutput<typeof cratesIoValidationTableSchema>;

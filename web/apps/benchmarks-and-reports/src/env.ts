@@ -1,5 +1,6 @@
-import { createNextjsEnv, presetVercel } from "@nurliman/env-valibot";
-import { optional as vOptional, picklist as vPicklist } from "@valibot/valibot";
+import { createNextjsEnv } from "@risc0/ui/libs/env-valibot/nextjs";
+import { vercel as presetVercel } from "@risc0/ui/libs/env-valibot/presets";
+import { optional as vOptional, picklist as vPicklist } from "valibot";
 
 const env = createNextjsEnv({
   extends: [presetVercel()],

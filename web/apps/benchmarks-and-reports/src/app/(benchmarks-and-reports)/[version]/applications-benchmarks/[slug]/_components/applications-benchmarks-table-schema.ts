@@ -1,4 +1,4 @@
-import { object as vObject, type Output as vOutput, string as vString } from "@valibot/valibot";
+import { type InferOutput as vInferOutput, object as vObject, string as vString } from "valibot";
 
 const applicationsBenchmarksTableSchema = {
   main: vObject({
@@ -32,6 +32,6 @@ const applicationsBenchmarksTableSchema = {
   }),
 };
 
-export type ApplicationsBenchmarksTableSchema<T extends keyof typeof applicationsBenchmarksTableSchema> = vOutput<
+export type ApplicationsBenchmarksTableSchema<T extends keyof typeof applicationsBenchmarksTableSchema> = vInferOutput<
   (typeof applicationsBenchmarksTableSchema)[T]
 >;
