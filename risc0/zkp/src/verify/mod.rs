@@ -340,6 +340,9 @@ where
         // Now, convert U polynomials from coefficient form to evaluation form
         let mut cur_pos = 0;
         let mut eval_u = Vec::with_capacity(num_taps);
+        for (i, j) in coeff_u.iter().enumerate() {
+            tracing::debug!("coeff_u {}: {:?}", i, j);
+        }
         for reg in taps.regs() {
             for i in 0..reg.size() {
                 let x = z * back_one.pow(reg.back(i));
@@ -349,6 +352,10 @@ where
             cur_pos += reg.size();
         }
         assert_eq!(eval_u.len(), num_taps, "Miscalculated capacity for eval_us");
+        tracing::debug!("eval-u:");
+        for (i, j) in eval_u.iter().enumerate() {
+            tracing::debug!("eval_u {}: {:?}", i, j);
+        }
 
         // Compute the core constraint polynomial.
         // I.e. the set of all constraints mixed by poly_mix

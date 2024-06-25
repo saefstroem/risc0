@@ -29,7 +29,7 @@ pub const REGISTER_GROUP_ACCUM: usize = 0;
 pub const REGISTER_GROUP_CODE: usize = 1;
 pub const REGISTER_GROUP_DATA: usize = 2;
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy,Debug)]
 pub struct MixState<EE: ExtElem> {
     pub tot: EE,
     pub mul: EE,
@@ -182,10 +182,11 @@ pub type Arg = usize;
 pub type Var = usize;
 
 pub struct PolyExtStepDef {
-    pub block: &'static [PolyExtStep],
+    pub block: &'static [(PolyExtStep, &'static str)],
     pub ret: Var,
 }
 
+#[derive(Debug)]
 pub enum PolyExtStep {
     Const(u32),
     Get(usize),
@@ -206,7 +207,12 @@ impl PolyExtStep {
         mix: &F::ExtElem,
         u: &[F::ExtElem],
         args: &[&[F::Elem]],
+        _index: usize, loc: &str
     ) {
+        let orig_fp_len = fp_vars.len();
+        let orig_mix_len = mix_vars.len();
+
+        print!("{:?}", self);
         match self {
             PolyExtStep::Const(value) => {
                 let elem = F::Elem::from_u64(*value as u64);
@@ -219,12 +225,15 @@ impl PolyExtStep {
                 fp_vars.push(F::ExtElem::from_subfield(&args[*base][*offset]));
             }
             PolyExtStep::Add(x1, x2) => {
+                print!(" {:?} + {:?}", fp_vars[*x1], fp_vars[*x2]);
                 fp_vars.push(fp_vars[*x1] + fp_vars[*x2]);
             }
             PolyExtStep::Sub(x1, x2) => {
+                print!(" {:?} - {:?}", fp_vars[*x1], fp_vars[*x2]);
                 fp_vars.push(fp_vars[*x1] - fp_vars[*x2]);
             }
             PolyExtStep::Mul(x1, x2) => {
+                print!(" {:?} * {:?}", fp_vars[*x1], fp_vars[*x2]);
                 fp_vars.push(fp_vars[*x1] * fp_vars[*x2]);
             }
             PolyExtStep::True => {
@@ -234,6 +243,7 @@ impl PolyExtStep {
                 });
             }
             PolyExtStep::AndEqz(x, val) => {
+                print!(" {:?} && {:?}", mix_vars[*x], fp_vars[*val]);
                 let x = mix_vars[*x];
                 let val = fp_vars[*val];
                 mix_vars.push(MixState {
@@ -242,6 +252,7 @@ impl PolyExtStep {
                 });
             }
             PolyExtStep::AndCond(x, cond, inner) => {
+                print!(" {:?} && {:?} ? {:?}", mix_vars[*x], fp_vars[*cond], mix_vars[*inner]);
                 let x = mix_vars[*x];
                 let cond = fp_vars[*cond];
                 let inner = mix_vars[*inner];
@@ -251,6 +262,18 @@ impl PolyExtStep {
                 });
             }
         }
+        if fp_vars.len() > orig_fp_len {
+            assert_eq!(fp_vars.len(), orig_fp_len + 1);
+
+            print!( " -> fp[{}]: {:?}", orig_fp_len, fp_vars.last().unwrap());
+        }
+        if mix_vars.len() > orig_mix_len {
+            assert_eq!(mix_vars.len(), orig_mix_len + 1);
+
+            print!( " -> mix[{}]: {:?}", orig_mix_len, mix_vars.last().unwrap())
+;
+        }
+        print!(" @{loc}\n");
     }
 }
 
@@ -263,8 +286,8 @@ impl PolyExtStepDef {
     ) -> MixState<F::ExtElem> {
         let mut fp_vars = Vec::with_capacity(self.block.len() - (self.ret + 1));
         let mut mix_vars = Vec::with_capacity(self.ret + 1);
-        for op in self.block.iter() {
-            op.step::<F>(&mut fp_vars, &mut mix_vars, mix, u, args);
+        for (idx, (op, loc)) in self.block.iter().enumerate() {
+            op.step::<F>(&mut fp_vars, &mut mix_vars, mix, u, args,idx, loc);
         }
         assert_eq!(
             fp_vars.len(),

@@ -177,6 +177,7 @@ pub trait ExtElem:
     + ops::SubAssign
     + cmp::PartialEq
     + cmp::Eq
+    + Debug
 {
     /// An element of the base field
     ///
