@@ -11,14 +11,15 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+extern crate alloc;
 
-#![doc = include_str!("../README.md")]
-#![no_std]
+use alloc::vec::Vec;
+use serde::{Deserialize, Serialize};
 
-pub mod bench;
-#[cfg(features = "c-kzg")]
-pub mod kzg_common;
-pub mod multi_test;
-
-#[cfg(not(target_os = "zkvm"))]
-include!(concat!(env!("OUT_DIR"), "/methods.rs"));
+#[derive(Deserialize, Serialize)]
+pub struct Proof {
+    pub commitment: Vec<u8>,
+    pub z: Vec<u8>,
+    pub y: Vec<u8>,
+    pub proof: Vec<u8>,
+}
