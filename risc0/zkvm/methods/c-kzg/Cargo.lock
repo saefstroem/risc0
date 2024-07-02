@@ -878,7 +878,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "risc0-zkvm-methods-cpp-crates"
+name = "risc0-zkvm-methods-c-kzg"
 version = "0.1.0"
 dependencies = [
  "blst",
