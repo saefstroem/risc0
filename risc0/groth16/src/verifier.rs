@@ -178,7 +178,7 @@ impl Digestible for Fr {
 
 /// Verifying key for Groth16 proofs.
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct VerifyingKey(#[serde(with = "serde_ark")] pub(crate) ark_groth16::VerifyingKey<Bn254>);
+pub struct VerifyingKey(#[serde(with = "serde_ark")] pub ark_groth16::VerifyingKey<Bn254>);
 
 /// Hash a point on G1 or G2 by hashing the concatenated big-endian representation of (x, y).
 fn hash_point<S: Sha256>(p: impl AffineRepr) -> Digest {
@@ -241,8 +241,55 @@ mod serde_ark {
 }
 
 /// Default verifying key for RISC Zero recursive verification.
+#[allow(dead_code)]
+pub fn verifying_key_bytes() -> VerifyingKeyBytes {
+    try_verifying_key_bytes().unwrap()
+}
+
+/// Default verifying key for RISC Zero recursive verification.
 pub fn verifying_key() -> VerifyingKey {
     try_verifying_key().unwrap()
+}
+
+#[derive(Debug)]
+pub struct VerifyingKeyBytes {
+    pub alpha_g1: [Vec<u8>; 2],
+    pub beta_g2: [Vec<Vec<u8>>; 2],
+    pub gamma_g2: [Vec<Vec<u8>>; 2],
+    pub delta_g2: [Vec<Vec<u8>>; 2],
+    pub gamma_abc_g1: Vec<[Vec<u8>; 2]>,
+}
+
+pub fn try_verifying_key_bytes() -> Result<VerifyingKeyBytes> {
+    let alpha_g1 = [from_u256(ALPHA_X).unwrap(), from_u256(ALPHA_Y).unwrap()];
+    let beta_g2 = [
+        vec![from_u256(BETA_X1).unwrap(), from_u256(BETA_X2).unwrap()],
+        vec![from_u256(BETA_Y1).unwrap(), from_u256(BETA_Y2).unwrap()],
+    ];
+    let gamma_g2 = [
+        vec![from_u256(GAMMA_X1).unwrap(), from_u256(GAMMA_X2).unwrap()],
+        vec![from_u256(GAMMA_Y1).unwrap(), from_u256(GAMMA_Y2).unwrap()],
+    ];
+    let delta_g2 = [
+        vec![from_u256(DELTA_X1).unwrap(), from_u256(DELTA_X2).unwrap()],
+        vec![from_u256(DELTA_Y1).unwrap(), from_u256(DELTA_Y2).unwrap()],
+    ];
+
+    let ic0 = [from_u256(IC0_X).unwrap(), from_u256(IC0_Y).unwrap()];
+    let ic1 = [from_u256(IC1_X).unwrap(), from_u256(IC1_Y).unwrap()];
+    let ic2 = [from_u256(IC2_X).unwrap(), from_u256(IC2_Y).unwrap()];
+    let ic3 = [from_u256(IC3_X).unwrap(), from_u256(IC3_Y).unwrap()];
+    let ic4 = [from_u256(IC4_X).unwrap(), from_u256(IC4_Y).unwrap()];
+    let ic5 = [from_u256(IC5_X).unwrap(), from_u256(IC5_Y).unwrap()];
+    let gamma_abc_g1 = vec![ic0, ic1, ic2, ic3, ic4, ic5];
+
+    Ok(VerifyingKeyBytes {
+        alpha_g1,
+        beta_g2,
+        gamma_g2,
+        delta_g2,
+        gamma_abc_g1,
+    })
 }
 
 // try_verifying_key executes entirely over const data and so should never error.

@@ -85,7 +85,7 @@ mod verifier;
 pub use data_structures::{ProofJson, PublicInputsJson, Seal, VerifyingKeyJson};
 #[cfg(feature = "prove")]
 pub use seal_to_json::to_json;
-pub use verifier::{verifying_key, Fr, Verifier, VerifyingKey};
+pub use verifier::{verifying_key, verifying_key_bytes, Fr, Verifier, VerifyingKey};
 
 /// Splits the digest in half returning a scalar for each halve.
 pub fn split_digest(d: Digest) -> Result<(Fr, Fr), Error> {
@@ -95,6 +95,17 @@ pub fn split_digest(d: Digest) -> Result<(Fr, Fr), Error> {
     Ok((
         fr_from_bytes(&from_u256_hex(&hex::encode(a))?)?,
         fr_from_bytes(&from_u256_hex(&hex::encode(b))?)?,
+    ))
+}
+
+/// Split digets in half to bytes
+pub fn split_digest_bytes(d: Digest) -> Result<(Vec<u8>, Vec<u8>), Error> {
+    let big_endian: Vec<u8> = d.as_bytes().to_vec().iter().rev().cloned().collect();
+    let middle = big_endian.len() / 2;
+    let (b, a) = big_endian.split_at(middle);
+    Ok((
+        from_u256_hex(&hex::encode(a))?,
+        from_u256_hex(&hex::encode(b))?,
     ))
 }
 
@@ -158,8 +169,8 @@ pub(crate) fn from_u256(value: &str) -> Result<Vec<u8>, Error> {
     }
 }
 
-// Convert the U256 value to a byte array in big-endian format
-fn from_u256_hex(value: &str) -> Result<Vec<u8>, Error> {
+/// Convert the U256 value to a byte array in big-endian format
+pub fn from_u256_hex(value: &str) -> Result<Vec<u8>, Error> {
     Ok(
         to_fixed_array(hex::decode(value).map_err(|_| anyhow!("conversion from u256 failed"))?)
             .to_vec(),
