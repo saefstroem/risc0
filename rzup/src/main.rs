@@ -16,7 +16,10 @@ use anyhow::Result;
 
 use clap::{CommandFactory, Parser, Subcommand};
 
+shadow!(build);
+use crate::build as shadow_build;
 use rzup::{cli, extension, toolchain, utils};
+use shadow_rs::shadow;
 
 use std::fs::{self, OpenOptions};
 
@@ -40,7 +43,11 @@ Chat & Support  : https://discord.com/invite/risczero/",
     rzup::Rzup::version(),
 ),
 after_help = cli::help::RZUP_HELP,
-version = rzup::Rzup::version(),
+version = shadow_rs::formatcp!(r#"{}
+commit hash: {}
+commit date: {}
+"#, shadow_build::PKG_VERSION, shadow_build::SHORT_COMMIT, shadow_build::COMMIT_DATE
+),
 )]
 struct Rzup {
     /// Enable verbose output
