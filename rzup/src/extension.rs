@@ -16,7 +16,7 @@ use std::{
     fs,
     io::{BufReader, Write},
     os::unix::fs::PermissionsExt,
-    path::{Path, PathBuf},
+    path::Path,
     str::FromStr,
 };
 
@@ -92,9 +92,9 @@ impl Extension {
         &self,
         target: Target,
         tag: Option<&str>,
-        extensions_root_dir: &Path,
+        root_dir: &Path,
         force: bool,
-    ) -> Result<PathBuf> {
+    ) -> Result<()> {
         let client = http_client()?;
 
         let temp_dir = tempdir()?;
@@ -110,31 +110,34 @@ impl Extension {
             );
         };
 
-        let extension_dir =
-            extensions_root_dir.join(format!("{}-{}", release_info.tag_name, self.to_str()));
+        let version = &release_info.tag_name[1..];
+        let r0vm_dir = root_dir.join("r0vm").join(version);
+        let cargo_risczero_dir = root_dir.join("cargo-risczero").join(version);
 
         // Remove directory if it exists and force is set
-        if extension_dir.is_dir() && force {
+        if r0vm_dir.is_dir() && cargo_risczero_dir.is_dir() && force {
             info_msg!(format!(
-                "Extension path {} already exists - deleting existing files!",
-                extension_dir.display()
+                "Extension path {} and {} already exists - deleting existing files!",
+                r0vm_dir.display(), cargo_risczero_dir.display(),
             ));
 
-            verbose_msg!(format!("deleting {}", extension_dir.display()));
+            verbose_msg!(format!("deleting {}", r0vm_dir.display()));
+            verbose_msg!(format!("deleting {}", cargo_risczero_dir.display()));
 
-            fs::remove_dir_all(&extension_dir)?;
+            fs::remove_dir_all(&r0vm_dir)?;
+            fs::remove_dir_all(&cargo_risczero_dir)?;
         }
 
         // Skip download if directory already exists and force is not set
-        if extension_dir.is_dir() && !force {
+        if r0vm_dir.is_dir() && cargo_risczero_dir.is_dir() && !force {
             info_msg!(format!(
-                "Extension path {} already exists - skipping download.",
-                extension_dir.display()
+                "Extension path {} and {} already exists - skipping download.",
+                r0vm_dir.display(), cargo_risczero_dir.display(),
             ));
-            return Ok(extension_dir);
+            return Ok(());
         }
 
-        info_msg!(format!("Downloading {} extension...", self.to_str()));
+        info_msg!(format!("Downloading cargo-risczero extension and r0vm server..."));
 
         verbose_msg!(format!(
             "Requesting extension download from {}",
@@ -166,52 +169,60 @@ impl Extension {
 
         let tarball = fs::File::open(temp_file_path)?;
 
-        match self {
-            Extension::CargoRiscZero => {
-                info_msg!(format!("Extracting {} extension...", self.to_str()));
+        info_msg!(format!("Extracting..."));
 
-                let decoder = GzDecoder::new(BufReader::new(tarball));
-                let mut archive = Archive::new(decoder);
+        let decoder = GzDecoder::new(BufReader::new(tarball));
+        let mut archive = Archive::new(decoder);
 
-                verbose_msg!(format!(
-                    "Unpacking {} to {}",
-                    self.to_str(),
-                    &extension_dir.display()
-                ));
+        let temp_extract_dir = tempdir()?;
+        verbose_msg!(format!(
+            "Unpacking {} to {}",
+            self.to_str(),
+            &temp_extract_dir.path().display()
+        ));
+        archive.unpack(&temp_extract_dir)?;
 
-                archive.unpack(&extension_dir)?;
-                #[cfg(target_family = "unix")]
-                {
-                    let binary_path = extension_dir.join("cargo-risczero");
-
-                    verbose_msg!("Setting extension permissons to 0o755");
-
-                    let mut perms = fs::metadata(&binary_path)?.permissions();
-                    perms.set_mode(0o755);
-                    fs::set_permissions(&binary_path, perms)?;
-                }
-                // TODO: Check if this is necessary
-                #[cfg(target_family = "windows")]
-                {
-                    let binary_path = extension_dir.join("cargo-risczero.exe");
-                }
-            }
+        for path in [r0vm_dir.join("r0vm"), cargo_risczero_dir.join("cargo-risczero")] {
+            fs::create_dir_all(path.parent().unwrap())?;
+            fs::OpenOptions::new()
+                .create(true)
+                .write(true)
+                .open(path.clone())?;
+            verbose_msg!(format!(
+                "copying {:?} to {}",
+                path.file_name().unwrap(),
+                path.display(),
+            ));
+            fs::copy(temp_extract_dir.path().join(path.file_name().unwrap()), path)?;
         }
 
-        Ok(extension_dir)
+        #[cfg(target_family = "unix")]
+        {
+            let binary_path = cargo_risczero_dir.join("cargo-risczero");
+
+            verbose_msg!("Setting extension permissons to 0o755");
+
+            let mut perms = fs::metadata(&binary_path)?.permissions();
+            perms.set_mode(0o755);
+            fs::set_permissions(&binary_path, perms)?;
+        }
+
+        Ok(())
     }
 
-    pub fn link(&self, dir: &Path) -> Result<()> {
+    pub fn link(&self, dir: &Path, tag: &str) -> Result<()> {
+        // todo: pass in both paths
         match self {
             Extension::CargoRiscZero => {
+                let version = &tag[1..];
                 let cargo_bin_dir = dirs::home_dir()
                     .ok_or_else(|| anyhow!("Could not determine home directory"))?
                     .join(".cargo/bin");
 
                 self.unlink()?;
 
-                let cargo_risczero_path = dir.join("cargo-risczero");
-                let r0vm_path = dir.join("r0vm");
+                let cargo_risczero_path = dir.join("cargo-risczero").join(version).join("cargo-risczero");
+                let r0vm_path = dir.join("r0vm").join(version).join("r0vm");
 
                 let cargo_risczero_link = cargo_bin_dir.join("cargo-risczero");
                 let r0vm_link = cargo_bin_dir.join("r0vm");
@@ -288,14 +299,11 @@ impl Extension {
         let lockfile_path = root_dir.join("ext-lock");
         let _lock = flock(&lockfile_path)?;
 
-        let extensions_root_dir = root_dir.join("extensions");
-
         match self {
             Extension::CargoRiscZero => {
-                let cargo_risczero_path = self
-                    .download(target, tag, &extensions_root_dir, force)
-                    .await?;
-                self.link(&cargo_risczero_path)?;
+                self.download(target, tag, &root_dir, force).await?;
+                let tag = self.release_info(tag).await?.tag_name;
+                self.link(&root_dir, &tag)?;
             }
         }
         Ok(())

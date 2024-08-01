@@ -68,8 +68,8 @@ pub async fn handler(subcmd: ExtensionSubcmd) -> Result<()> {
             Ok(())
         }
         ExtensionSubcmd::Use { extension, version } => {
-            let extension_path = parse_extenstion_version(extension, version)?;
-            extension.link(&extension_path)
+            let extension_path = parse_extenstion_version(extension, version.clone())?;
+            extension.link(&extension_path, &version)
         }
         ExtensionSubcmd::Uninstall { extension } => extension.unlink(),
     }
