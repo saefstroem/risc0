@@ -30,3 +30,4 @@ export-libm = ["dep:libm"]
 export-getrandom = ["dep:getrandom", "dep:bytemuck"]
 # exports a `getrandom` implementation that uses sys_random
 getrandom = ["export-getrandom"]
+disable-bump-allocator = []

@@ -68,9 +68,8 @@
 //! [proof composition]:https://www.risczero.com/blog/proof-composition
 //! [guest-optimization]: https://dev.risczero.com/api/zkvm/optimization#when-reading-data-as-raw-bytes-use-envread_slice
 
-use core::{cell::OnceCell, convert::Infallible, fmt};
-
 use bytemuck::Pod;
+use core::{cell::OnceCell, convert::Infallible, fmt};
 use risc0_zkvm_platform::{
     align_up, fileno,
     syscall::{
@@ -102,7 +101,8 @@ static mut ASSUMPTIONS_DIGEST: MaybePruned<Assumptions> = MaybePruned::Pruned(Di
 /// information leakage through the post-state digest.
 static mut MEMORY_IMAGE_ENTROPY: [u32; 4] = [0u32; 4];
 
-pub(crate) fn init() {
+/// Initialize globals before program main
+pub fn init() {
     unsafe {
         HASHER.set(Sha256::new()).unwrap();
         syscall::sys_rand(
@@ -112,7 +112,8 @@ pub(crate) fn init() {
     }
 }
 
-pub(crate) fn finalize(halt: bool, user_exit: u8) {
+/// Finalize execution
+pub fn finalize(halt: bool, user_exit: u8) {
     unsafe {
         let hasher = HASHER.take();
         let journal_digest: Digest = hasher.unwrap().finalize().as_slice().try_into().unwrap();
@@ -321,6 +322,7 @@ pub fn verify_assumption(claim: Digest, control_root: Digest) -> Result<(), Infa
 /// receives the return data.
 ///
 /// On the host side, implement SliceIo to provide a handler for this call.
+#[cfg(not(feature = "disable-bump-allocator"))]
 pub fn send_recv_slice<T: Pod, U: Pod>(syscall_name: SyscallName, to_host: &[T]) -> &'static [U] {
     let syscall::Return(nbytes, _) = syscall(syscall_name, bytemuck::cast_slice(to_host), &mut []);
     let nwords = align_up(nbytes as usize, WORD_SIZE) / WORD_SIZE;

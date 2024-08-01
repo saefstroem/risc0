@@ -168,3 +168,6 @@ std = [
   "serde/std",
   "sha2/std",
 ]
+disable-bump-allocator = [
+  "risc0-zkvm-platform/disable-bump-allocator"
+]

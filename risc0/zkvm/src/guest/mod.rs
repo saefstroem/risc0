@@ -147,7 +147,7 @@ macro_rules! entry {
     };
 }
 
-#[cfg(target_os = "zkvm")]
+#[cfg(all(not(feature = "disable-bump-allocator"), target_os = "zkvm"))]
 #[no_mangle]
 unsafe extern "C" fn __start() -> ! {
     env::init();

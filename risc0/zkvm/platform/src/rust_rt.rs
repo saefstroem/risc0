@@ -80,8 +80,10 @@ mod entrypoint {
     );
 }
 
+#[cfg(not(feature = "disable-bump-allocator"))]
 struct BumpPointerAlloc;
 
+#[cfg(not(feature = "disable-bump-allocator"))]
 unsafe impl GlobalAlloc for BumpPointerAlloc {
     unsafe fn alloc(&self, layout: Layout) -> *mut u8 {
         sys_alloc_aligned(layout.size(), layout.align())
@@ -98,5 +100,6 @@ unsafe impl GlobalAlloc for BumpPointerAlloc {
     }
 }
 
-#[global_allocator]
+#[cfg_attr(not(feature = "disable-bump-allocator"), global_allocator)]
+#[cfg(not(feature = "disable-bump-allocator"))]
 static HEAP: BumpPointerAlloc = BumpPointerAlloc;
