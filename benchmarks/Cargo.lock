@@ -438,6 +438,7 @@ dependencies = [
  "risc0-groth16",
  "serde",
  "thiserror",
+ "tokio",
 ]
 
 [[package]]
@@ -2780,6 +2781,7 @@ dependencies = [
  "serde",
  "sha2",
  "tempfile",
+ "tokio",
  "tracing",
  "typetag",
 ]

@@ -73,6 +73,7 @@ rayon = { version = "1.5", optional = true }
 rustc-demangle = { version = "0.1", optional = true }
 sha2 = { version = "0.10", default-features = false }
 tempfile = { version = "3", optional = true }
+tokio = { version = "1", optional = true }
 typetag = { version = "0.2", optional = true }
 
 [dev-dependencies]
@@ -126,7 +127,8 @@ metal = [
   "risc0-circuit-rv32im/metal",
   "risc0-zkp/metal",
 ]
-default = ["client"]
+# TODO likely remove non_blocking
+default = ["client", "non_blocking"]
 disable-dev-mode = []
 # This flag uses the docker environment to build test guests such as multi-test
 # to ensure accurate cycle and segment counts. Tests that have been gated on
@@ -168,3 +170,4 @@ std = [
   "serde/std",
   "sha2/std",
 ]
+non_blocking = ["client", "bonsai-sdk/non_blocking", "dep:tokio"]
