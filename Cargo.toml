@@ -19,6 +19,7 @@ members = [
   "risc0/zkvm",
   "risc0/zkvm/methods",
   "risc0/zkvm/platform",
+  "risc0/zkvm/platform/macros",
   "risc0/zkvm/receipts",
   "rzup",
   "tools/hotbench",
@@ -52,6 +53,7 @@ risc0-sys = { version = "1.1.0-alpha.1", default-features = false, path = "risc0
 risc0-zkp = { version = "1.1.0-alpha.1", default-features = false, path = "risc0/zkp" }
 risc0-zkvm = { version = "1.1.0-alpha.1", default-features = false, path = "risc0/zkvm" }
 risc0-zkvm-platform = { version = "1.1.0-alpha.1", default-features = false, path = "risc0/zkvm/platform" }
+risc0-zkvm-platform-macros = { version = "1.1.0-alpha.1", default-features = false, path = "risc0/zkvm/platform/macros" }
 sppark = "0.1.7"
 
 [profile.bench]

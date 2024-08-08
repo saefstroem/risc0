@@ -4203,7 +4203,12 @@ dependencies = [
  "embedded-alloc",
  "getrandom",
  "libm",
+ "risc0-zkvm-platform-macros",
 ]
+
+[[package]]
+name = "risc0-zkvm-platform-macros"
+version = "1.1.0-alpha.1"
 
 [[package]]
 name = "risc0-zkvm-receipts"
