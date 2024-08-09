@@ -164,11 +164,6 @@ unsafe extern "C" fn __start() -> ! {
         }
     }
 
-    #[cfg(risc0_guest_allocator = "embedded")]
-    {
-        env::log("risc0-zkvm risc0_guest_allocator");
-    }
-
     {
         extern "C" {
             fn main();
