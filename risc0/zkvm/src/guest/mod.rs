@@ -152,7 +152,6 @@ macro_rules! entry {
 unsafe extern "C" fn __start() -> ! {
     env::init();
 
-    // #[cfg(feature = "heap-embedded-alloc")]
     #[cfg(risc0_guest_allocator = "embedded")]
     {
         extern "C" {

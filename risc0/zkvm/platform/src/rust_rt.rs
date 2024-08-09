@@ -79,7 +79,6 @@ mod entrypoint {
 
 #[cfg(not(risc0_guest_allocator = "none"))]
 pub mod heap {
-    // #[cfg(not(feature = "heap-embedded-alloc"))]
     #[cfg(any(not(risc0_guest_allocator), risc0_guest_allocator = "bump"))]
     pub mod bump_allocator {
         use crate::syscall::sys_alloc_aligned;
@@ -107,7 +106,6 @@ pub mod heap {
         pub static HEAP: BumpPointerAlloc = BumpPointerAlloc;
     }
 
-    // #[cfg(feature = "heap-embedded-alloc")]
     #[cfg(risc0_guest_allocator = "embedded")]
     pub mod embedded_allocator {
         use critical_section::RawRestoreState;
