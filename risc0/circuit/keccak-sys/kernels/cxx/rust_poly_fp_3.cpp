@@ -22,67 +22,67 @@
 constexpr size_t kInvRate = 4;
 
 // clang-format off
-namespace risc0::circuit::top {
+namespace risc0::circuit::keccak {
 
-FpExt top_55(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_54(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_53(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_52(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_51(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_50(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_49(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
-FpExt top_48(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
-FpExt top_47(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_46(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_45(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_44(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_43(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_42(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_41(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_40(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_39(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_38(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_37(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_36(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_35(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_34(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_33(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_32(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_31(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_30(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_29(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_28(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_27(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_26(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_25(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_24(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_23(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_22(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
-FpExt top_21(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
-FpExt top_20(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
-FpExt top_19(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_18(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_17(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_16(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_15(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_14(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_13(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_12(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_11(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_10(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_9(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_8(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_7(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_6(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_5(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_4(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_3(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_2(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
-FpExt top_1(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
-FpExt top_0(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_55(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_54(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_53(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_52(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_51(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_50(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_49(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
+FpExt keccak_48(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
+FpExt keccak_47(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_46(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_45(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_44(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_43(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_42(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_41(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_40(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_39(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_38(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_37(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_36(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_35(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_34(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_33(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_32(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_31(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_30(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_29(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_28(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_27(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_26(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_25(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_24(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_23(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_22(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
+FpExt keccak_21(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
+FpExt keccak_20(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, FpExt arg5, Fp* arg6);
+FpExt keccak_19(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_18(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_17(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_16(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_15(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_14(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_13(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_12(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_11(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_10(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_9(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_8(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_7(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_6(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_5(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_4(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_3(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_2(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5);
+FpExt keccak_1(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4);
+FpExt keccak_0(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3);
 FpExt poly_fp(size_t cycle, size_t steps, FpExt* poly_mix, Fp** args);
 
-FpExt top_52(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_52(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(32768);
@@ -3177,10 +3177,10 @@ FpExt top_52(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( Pack ( zirgen/circuit/keccak2/pack.zir :32:33) at callsite( UnpackReg ( zirgen/circuit/keccak2/pack.zir :49:25) at callsite( SFlatToBits ( zirgen/circuit/keccak2/top.zir :329:22) at callsite( ReadCycle ( zirgen/circuit/keccak2/top.zir :335:23) at callsite( Top ( zirgen/circuit/keccak2/top.zir :493:15) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown))))))))
   arg0[14] = x1297;
   // loc(unknown)
-  auto x1298 = top_51(cycle, steps, poly_mix, arg0, x1133, arg2, arg3, arg4, arg5);
+  auto x1298 = keccak_51(cycle, steps, poly_mix, arg0, x1133, arg2, arg3, arg4, arg5);
   return x1298;
 }
-FpExt top_47(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_47(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(32768);
@@ -6229,10 +6229,10 @@ FpExt top_47(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( Pack ( zirgen/circuit/keccak2/pack.zir :32:6) at callsite( WriteCycle ( zirgen/circuit/keccak2/top.zir :379:19) at callsite( Top ( zirgen/circuit/keccak2/top.zir :495:16) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown))))))
   arg0[107] = x1451;
   // loc(unknown)
-  auto x1452 = top_46(cycle, steps, poly_mix, arg0, arg1, arg2, arg3, arg4, arg5);
+  auto x1452 = keccak_46(cycle, steps, poly_mix, arg0, arg1, arg2, arg3, arg4, arg5);
   return x1452;
 }
-FpExt top_42(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4) {
+FpExt keccak_42(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(4);
@@ -9299,10 +9299,10 @@ FpExt top_42(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( Xor5 ( zirgen/circuit/keccak2/xor5.zir :10:12) at callsite( ThetaP1 ( zirgen/circuit/keccak2/keccak.zir :13:12) at callsite( KeccakRound0 ( zirgen/circuit/keccak2/top.zir :97:16) at callsite( Top ( zirgen/circuit/keccak2/top.zir :496:18) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))
   arg0[456] = x1529;
   // loc(unknown)
-  auto x1530 = top_41(cycle, steps, poly_mix, arg0, x1527, arg2, arg3, arg4);
+  auto x1530 = keccak_41(cycle, steps, poly_mix, arg0, x1527, arg2, arg3, arg4);
   return x1530;
 }
-FpExt top_37(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
+FpExt keccak_37(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(2);
@@ -13011,10 +13011,10 @@ FpExt top_37(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( BitXor ( zirgen/circuit/keccak2/bits.zir :32:4) at callsite( ThetaP2 ( zirgen/circuit/keccak2/keccak.zir :31:16) at callsite( KeccakRound12 ( zirgen/circuit/keccak2/top.zir :111:41) at callsite( Top ( zirgen/circuit/keccak2/top.zir :497:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))
   arg0[1387] = x1389;
   // loc(unknown)
-  auto x1390 = top_36(cycle, steps, poly_mix, arg0, arg1, arg2, arg3);
+  auto x1390 = keccak_36(cycle, steps, poly_mix, arg0, arg1, arg2, arg3);
   return x1390;
 }
-FpExt top_32(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
+FpExt keccak_32(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(2);
@@ -16771,10 +16771,10 @@ FpExt top_32(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( BitXor ( zirgen/circuit/keccak2/bits.zir :32:8) at callsite( ThetaP2 ( zirgen/circuit/keccak2/keccak.zir :31:16) at callsite( KeccakRound12 ( zirgen/circuit/keccak2/top.zir :111:41) at callsite( Top ( zirgen/circuit/keccak2/top.zir :498:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))
   arg0[3533] = x1493;
   // loc(unknown)
-  auto x1494 = top_31(cycle, steps, poly_mix, arg0, arg1, arg2, arg3);
+  auto x1494 = keccak_31(cycle, steps, poly_mix, arg0, arg1, arg2, arg3);
   return x1494;
 }
-FpExt top_27(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4) {
+FpExt keccak_27(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, Fp* arg4) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(2);
@@ -20373,10 +20373,10 @@ FpExt top_27(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( BitXor ( zirgen/circuit/keccak2/bits.zir :32:8) at callsite( Chi ( zirgen/circuit/keccak2/keccak.zir :73:16) at callsite( KeccakRound34 ( zirgen/circuit/keccak2/top.zir :117:35) at callsite( Top ( zirgen/circuit/keccak2/top.zir :499:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))
   arg0[4449] = x1733;
   // loc(unknown)
-  auto x1734 = top_26(cycle, steps, poly_mix, arg0, arg3, x1349, arg4);
+  auto x1734 = keccak_26(cycle, steps, poly_mix, arg0, arg3, x1349, arg4);
   return x1734;
 }
-FpExt top_22(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
+FpExt keccak_22(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, Fp* arg3) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(23);
@@ -24189,10 +24189,10 @@ FpExt top_22(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite( Reg ( <preamble> :5:7) at callsite( TopState ( zirgen/circuit/keccak2/top.zir :36:9) at callsite( KeccakRound34 ( zirgen/circuit/keccak2/top.zir :117:12) at callsite( Top ( zirgen/circuit/keccak2/top.zir :499:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown))))))
   arg0[4635] = x1595;
   // loc(unknown)
-  auto x1596 = top_21(cycle, steps, poly_mix, arg0, x1593, arg2, x761, arg1, x636, arg3);
+  auto x1596 = keccak_21(cycle, steps, poly_mix, arg0, x1593, arg2, x761, arg1, x636, arg3);
   return x1596;
 }
-FpExt top_17(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_17(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(65536);
@@ -27063,10 +27063,10 @@ FpExt top_17(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( BitXor ( zirgen/circuit/keccak2/bits.zir :32:16) at callsite( XorU32 ( zirgen/circuit/keccak2/sha2.zir :10:12) at callsite( ComputeW ( zirgen/circuit/keccak2/sha2.zir :59:51) at callsite( DoShaStep ( zirgen/circuit/keccak2/top.zir :137:20) at callsite( ShaCycle ( zirgen/circuit/keccak2/top.zir :195:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :501:14) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))))
   arg0[6206] = x1333;
   // loc(unknown)
-  auto x1334 = top_16(cycle, steps, poly_mix, arg0, x1218, arg2, arg3, arg4, arg5);
+  auto x1334 = keccak_16(cycle, steps, poly_mix, arg0, x1218, arg2, arg3, arg4, arg5);
   return x1334;
 }
-FpExt top_12(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_12(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(65536);
@@ -29721,10 +29721,10 @@ FpExt top_12(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, 
   // loc(callsite(unknown at callsite( ChU32 ( zirgen/circuit/keccak2/sha2.zir :25:29) at callsite( ComputeAE ( zirgen/circuit/keccak2/sha2.zir :74:71) at callsite( DoShaStep ( zirgen/circuit/keccak2/top.zir :141:21) at callsite( ShaCycle ( zirgen/circuit/keccak2/top.zir :197:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :501:14) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown))))))))
   arg0[6870] = x1228;
   // loc(unknown)
-  auto x1229 = top_11(cycle, steps, poly_mix, arg0, x653, arg2, arg3, arg4, arg5);
+  auto x1229 = keccak_11(cycle, steps, poly_mix, arg0, x653, arg2, arg3, arg4, arg5);
   return x1229;
 }
-FpExt top_7(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_7(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(65536);
@@ -32633,10 +32633,10 @@ FpExt top_7(size_t cycle, size_t steps, FpExt* poly_mix, Fp* arg0, FpExt arg1, F
   // loc(callsite(unknown at callsite( BitXor ( zirgen/circuit/keccak2/bits.zir :32:4) at callsite( XorU32 ( zirgen/circuit/keccak2/sha2.zir :10:12) at callsite( ComputeW ( zirgen/circuit/keccak2/sha2.zir :60:16) at callsite( DoShaStep ( zirgen/circuit/keccak2/top.zir :137:20) at callsite( ShaCycle ( zirgen/circuit/keccak2/top.zir :200:22) at callsite( Top ( zirgen/circuit/keccak2/top.zir :501:14) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown)))))))))
   arg0[7658] = x1385;
   // loc(unknown)
-  auto x1386 = top_6(cycle, steps, poly_mix, arg0, x1046, arg2, arg3, arg4, arg5);
+  auto x1386 = keccak_6(cycle, steps, poly_mix, arg0, x1046, arg2, arg3, arg4, arg5);
   return x1386;
 }
-FpExt top_2(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
+FpExt keccak_2(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, FpExt arg2, FpExt arg3, FpExt arg4, Fp* arg5) {
   size_t mask = steps - 1;
   // loc(unknown)
   constexpr Fp x0(0);
@@ -35545,9 +35545,9 @@ FpExt top_2(size_t cycle, size_t steps, FpExt* poly_mix, FpExt arg0, Fp* arg1, F
   // loc(callsite( Reg ( <preamble> :5:7) at callsite( TopState ( zirgen/circuit/keccak2/top.zir :36:9) at callsite( ShaNextBlockCycle ( zirgen/circuit/keccak2/top.zir :262:24) at callsite( Top ( zirgen/circuit/keccak2/top.zir :502:23) at callsite( Top ( zirgen/circuit/keccak2/top.zir :473:2) at unknown))))))
   FpExt x1452 = x1450 + x1451 * poly_mix[321];
   // loc(unknown)
-  auto x1453 = top_1(cycle, steps, poly_mix, arg1, x1452, x724, arg4, arg5);
+  auto x1453 = keccak_1(cycle, steps, poly_mix, arg1, x1452, x724, arg4, arg5);
   return x1453;
 }
 
-} // namespace risc0::circuit::top
+} // namespace risc0::circuit::keccak
 // clang-format on
