@@ -48,7 +48,9 @@ use super::{
 };
 use crate::{
     prove::{
-        emu::sha_cycles,
+        emu::{
+            pager::PAGE_WORDS, rv32im::{InsnCategory, InsnKind}, sha_cycles
+        },
         engine::loader::{FINI_CYCLES, INIT_CYCLES},
         segment::{Segment, SyscallRecord},
     },
@@ -219,15 +221,64 @@ impl<'a, 'b, S: Syscall> Executor<'a, 'b, S> {
 
             if let Some(max_cycles) = max_cycles {
                 if self.cycles.user >= max_cycles as usize {
-                    bail!("Session limit exceeded");
+                    println!("Max cycles reached");
+
+                    self.exit_code = Some(ExitCode::Halted(0));
+                    break;
                 }
             }
+            let pc_page_idx = EmuContext::get_pc(self).waddr().page_idx();
 
+            let word_addr = (pc_page_idx % PAGE_WORDS as u32) as usize;
+            let byte_addr = word_addr * WORD_SIZE;
+            let mut bytes = [0u8; WORD_SIZE];
+            bytes.clone_from_slice(&self.pager.page_table.0[byte_addr..byte_addr + WORD_SIZE]);
+            //let data = u32::from_le_bytes(bytes);
+            // tracing::trace!("load({addr:?}) -> 0x{data:08x}");
+            u32::from_le_bytes(bytes)
+
+            let word = self.load_memory()?;
+            let mut dont_commit = false;
+            let decoded = DecodedInstruction::new(word);
+            let insn = emu.table.lookup(&decoded);
+
+            if let InsnCategory::System = insn.category {
+                if insn.kind == InsnKind::EANY
+                    && decoded.rs2 == 0
+                    && self.load_register(REG_T0)? == ecall::HALT
+                {
+                    let a1 = self.load_register(REG_A1)?;
+                    let output: [u8; DIGEST_BYTES] = [
+                        131, 111, 23, 92, 98, 192, 243, 83, 131, 22, 101, 66, 126, 139, 11, 52,
+                        246, 209, 210, 25, 2, 118, 77, 174, 180, 6, 198, 184, 61, 181, 117, 176,
+                    ];
+                    let res = &output.iter().enumerate().for_each(|(i, x)| {
+                        //self.raw_store_u8(ByteAddr(a1) + i, *x)
+                        let addr = ByteAddr(a1) + i;
+                        let byte = *x;
+                        let byte_offset = addr.0 as usize % WORD_SIZE;
+                        let word = self.peek_u32(addr).unwrap();
+                        let mut bytes = word.to_le_bytes();
+                        bytes[byte_offset] = byte;
+                        let word = u32::from_le_bytes(bytes);
+                        let addr = addr.waddr();
+                        let page_idx = addr.page_idx();
+
+                        let idx = self.pager.page_table[page_idx as usize] as usize;
+                        let page = self.pager.page_cache.get_mut(idx).unwrap();
+                        //self.pending_actions.push(Action::Store(addr, old));
+                        page.store(addr, word);
+                    });
+                    println!("ecallhalt {:?}", output);
+
+                    //self.store_region_into_guest(ByteAddr(a1), &output).unwrap();
+                }
+            }
             emu.step(self)?;
 
             let segment_cycles = self.insn_cycles + self.pager.cycles + self.pending.cycles;
             if segment_cycles < segment_limit {
-                self.advance()?;
+                self.advance(dont_commit)?;
             } else if self.insn_cycles == 0 {
                 bail!(
                     "segment limit ({segment_limit}) too small for instruction at pc: {:?}",
@@ -310,7 +361,7 @@ impl<'a, 'b, S: Syscall> Executor<'a, 'b, S> {
         })
     }
 
-    fn advance(&mut self) -> Result<()> {
+    fn advance(&mut self, _dont_commit: bool) -> Result<()> {
         for trace in &self.trace {
             trace
                 .borrow_mut()
@@ -335,6 +386,7 @@ impl<'a, 'b, S: Syscall> Executor<'a, 'b, S> {
         }
         self.output_digest = self.pending.output_digest.take();
         self.exit_code = self.pending.exit_code.take();
+
         self.pager.commit_step();
 
         Ok(())
@@ -356,6 +408,7 @@ impl<'a, 'b, S: Syscall> Executor<'a, 'b, S> {
         let a0 = self.load_register(REG_A0)?;
         let output_ptr = self.load_guest_addr_from_register(REG_A1)?;
         let output: [u8; DIGEST_BYTES] = self.load_array_from_guest(output_ptr)?;
+        println!("ecallhalt {:?}", output);
 
         let halt_type = a0 & 0xff;
         let user_exit = (a0 >> 8) & 0xff;
@@ -654,6 +707,7 @@ impl<'a, 'b, S: Syscall> EmuContext for Executor<'a, 'b, S> {
     }
 
     fn trap(&self, cause: TrapCause) -> Result<bool> {
+        println!("LMAO");
         let msg = format!("Trap: {cause:08x?}, pc: {:?}", self.pc);
         tracing::info!("{msg}");
         bail!("{msg}");

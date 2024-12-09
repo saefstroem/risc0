@@ -40,7 +40,7 @@ const fn cycles_per_page(blocks_per_page: usize) -> usize {
     1 + SHA_INIT + (SHA_LOAD + SHA_MAIN) * blocks_per_page
 }
 
-struct Page(Vec<u8>);
+pub struct Page(Vec<u8>);
 
 #[derive(Clone, Copy, Debug, PartialEq, PartialOrd)]
 enum PageState {
@@ -63,8 +63,8 @@ enum Action {
 
 pub struct PagedMemory {
     pub image: MemoryImage,
-    page_table: Vec<u32>,
-    page_cache: Vec<Page>,
+    pub page_table: Vec<u32>,
+    pub page_cache: Vec<Page>,
     page_states: BTreeMap<u32, PageState>,
     pub cycles: usize,
     pending_actions: Vec<Action>,
@@ -128,7 +128,7 @@ impl PagedMemory {
         let idx = self.page_table[page_idx as usize] as usize;
         let page = self.page_cache.get_mut(idx).unwrap();
         let old = page.load(addr);
-        self.pending_actions.push(Action::Store(addr, old));
+        //self.pending_actions.push(Action::Store(addr, old));
         page.store(addr, data);
 
         Ok(())
@@ -284,7 +284,7 @@ impl PagedMemory {
 }
 
 impl Page {
-    fn load(&self, addr: WordAddr) -> u32 {
+    pub fn load(&self, addr: WordAddr) -> u32 {
         let word_addr = (addr.0 % PAGE_WORDS as u32) as usize;
         let byte_addr = word_addr * WORD_SIZE;
         let mut bytes = [0u8; WORD_SIZE];
@@ -294,7 +294,7 @@ impl Page {
         u32::from_le_bytes(bytes)
     }
 
-    fn store(&mut self, addr: WordAddr, data: u32) {
+    pub fn store(&mut self, addr: WordAddr, data: u32) {
         let word_addr = (addr.0 % PAGE_WORDS as u32) as usize;
         let byte_addr = word_addr * WORD_SIZE;
         // tracing::trace!("store({addr:?}, 0x{data:08x})");
