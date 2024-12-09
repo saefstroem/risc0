@@ -141,7 +141,6 @@ pub(crate) fn finalize(halt: bool, user_exit: u8) {
             assumptions: MaybePruned::Pruned(ASSUMPTIONS_DIGEST.digest()),
         };
         let output_words: [u32; 8] = output.digest().into();
-
         if halt {
             sys_halt(user_exit, &output_words)
         } else {

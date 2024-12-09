@@ -76,7 +76,7 @@ pub mod guest;
 #[cfg(not(target_os = "zkvm"))]
 mod host;
 mod receipt;
-mod receipt_claim;
+pub mod receipt_claim;
 pub mod serde;
 pub mod sha;
 

@@ -69,7 +69,7 @@ pub trait EmuContext {
 
 #[derive(Default)]
 pub struct Emulator {
-    table: FastDecodeTable,
+    pub table: FastDecodeTable,
 }
 
 #[derive(Debug)]
@@ -90,7 +90,7 @@ pub struct DecodedInstruction {
     pub insn: u32,
     top_bit: u32,
     func7: u32,
-    rs2: u32,
+    pub rs2: u32,
     rs1: u32,
     func3: u32,
     rd: u32,
@@ -98,7 +98,7 @@ pub struct DecodedInstruction {
 }
 
 #[derive(Clone, Copy, Debug)]
-enum InsnCategory {
+pub enum InsnCategory {
     Compute,
     Load,
     Store,
@@ -161,7 +161,7 @@ pub enum InsnKind {
 #[derive(Clone, Copy, Debug)]
 pub struct Instruction {
     pub kind: InsnKind,
-    category: InsnCategory,
+    pub category: InsnCategory,
     pub opcode: u32,
     pub func3: u32,
     pub func7: u32,
@@ -169,7 +169,7 @@ pub struct Instruction {
 }
 
 impl DecodedInstruction {
-    fn new(insn: u32) -> Self {
+    pub fn new(insn: u32) -> Self {
         Self {
             insn,
             top_bit: (insn & 0x80000000) >> 31,
@@ -292,7 +292,7 @@ const RV32IM_ISA: InstructionTable = [
 // in practice the low 2 bits of opcode are always 11, so we can drop them, and
 // also func7 is always either 0, 1, 0x20 or don't care, so we can reduce func7
 // to 2 bits, which gets us to 10 bits, which is only 1k.
-struct FastDecodeTable {
+pub struct FastDecodeTable {
     table: FastInstructionTable,
 }
 
@@ -344,7 +344,7 @@ impl FastDecodeTable {
         }
     }
 
-    fn lookup(&self, decoded: &DecodedInstruction) -> Instruction {
+    pub fn lookup(&self, decoded: &DecodedInstruction) -> Instruction {
         let isa_idx = self.table[Self::map10(decoded.opcode, decoded.func3, decoded.func7)];
         RV32IM_ISA[isa_idx as usize]
     }

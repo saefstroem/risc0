@@ -29,8 +29,8 @@ use risc0_zkvm_platform::{fileno, memory::GUEST_MAX_MEM, PAGE_SIZE};
 use tempfile::tempdir;
 
 use crate::{
-    host::client::env::SegmentPath, Assumptions, ExecutorEnv, FileSegmentRef, Output, Segment,
-    SegmentRef, Session,
+    host::client::env::SegmentPath, Assumptions, ExecutorEnv, FileSegmentRef, MaybePruned, Output,
+    Segment, SegmentRef, Session,
 };
 
 use super::{
@@ -128,7 +128,7 @@ impl<'a> ExecutorImpl<'a> {
         self.env
             .posix_io
             .borrow_mut()
-            .with_write_fd(fileno::JOURNAL, journal.clone());
+            .with_write_fd(fileno::JOURNAL, Journal::default());
 
         let segment_limit_po2 = self
             .env
@@ -156,7 +156,7 @@ impl<'a> ExecutorImpl<'a> {
                         })
                         .map(|journal| {
                             Ok(Output {
-                                journal: journal.into(),
+                                journal: MaybePruned::Value(Vec::new()),
                                 assumptions: Assumptions(
                                     self.env
                                         .assumptions
