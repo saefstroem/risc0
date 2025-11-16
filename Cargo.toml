@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-  "bonsai/sdk",
+  "bonsai/sdk", 
   "risc0/bigint2",
   "risc0/bigint2/methods",
   "risc0/binfmt",
