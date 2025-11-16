@@ -5,12 +5,15 @@ edition = { workspace = true }
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
-risc0-zkvm = { path = "../../risc0/zkvm" }
+risc0-zkvm = { path = "../../risc0/zkvm",features=["prove","metal"] }
 sha-methods = { path = "methods" }
+borsh = "1.5.7"
+hex = "0.4.3"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [dev-dependencies]
 gpu-guard = { path = "../../tools/gpu-guard" }
-hex = "0.4"
+
 
 [features]
 cuda = ["risc0-zkvm/cuda"]

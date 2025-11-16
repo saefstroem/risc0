@@ -16,7 +16,7 @@
 #![doc = include_str!("../README.md")]
 
 use hello_world_methods::MULTIPLY_ELF;
-use risc0_zkvm::{ExecutorEnv, Receipt, default_prover};
+use risc0_zkvm::{ExecutorEnv, ProverOpts, Receipt, default_prover};
 
 // This is a Hello World demo for the RISC Zero zkVM.
 // By running the demo, Alice can produce a receipt that proves that she knows
@@ -38,7 +38,10 @@ pub fn multiply(a: u64, b: u64) -> (Receipt, u64) {
     let prover = default_prover();
 
     // Produce a receipt by proving the specified ELF binary.
-    let receipt = prover.prove(env, MULTIPLY_ELF).unwrap().receipt;
+    let receipt = prover
+        .prove_with_opts(env, MULTIPLY_ELF, &ProverOpts::succinct())
+        .unwrap()
+        .receipt;
 
     // Extract journal of receipt (i.e. output c, where c = a * b)
     let c: u64 = receipt.journal.decode().expect(
