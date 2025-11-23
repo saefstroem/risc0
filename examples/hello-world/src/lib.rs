@@ -15,7 +15,7 @@
 
 #![doc = include_str!("../README.md")]
 
-use hello_world_methods::MULTIPLY_ELF;
+use hello_world_methods::{MULTIPLY_ELF, MULTIPLY_ID};
 use risc0_zkvm::{ExecutorEnv, ProverOpts, Receipt, default_prover};
 
 // This is a Hello World demo for the RISC Zero zkVM.
@@ -49,6 +49,7 @@ pub fn multiply(a: u64, b: u64) -> (Receipt, u64) {
     );
 
     // Report the product
+    receipt.verify(MULTIPLY_ID).unwrap();
     println!("I know the factors of {c}, and I can prove it!");
 
     (receipt, c)

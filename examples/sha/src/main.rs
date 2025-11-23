@@ -81,7 +81,7 @@ fn provably_hash(input: &str, use_rust_crypto: bool) -> (Digest, Receipt) {
 
     // Produce a receipt by proving the specified ELF binary.
     let receipt = prover
-        .prove_with_opts(env, elf, &ProverOpts::groth16())
+        .prove_with_opts(env, elf, &ProverOpts::succinct())
         .unwrap()
         .receipt;
     tracing_subscriber::fmt()
@@ -104,7 +104,7 @@ fn main() {
     let args = Cli::parse();
 
     // Prove hash the message.
-    let (digest, receipt) = provably_hash(&args.message, false);
+    let (_digest, receipt) = provably_hash(&args.message, false);
 
     let inner_receipt = receipt.inner.succinct().unwrap();
 
@@ -138,8 +138,11 @@ fn main() {
     println!("Hex-encoded proof written to proof.hex");
 
     // Here is where one would send 'hex_encoded' over the network...
-
+    println!("hashid:{:?}", HASH_ID);
     // Verify the receipt, ensuring the prover knows a valid SHA-256 preimage.
+
+    let digest = receipt.journal.digest();
+    println!("journal digest:{:?}", digest);
     receipt
         .verify(HASH_ID)
         .expect("receipt verification failed");

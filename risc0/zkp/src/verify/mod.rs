@@ -532,7 +532,7 @@ where
     // Get merkle root for the code merkle tree.
     // The code merkle tree contains the control instructions for the zkVM.
     let code_root = verifier.verify_group(REGISTER_GROUP_CODE)?;
-
+    
     // Invoke the user-supplied verification function to ensure that
     // the code root of the merkle tree is as expected.
     check_code(po2 as u32, code_root)?;
