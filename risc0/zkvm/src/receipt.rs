@@ -313,7 +313,7 @@ pub enum InnerReceipt {
     /// A [SuccinctReceipt], proving arbitrarily long zkVM computations with a single STARK.
     Succinct(SuccinctReceipt<ReceiptClaim>),
 
-    /// A [Groth16Receipt], proving arbitrarily long zkVM computations with a single Groth16 SNARK.
+    /// A [Groth16Re`ceipt], proving arbitrarily long zkVM computations with a single Groth16 SNARK.
     Groth16(Groth16Receipt<ReceiptClaim>),
 
     /// A [FakeReceipt], with no cryptographic integrity, used only for development.

@@ -401,7 +401,7 @@ pub fn prove_zkr(
     let opts = ProverOpts::succinct().with_control_ids(allowed_control_ids);
     let mut prover = Prover::new(program, *control_id, opts.clone());
     prover.add_input(bytemuck::cast_slice(input));
-
+    tracing::info!("controlid:{:?}", control_id);
     tracing::debug!("Running prover");
     let receipt = prover.run()?;
 
