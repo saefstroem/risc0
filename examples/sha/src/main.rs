@@ -16,41 +16,29 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use clap::Parser;
 use risc0_zkvm::ProverOpts;
-use risc0_zkvm::recursion::MerkleProof;
 use risc0_zkvm::sha::Digestible;
 use risc0_zkvm::{ExecutorEnv, Receipt, default_prover, sha::Digest};
 use sha_methods::{HASH_ELF, HASH_ID, HASH_RUST_CRYPTO_ELF};
 use std::fs::File;
 use std::io::Write;
 
-#[derive(Debug, BorshDeserialize, BorshSerialize)]
-pub struct SuccinctReceipt {
-    /// The cryptographic seal of this receipt. This seal is a STARK proving an execution of the
-    /// recursion circuit.
-    pub seal: Vec<u32>,
+/// A receipt composed of a Groth16 over the BN_254 curve
+#[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
+#[cfg_attr(test, derive(PartialEq))]
+pub struct Groth16Receipt {
+    /// A Groth16 proof of a zkVM execution with the associated claim.
+    pub seal: Vec<u8>,
 
-    /// The control ID of this receipt, identifying the recursion program that was run (e.g. lift,
-    /// join, or resolve).
-    pub control_id: Digest,
-
-    /// Claim containing information about the computation that this receipt proves.
-    ///
-    /// The standard claim type is [ReceiptClaim][crate::ReceiptClaim], which represents a RISC-V
-    /// zkVM execution.
+    /// [ReceiptClaim][crate::ReceiptClaim] containing information about the execution that this
+    /// receipt proves.
     pub claim: Digest,
-
-    /// Name of the hash function used to create this receipt.
-    pub hashfn: String,
 
     /// A digest of the verifier parameters that can be used to verify this receipt.
     ///
     /// Acts as a fingerprint to identify differing proof system or circuit versions between a
-    /// prover and a verifier. It is not intended to contain the full verifier parameters, which must
+    /// prover and a verifier. Is not intended to contain the full verifier parameters, which must
     /// be provided by a trusted source (e.g. packaged with the verifier code).
     pub verifier_parameters: Digest,
-
-    /// Merkle inclusion proof for control_id against the control root for this receipt.
-    pub control_inclusion_proof: MerkleProof,
 }
 
 /// Hash the given bytes, returning the digest and a [Receipt] that can
@@ -81,7 +69,7 @@ fn provably_hash(input: &str, use_rust_crypto: bool) -> (Digest, Receipt) {
 
     // Produce a receipt by proving the specified ELF binary.
     let receipt = prover
-        .prove_with_opts(env, elf, &ProverOpts::succinct())
+        .prove_with_opts(env, elf, &ProverOpts::groth16())
         .unwrap()
         .receipt;
     tracing_subscriber::fmt()
@@ -106,24 +94,16 @@ fn main() {
     // Prove hash the message.
     let (_digest, receipt) = provably_hash(&args.message, false);
 
-    let inner_receipt = receipt.inner.succinct().unwrap();
+    let inner_receipt = receipt.inner.groth16().unwrap();
 
     // Convert the inner receipt to our custom SuccinctReceipt type
-    let custom_receipt = SuccinctReceipt {
+    let custom_receipt = Groth16Receipt {
         seal: inner_receipt.seal.clone(),
-        control_id: inner_receipt.control_id,
         claim: inner_receipt.claim.digest(),
-        hashfn: inner_receipt.hashfn.clone(),
         verifier_parameters: inner_receipt.verifier_parameters,
-        control_inclusion_proof: inner_receipt.control_inclusion_proof.clone(),
     };
 
     println!("Seal size in bytes: {}", custom_receipt.seal.len() * 4);
-
-    println!(
-        "Control inclusion proof: {:?}",
-        custom_receipt.control_inclusion_proof
-    );
 
     // Hex encode the serialized receipt
     let hex_encoded = hex::encode(
@@ -131,7 +111,7 @@ fn main() {
     );
 
     // Write to proof.hex file
-    let mut file = File::create("proof.hex").expect("Failed to create proof.hex file");
+    let mut file = File::create("groth.hex").expect("Failed to create proof.hex file");
     file.write_all(hex_encoded.as_bytes())
         .expect("Failed to write to proof.hex file");
 
@@ -152,9 +132,7 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    use crate::SuccinctReceipt;
     use sha_methods::{HASH_ID, HASH_RUST_CRYPTO_ID};
-    use std::fs;
 
     #[test]
     #[gpu_guard::gpu_guard(skip_if_dev_mode = true)]
@@ -178,21 +156,5 @@ mod tests {
             "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
             "We expect to match the reference SHA-256 hash of the standard test value 'abc'"
         );
-    }
-
-    #[test]
-    fn test_deserialize_proof_hex() {
-        // Read the hex-encoded proof from file
-        let hex_encoded = fs::read_to_string("proof.hex").expect("Failed to read proof.hex file");
-
-        // Decode from hex
-        let serialized_receipt = hex::decode(&hex_encoded).expect("Failed to decode hex string");
-
-        // Deserialize the inner receipt using Borsh
-        borsh::from_slice::<SuccinctReceipt>(&serialized_receipt)
-            .expect("Failed to deserialize receipt with Borsh");
-
-        println!("Successfully deserialized and verified receipt!");
-        println!("Serialized size: {} bytes", serialized_receipt.len());
     }
 }
