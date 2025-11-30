@@ -55,6 +55,23 @@ pub struct SuccinctReceipt {
     control_inclusion_proof: MerkleProof,
 }
 
+#[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
+pub struct Groth16Receipt {
+    /// A Groth16 proof of a zkVM execution with the associated claim.
+    seal: Vec<u8>,
+
+    /// [ReceiptClaim][crate::ReceiptClaim] containing information about the execution that this
+    /// receipt proves.
+    claim: Digest,
+
+    /// A digest of the verifier parameters that can be used to verify this receipt.
+    ///
+    /// Acts as a fingerprint to identify differing proof system or circuit versions between a
+    /// prover and a verifier. Is not intended to contain the full verifier parameters, which must
+    /// be provided by a trusted source (e.g. packaged with the verifier code).
+    verifier_parameters: Digest,
+}
+
 /// Hash the given bytes, returning the digest and a [Receipt] that can
 /// be used to verify that the hash was computed correctly (i.e. that
 /// the Prover knows a preimage for the given SHA-256 hash)
@@ -83,7 +100,7 @@ fn provably_hash(input: &str, use_rust_crypto: bool) -> (Digest, Receipt) {
 
     // Produce a receipt by proving the specified ELF binary.
     let receipt = prover
-        .prove_with_opts(env, elf, &ProverOpts::succinct())
+        .prove_with_opts(env, elf, &ProverOpts::groth16())
         .unwrap()
         .receipt;
 
@@ -106,14 +123,11 @@ fn main() {
     // Prove hash the message.
     let (_digest, receipt) = provably_hash(&args.message, false);
 
-    let inner_receipt = receipt.inner.succinct().unwrap();
+    let inner_receipt = receipt.inner.groth16().unwrap();
 
     // Convert the inner receipt to our custom SuccinctReceipt type
-    let custom_receipt = SuccinctReceipt {
-        control_id: inner_receipt.control_id,
+    let custom_receipt = Groth16Receipt {
         seal: inner_receipt.seal.clone(),
-        hashfn: inner_receipt.hashfn.clone(),
-        control_inclusion_proof: inner_receipt.control_inclusion_proof.clone(),
         claim: inner_receipt.claim.digest(),
         verifier_parameters: inner_receipt.verifier_parameters,
     };
@@ -126,7 +140,7 @@ fn main() {
     );
 
     // Write to proof.hex file
-    let mut file = File::create("succinct.hex").expect("Failed to create proof.hex file");
+    let mut file = File::create("groth.hex").expect("Failed to create proof.hex file");
     file.write_all(hex_encoded.as_bytes())
         .expect("Failed to write to proof.hex file");
 
@@ -134,6 +148,9 @@ fn main() {
 
     // Here is where one would send 'hex_encoded' over the network...
     println!("hashid:{:?}", HASH_ID);
+    let digest = Digest::new(HASH_ID);
+
+    println!("sha succinct image id hex:{:?}", digest);
     // Verify the receipt, ensuring the prover knows a valid SHA-256 preimage.
 
     let digest = receipt.journal.digest();
