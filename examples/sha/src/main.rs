@@ -16,6 +16,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use clap::Parser;
 use risc0_zkvm::ProverOpts;
+use risc0_zkvm::recursion::MerkleProof;
 use risc0_zkvm::sha::Digestible;
 use risc0_zkvm::{ExecutorEnv, Receipt, default_prover, sha::Digest};
 use sha_methods::{HASH_ELF, HASH_ID, HASH_RUST_CRYPTO_ELF};
@@ -25,20 +26,33 @@ use std::io::Write;
 /// A receipt composed of a Groth16 over the BN_254 curve
 #[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
 #[cfg_attr(test, derive(PartialEq))]
-pub struct Groth16Receipt {
-    /// A Groth16 proof of a zkVM execution with the associated claim.
-    pub seal: Vec<u8>,
+pub struct SuccinctReceipt {
+    /// The cryptographic seal of this receipt. This seal is a STARK proving an execution of the
+    /// recursion circuit.
+    seal: Vec<u32>,
 
-    /// [ReceiptClaim][crate::ReceiptClaim] containing information about the execution that this
-    /// receipt proves.
-    pub claim: Digest,
+    /// The control ID of this receipt, identifying the recursion program that was run (e.g. lift,
+    /// join, or resolve).
+    control_id: Digest,
+
+    /// Claim containing information about the computation that this receipt proves.
+    ///
+    /// The standard claim type is [ReceiptClaim][crate::ReceiptClaim], which represents a RISC-V
+    /// zkVM execution.
+    claim: Digest,
+
+    /// Name of the hash function used to create this receipt.
+    hashfn: String,
 
     /// A digest of the verifier parameters that can be used to verify this receipt.
     ///
     /// Acts as a fingerprint to identify differing proof system or circuit versions between a
-    /// prover and a verifier. Is not intended to contain the full verifier parameters, which must
+    /// prover and a verifier. It is not intended to contain the full verifier parameters, which must
     /// be provided by a trusted source (e.g. packaged with the verifier code).
-    pub verifier_parameters: Digest,
+    verifier_parameters: Digest,
+
+    /// Merkle inclusion proof for control_id against the control root for this receipt.
+    control_inclusion_proof: MerkleProof,
 }
 
 /// Hash the given bytes, returning the digest and a [Receipt] that can
@@ -69,7 +83,7 @@ fn provably_hash(input: &str, use_rust_crypto: bool) -> (Digest, Receipt) {
 
     // Produce a receipt by proving the specified ELF binary.
     let receipt = prover
-        .prove_with_opts(env, elf, &ProverOpts::groth16())
+        .prove_with_opts(env, elf, &ProverOpts::succinct())
         .unwrap()
         .receipt;
     tracing_subscriber::fmt()
@@ -94,11 +108,14 @@ fn main() {
     // Prove hash the message.
     let (_digest, receipt) = provably_hash(&args.message, false);
 
-    let inner_receipt = receipt.inner.groth16().unwrap();
+    let inner_receipt = receipt.inner.succinct().unwrap();
 
     // Convert the inner receipt to our custom SuccinctReceipt type
-    let custom_receipt = Groth16Receipt {
+    let custom_receipt = SuccinctReceipt {
+        control_id: inner_receipt.control_id,
         seal: inner_receipt.seal.clone(),
+        hashfn: inner_receipt.hashfn.clone(),
+        control_inclusion_proof: inner_receipt.control_inclusion_proof.clone(),
         claim: inner_receipt.claim.digest(),
         verifier_parameters: inner_receipt.verifier_parameters,
     };
@@ -111,7 +128,7 @@ fn main() {
     );
 
     // Write to proof.hex file
-    let mut file = File::create("groth.hex").expect("Failed to create proof.hex file");
+    let mut file = File::create("succinct.hex").expect("Failed to create proof.hex file");
     file.write_all(hex_encoded.as_bytes())
         .expect("Failed to write to proof.hex file");
 
@@ -133,6 +150,18 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use sha_methods::{HASH_ID, HASH_RUST_CRYPTO_ID};
+
+    // [1423791584, 880512669, 1738307172, 2533723364, 3880046003, 402541997, 1959133478, 277067013]
+    use risc0_zkvm::Digest;
+    #[test]
+    fn hash_abcd() {
+        let digest = Digest::new([
+            2490666878, 931064206, 2859705260, 2816403364, 2239188247, 1314886651, 35655229,
+            3459784930,
+        ]);
+
+        println!("sha succinct image id hex:{:?}", digest);
+    }
 
     #[test]
     #[gpu_guard::gpu_guard(skip_if_dev_mode = true)]
