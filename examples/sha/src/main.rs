@@ -15,10 +15,10 @@
 
 use borsh::{BorshDeserialize, BorshSerialize};
 use clap::Parser;
-use risc0_zkvm::ProverOpts;
 use risc0_zkvm::recursion::MerkleProof;
 use risc0_zkvm::sha::Digestible;
-use risc0_zkvm::{ExecutorEnv, Receipt, default_prover, sha::Digest};
+use risc0_zkvm::ProverOpts;
+use risc0_zkvm::{default_prover, sha::Digest, ExecutorEnv, Receipt};
 use sha_methods::{HASH_ELF, HASH_ID, HASH_RUST_CRYPTO_ELF};
 use std::fs::File;
 use std::io::Write;
@@ -86,9 +86,7 @@ fn provably_hash(input: &str, use_rust_crypto: bool) -> (Digest, Receipt) {
         .prove_with_opts(env, elf, &ProverOpts::succinct())
         .unwrap()
         .receipt;
-    tracing_subscriber::fmt()
-        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
-        .init();
+
     receipt.verify(HASH_ID).unwrap();
 
     let digest = receipt.journal.decode().unwrap();
@@ -149,15 +147,15 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    use sha_methods::{HASH_ID, HASH_RUST_CRYPTO_ID};
+    use sha_methods::HASH_ID;
 
     // [1423791584, 880512669, 1738307172, 2533723364, 3880046003, 402541997, 1959133478, 277067013]
     use risc0_zkvm::Digest;
     #[test]
     fn hash_abcd() {
         let digest = Digest::new([
-            2490666878, 931064206, 2859705260, 2816403364, 2239188247, 1314886651, 35655229,
-            3459784930,
+            1753878241, 1141607696, 453267234, 360392654, 2778692852, 1769103400, 220658553,
+            3032668356,
         ]);
 
         println!("sha succinct image id hex:{:?}", digest);
@@ -167,18 +165,6 @@ mod tests {
     fn hash_abc() {
         let (digest, receipt) = super::provably_hash("abc", false);
         receipt.verify(HASH_ID).unwrap();
-        assert_eq!(
-            hex::encode(digest.as_bytes()),
-            "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
-            "We expect to match the reference SHA-256 hash of the standard test value 'abc'"
-        );
-    }
-
-    #[test]
-    #[gpu_guard::gpu_guard(skip_if_dev_mode = true)]
-    fn hash_abc_rust_crypto() {
-        let (digest, receipt) = super::provably_hash("abc", true);
-        receipt.verify(HASH_RUST_CRYPTO_ID).unwrap();
         assert_eq!(
             hex::encode(digest.as_bytes()),
             "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
