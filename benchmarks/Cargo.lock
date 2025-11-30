@@ -3842,6 +3842,7 @@ dependencies = [
 name = "risc0-circuit-recursion-sys"
 version = "5.0.0"
 dependencies = [
+ "cust",
  "glob",
  "risc0-build-kernel",
  "risc0-core",
@@ -3891,7 +3892,6 @@ dependencies = [
  "risc0-binfmt",
  "risc0-circuit-rv32im",
  "risc0-circuit-rv32im-m3-sys",
- "risc0-sys",
  "risc0-zkp",
  "risc0-zkvm-platform",
  "serde",
@@ -3902,6 +3902,7 @@ dependencies = [
 name = "risc0-circuit-rv32im-m3-sys"
 version = "0.0.0"
 dependencies = [
+ "anyhow",
  "cc",
  "glob",
  "risc0-build-kernel",
