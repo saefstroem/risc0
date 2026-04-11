@@ -123,7 +123,8 @@ fn main() {
     // Prove hash the message.
     let (_digest, receipt) = provably_hash(&args.message, false);
 
-    let inner_receipt = receipt.inner.groth16().unwrap();
+    let inner_receipt: &risc0_zkvm::Groth16Receipt<risc0_zkvm::ReceiptClaim> =
+        receipt.inner.groth16().unwrap();
 
     // Convert the inner receipt to our custom SuccinctReceipt type
     let custom_receipt = Groth16Receipt {

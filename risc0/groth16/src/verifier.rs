@@ -25,10 +25,7 @@ use risc0_binfmt::{tagged_iter, tagged_struct, Digestible};
 use risc0_zkp::core::{digest::Digest, hash::sha::Sha256};
 use serde::{Deserialize, Serialize};
 
-use crate::{
-    from_u256, from_u256_hex, g1_from_bytes, g2_from_bytes, ProofJson, PublicInputsJson, Seal,
-    VerifyingKeyJson,
-};
+use crate::{from_u256, from_u256_hex, g1_from_bytes, g2_from_bytes, Seal};
 
 // Constants from: risc0-ethereum/contracts/src/groth16/Groth16Verifier.sol
 // When running a new ceremony, update them by running cargo xtask bootstrap-groth16
@@ -78,15 +75,23 @@ const IC5_Y: &str = "15060583660288623605191393599883223885678013570733629274538
 /// Groth16 `Verifier` instance over the BN_254 curve encoded in little endian.
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Verifier {
+    /// olol
+    pub unprepared_key: Vec<u8>,
     /// prepared verifying key little endian encoded.
-    encoded_pvk: Vec<u8>,
+    pub encoded_pvk: Vec<u8>,
 
     /// proof little endian encoded.
-    encoded_proof: Vec<u8>,
+    pub encoded_proof: Vec<u8>,
 
     /// prepared public inputs little endian encoded.
-    encoded_prepared_inputs: Vec<u8>,
+    pub encoded_prepared_inputs: Vec<u8>,
+    ///lolol
+    pub public_inputs: Vec<Vec<u8>>,
 }
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+/// lol
+pub struct Fr(#[serde(with = "serde_ark")] ark_bn254::Fr);
 
 impl Verifier {
     /// Creates a new Groth16 `Verifier` instance.
@@ -112,19 +117,24 @@ impl Verifier {
         public_inputs: &[Fr],
         verifying_key: &VerifyingKey,
     ) -> Result<Self, Error> {
+        let mut unprepared_key: Vec<u8> = Vec::new();
+        verifying_key
+            .0
+            .serialize_compressed(&mut unprepared_key)
+            .unwrap();
         let pvk = ark_groth16::prepare_verifying_key(&verifying_key.0);
         let mut encoded_pvk = Vec::new();
         pvk.serialize_uncompressed(&mut encoded_pvk)
             .map_err(|err| anyhow!(err))?;
 
         let mut encoded_proof = Vec::new();
-        let proof = Proof::<Bn254> {
+        let proof: Proof<ark_ec::bn::Bn<ark_bn254::Config>> = Proof::<Bn254> {
             a: g1_from_bytes(&seal.a)?,
             b: g2_from_bytes(&seal.b)?,
             c: g1_from_bytes(&seal.c)?,
         };
         proof
-            .serialize_uncompressed(&mut encoded_proof)
+            .serialize_compressed(&mut encoded_proof)
             .map_err(|err| anyhow!(err))?;
 
         let mut encoded_prepared_inputs = Vec::new();
@@ -134,28 +144,23 @@ impl Verifier {
         )
         .map_err(|err| anyhow!(err))?;
         prepared_inputs
-            .serialize_uncompressed(&mut encoded_prepared_inputs)
+            .serialize_compressed(&mut encoded_prepared_inputs)
             .map_err(|err| anyhow!(err))?;
 
         Ok(Self {
+            unprepared_key,
             encoded_pvk,
             encoded_proof,
             encoded_prepared_inputs,
+            public_inputs: public_inputs
+                .iter()
+                .map(|field| {
+                    let mut buffer = Vec::new();
+                    field.0.serialize_uncompressed(&mut buffer).unwrap();
+                    buffer
+                })
+                .collect(),
         })
-    }
-
-    /// Create a Verifier given the JSON representation of the proof, public inputs and verifier
-    /// key.
-    pub fn from_json(
-        proof: ProofJson,
-        public_inputs: PublicInputsJson,
-        verifying_key: VerifyingKeyJson,
-    ) -> Result<Self> {
-        Verifier::new_inner(
-            &proof.try_into()?,
-            &public_inputs.to_scalar()?,
-            &verifying_key.verifying_key()?,
-        )
     }
 
     /// Verifies the Groth16 proof.
@@ -175,10 +180,6 @@ impl Verifier {
         }
     }
 }
-
-/// Verifying key for Groth16 proofs.
-#[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct Fr(#[serde(with = "serde_ark")] pub(crate) ark_bn254::Fr);
 
 impl Digestible for Fr {
     /// Compute a tagged hash of the [Fr] value.
@@ -320,4 +321,76 @@ fn fr_from_bytes(scalar: &[u8]) -> Result<Fr, Error> {
     ark_bn254::Fr::deserialize_uncompressed(&*scalar)
         .map(Fr)
         .map_err(|err| anyhow!(err))
+}
+#[cfg(test)]
+mod tests {
+    use crate::Verifier;
+    use borsh::{BorshDeserialize, BorshSerialize};
+    use risc0_zkp::core::digest::Digest;
+    /// A receipt composed of a Groth16 over the BN_254 curve.
+    /// This struct is a modified version of the Groth16Receipt defined in
+    /// risc0. The reason for this is to simplify it, as we are certain to only receive digests
+    /// for the claim and verifier parameters.
+    #[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
+    #[cfg_attr(test, derive(PartialEq))]
+    pub struct Inner {
+        /// A Groth16 proof of a zkVM execution with the associated claim.
+        seal: Vec<u8>,
+
+        /// [ReceiptClaim][crate::ReceiptClaim] containing information about the execution that this
+        /// receipt proves.
+        claim: Digest,
+
+        /// A digest of the verifier parameters that can be used to verify this receipt.
+        ///
+        /// Acts as a fingerprint to identify differing proof system or circuit versions between a
+        /// prover and a verifier. Is not intended to contain the full verifier parameters, which must
+        /// be provided by a trusted source (e.g. packaged with the verifier code).
+        verifier_parameters: Digest,
+    }
+
+    // [1423791584, 880512669, 1738307172, 2533723364, 3880046003, 402541997, 1959133478, 277067013]
+    #[test]
+    fn hash_abcd() {
+        let image_id_hex = "75641a540ee2ad9ee5902bcdcdb8b55c0bef4a28287309b858f97b1356c6c2e0";
+        let journal_hex = "5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456";
+        let proof_data_hex = "0001000015fe378b1244f5c38f7ed9e74a784e68f355c1638e116064b1a183c4c0530257140cf216b9899d3a3fd8718db35946e75a5e69a2b4884935cd98d35c624c6ae41deb191920b352cb17ae53ca7cbab0e56a3d2f8307e7162fb75ab1365123b90e2e6ac57516e74adbe2baeffc2772bd1b24715952d85342a4c85011c35aab5e0728f81402ffe3655b3d07fe0a3df01a9b959ed54d2dccd4a955b77aa2ad08a1d103a01eb634d8f7ccb2ab903e053a0e0960a5b22f2d70d17f98dcb1936e940c2b2d593d7ea1cc214ed4ed764d7d716e11789a1ac27b26007eaa90bd7a29168c90142e64de0dfd31ffc775f3a5a31f87ff42cf78de195f8b78c3ea43f8b9a2cce1a95ac0b37bfedcd8136e6c1143086bf5d223ffcb21c6ffcb7c8f60392ca49dde73c457ba541936f0d907daf0c7253a39a9c5c427c225ba7709e44702d3c6eedc";
+        // Parse hex strings and convert to bytes
+        let image_id_bytes = hex::decode(image_id_hex).unwrap();
+        let journal_bytes = hex::decode(journal_hex).unwrap();
+        let proof_data_bytes = hex::decode(proof_data_hex).unwrap();
+
+        // The journal here is a digest of the public outputs of the ZK program.
+        // Do note here that the R0 precompiles are verifying the executions of the
+        // lift program, which verifies a previous ZK proof and outputs its public outputs as journal.
+        // Rest assured, the integrity of the journal is still bound by the proof.
+
+        // Deserialize the proof and prepare for verification
+        let inner: Inner = borsh::from_slice(&proof_data_bytes).unwrap();
+
+        // Convert image id and journal to Digests
+        let image_id: Digest = Digest::try_from(image_id_bytes.as_slice()).unwrap();
+        let journal: Digest = Digest::try_from(journal_bytes.as_slice()).unwrap();
+        let verifier = Verifier::new(
+            &inner.seal,
+            ALLOWED_CONTROL_ROOT,
+            inner.claim,
+            BN254_IDENTITY_CONTROL_ID,
+            &risc0_groth16::verifying_key(),
+        )
+        .unwrap();
+
+        println!("allowed control root: {:?}", ALLOWED_CONTROL_ROOT);
+
+        let encoded_pvk_hex = hex::encode(verifier.unprepared_key);
+        let encoded_proof = hex::encode(verifier.encoded_proof);
+        let encoded_prepared_inputs = hex::encode(verifier.encoded_prepared_inputs);
+        let serialized_public_inputs = verifier.public_inputs;
+        println!("pvk: {:?},{}", encoded_pvk_hex, encoded_pvk_hex.len());
+        println!("proof: {:?}", encoded_proof);
+        println!("input: {:?}", encoded_prepared_inputs);
+        serialized_public_inputs.iter().for_each(|input| {
+            println!("public input elem: {:?}", hex::encode(input));
+        });
+    }
 }

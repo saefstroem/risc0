@@ -4588,6 +4588,7 @@ dependencies = [
  "ark-ff 0.5.0",
  "ark-groth16",
  "ark-serialize 0.5.0",
+ "borsh",
  "bytemuck",
  "cfg-if",
  "circom-witnesscalc",
