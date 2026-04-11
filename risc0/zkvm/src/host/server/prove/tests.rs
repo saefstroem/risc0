@@ -1,4 +1,4 @@
-// Copyright 2025 RISC Zero, Inc.
+// Copyright 2026 RISC Zero, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ use rstest::rstest;
 use super::get_prover_server;
 use crate::{
     host::server::{exec::executor::ExecutorImpl, testutils},
+    recursion::prove::zkr,
     serde::{from_slice, to_vec},
     sha::Digestible,
     ExecutorEnv, ExitCode, InnerReceipt, ProveInfo, ProverOpts, Receipt, ReceiptKind, Session,
@@ -661,6 +662,26 @@ fn verify_in_guest(#[case] kind: ReceiptKind) {
     println!("{:?}", session.stats());
 }
 
+#[test]
+fn succinct_receipt_binds_control_id() {
+    let mut receipt = prove_nothing_succinct().receipt;
+    let InnerReceipt::Succinct(ref mut succinct_receipt) = receipt.inner else {
+        panic!("what?!")
+    };
+    // Get the control ID for an allowed ZKR, but not the right one.
+    succinct_receipt.control_id = zkr::resolve_unwrap_povw(&succinct_receipt.hashfn)
+        .unwrap()
+        .1;
+    let err = receipt
+        .verify_integrity_with_context(&VerifierContext::default())
+        .unwrap_err();
+
+    assert!(matches!(
+        err,
+        VerificationError::ControlVerificationError { .. }
+    ));
+}
+
 mod sys_verify {
     use std::sync::OnceLock;
 
@@ -982,7 +1003,7 @@ fn run_unconstrained() -> Result<()> {
 
 #[test_log::test]
 fn povw_nonce_assignment() -> Result<()> {
-    let spec = MultiTestSpec::BusyLoop { cycles: 1 << 17 };
+    let spec = MultiTestSpec::BusyLoop { cycles: 1 << 18 };
     let povw_job_id = PovwJobId {
         log: PovwLogId::from(0x202ce_u64),
         job: 42,
@@ -990,7 +1011,7 @@ fn povw_nonce_assignment() -> Result<()> {
     let env = ExecutorEnv::builder()
         .write(&spec)
         .unwrap()
-        .segment_limit_po2(15)
+        .segment_limit_po2(17)
         .povw(povw_job_id)
         .build()
         .unwrap();
@@ -1008,11 +1029,11 @@ fn povw_nonce_assignment() -> Result<()> {
 
 #[test_log::test]
 fn povw_nonce_default_assignment() -> Result<()> {
-    let spec = MultiTestSpec::BusyLoop { cycles: 1 << 17 };
+    let spec = MultiTestSpec::BusyLoop { cycles: 1 << 18 };
     let env = ExecutorEnv::builder()
         .write(&spec)
         .unwrap()
-        .segment_limit_po2(15)
+        .segment_limit_po2(17)
         .build()
         .unwrap();
     let session = ExecutorImpl::from_elf(env, MULTI_TEST_ELF)?.run()?;

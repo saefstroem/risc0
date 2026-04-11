@@ -1,4 +1,4 @@
-// Copyright 2025 RISC Zero, Inc.
+// Copyright 2026 RISC Zero, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@
 
 #![deny(rustdoc::broken_intra_doc_links)]
 #![deny(missing_docs)]
-#![cfg_attr(docsrs, feature(doc_cfg, doc_auto_cfg))]
+#![cfg_attr(docsrs, feature(doc_cfg))]
 
 mod consts;
 mod error;
@@ -44,3 +44,6 @@ pub use error::Error;
 pub use tree::{
     Bitmap, Job, Merkleized, MerkleizedIndex, Opening, SubtreeOpening, WorkLog, WorkSet,
 };
+
+// Re-export key types from risc0_binfmt
+pub use risc0_binfmt::{PovwJobId, PovwLogId, PovwNonce};
