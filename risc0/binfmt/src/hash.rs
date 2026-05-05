@@ -67,6 +67,16 @@ impl<T: Digestible> Digestible for Option<T> {
 ///
 /// Used for hashing of the receipt claim, and in the recursion predicates.
 pub fn tagged_struct<S: Sha256>(tag: &str, down: &[impl Borrow<Digest>], data: &[u32]) -> Digest {
+    if tag == "risc0.ReceiptClaim" || tag == "risc0.Output" {
+        println!("tag: {tag}");
+        for (i, digest) in down.iter().enumerate() {
+            println!("down[{i}]: {:?}", digest.borrow());
+        }
+        for (i, word) in data.iter().enumerate() {
+            println!("data[{i}]: {word}");
+        }
+    }
+
     let tag_digest: Digest = *S::hash_bytes(tag.as_bytes());
     #[allow(clippy::manual_slice_size_calculation)]
     let mut all = Vec::<u8>::with_capacity(

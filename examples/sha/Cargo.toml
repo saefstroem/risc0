@@ -7,8 +7,9 @@ edition = "2021"
 borsh = "1.6.0"
 clap = { version = "4.0", features = ["derive"] }
 hex = "0.4"
-risc0-zkvm = { path = "../../risc0/zkvm",features=["prove"] }
+risc0-zkvm = { path = "../../risc0/zkvm"}
 sha-methods = { path = "methods" }
+sha2 = "0.11.0"
 tracing-subscriber = "0.3.22"
 
 [dev-dependencies]

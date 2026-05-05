@@ -13,64 +13,13 @@
 //
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 
-use borsh::{BorshDeserialize, BorshSerialize};
 use clap::Parser;
-use risc0_zkvm::recursion::MerkleProof;
 use risc0_zkvm::sha::Digestible;
 use risc0_zkvm::ProverOpts;
 use risc0_zkvm::{default_prover, sha::Digest, ExecutorEnv, Receipt};
 use sha_methods::{HASH_ELF, HASH_ID, HASH_RUST_CRYPTO_ELF};
 use std::fs::File;
 use std::io::Write;
-
-/// A receipt composed of a Groth16 over the BN_254 curve
-#[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
-#[cfg_attr(test, derive(PartialEq))]
-pub struct SuccinctReceipt {
-    /// The cryptographic seal of this receipt. This seal is a STARK proving an execution of the
-    /// recursion circuit.
-    seal: Vec<u32>,
-
-    /// The control ID of this receipt, identifying the recursion program that was run (e.g. lift,
-    /// join, or resolve).
-    control_id: Digest,
-
-    /// Claim containing information about the computation that this receipt proves.
-    ///
-    /// The standard claim type is [ReceiptClaim][crate::ReceiptClaim], which represents a RISC-V
-    /// zkVM execution.
-    claim: Digest,
-
-    /// Name of the hash function used to create this receipt.
-    hashfn: String,
-
-    /// A digest of the verifier parameters that can be used to verify this receipt.
-    ///
-    /// Acts as a fingerprint to identify differing proof system or circuit versions between a
-    /// prover and a verifier. It is not intended to contain the full verifier parameters, which must
-    /// be provided by a trusted source (e.g. packaged with the verifier code).
-    verifier_parameters: Digest,
-
-    /// Merkle inclusion proof for control_id against the control root for this receipt.
-    control_inclusion_proof: MerkleProof,
-}
-
-#[derive(Clone, Debug, BorshSerialize, BorshDeserialize)]
-pub struct Groth16Receipt {
-    /// A Groth16 proof of a zkVM execution with the associated claim.
-    seal: Vec<u8>,
-
-    /// [ReceiptClaim][crate::ReceiptClaim] containing information about the execution that this
-    /// receipt proves.
-    claim: Digest,
-
-    /// A digest of the verifier parameters that can be used to verify this receipt.
-    ///
-    /// Acts as a fingerprint to identify differing proof system or circuit versions between a
-    /// prover and a verifier. Is not intended to contain the full verifier parameters, which must
-    /// be provided by a trusted source (e.g. packaged with the verifier code).
-    verifier_parameters: Digest,
-}
 
 /// Hash the given bytes, returning the digest and a [Receipt] that can
 /// be used to verify that the hash was computed correctly (i.e. that
@@ -115,6 +64,7 @@ struct Cli {
     #[arg(default_value = "")]
     message: String,
 }
+use risc0_zkvm::ReceiptClaim;
 
 fn main() {
     // Parse command line
@@ -123,34 +73,47 @@ fn main() {
     // Prove hash the message.
     let (_digest, receipt) = provably_hash(&args.message, false);
 
-    let inner_receipt = receipt.inner.groth16().unwrap();
-
-    // Convert the inner receipt to our custom SuccinctReceipt type
-    let custom_receipt = Groth16Receipt {
-        seal: inner_receipt.seal.clone(),
-        claim: inner_receipt.claim.digest(),
-        verifier_parameters: inner_receipt.verifier_parameters,
-    };
-
-    println!("Seal size in bytes: {}", custom_receipt.seal.len() * 4);
+    let inner_receipt: &risc0_zkvm::Groth16Receipt<ReceiptClaim> = receipt.inner.groth16().unwrap();
 
     // Hex encode the serialized receipt
-    let hex_encoded = hex::encode(
-        borsh::to_vec(&custom_receipt).expect("Failed to serialize receipt with Borsh"),
+    let hex_encoded =
+        hex::encode(borsh::to_vec(&inner_receipt).expect("Failed to serialize receipt with Borsh"));
+
+    //let groth_seal_hex = include_str!("data/groth16.seal.hex");
+    //let groth_claim_hex = include_str!("data/groth16.claim.hex");
+    //let groth_hashfn_hex = include_str!("data/groth16.hashfn.hex");
+    //let groth_control_index_hex = include_str!("data/groth16.control_index.hex");
+    //let groth_control_digests_hex = include_str!("data/groth16.control_digests.hex");
+    //let groth_image_id_hex = include_str!("data/groth16.image.hex");
+    //let stark_journal_hex = include_str!("data/succinct.journal.hex");
+    println!(
+        "seal hex: {:?}",
+        hex::encode(
+            inner_receipt
+                .seal
+                .iter()
+                .flat_map(|x| x.to_le_bytes())
+                .collect::<Vec<u8>>()
+        )
     );
+    println!(
+        "claim hex: {:?}",
+        hex::encode(inner_receipt.claim.digest().as_bytes())
+    );
+    println!("raw claim: {:?}", inner_receipt.claim);
 
     // Write to proof.hex file
     let mut file = File::create("groth.hex").expect("Failed to create proof.hex file");
     file.write_all(hex_encoded.as_bytes())
         .expect("Failed to write to proof.hex file");
 
-    println!("Hex-encoded proof written to proof.hex");
+    println!("Hex-encoded proof written to groth.hex");
 
     // Here is where one would send 'hex_encoded' over the network...
     println!("hashid:{:?}", HASH_ID);
     let digest = Digest::new(HASH_ID);
 
-    println!("sha succinct image id hex:{:?}", digest);
+    println!("sha groth image id hex:{:?}", digest);
     // Verify the receipt, ensuring the prover knows a valid SHA-256 preimage.
 
     let digest = receipt.journal.digest();
@@ -164,10 +127,11 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
+    use hex::FromHex;
     use sha_methods::HASH_ID;
 
     // [1423791584, 880512669, 1738307172, 2533723364, 3880046003, 402541997, 1959133478, 277067013]
-    use risc0_zkvm::Digest;
+    use risc0_zkvm::{sha::Digestible, Digest, Groth16Receipt, MaybePruned, ReceiptClaim};
     #[test]
     fn hash_abcd() {
         let digest = Digest::new([
@@ -187,5 +151,92 @@ mod tests {
             "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
             "We expect to match the reference SHA-256 hash of the standard test value 'abc'"
         );
+    }
+
+    fn compute_receipt_claim_hash(journal_hash: &[u8; 32], image_id: &[u8; 32]) -> [u8; 32] {
+        // Step 1: Compute Output digest first
+        let output_digest = compute_output_digest(journal_hash);
+
+        // Step 2: Compute ReceiptClaim digest
+        compute_receipt_claim_digest(image_id, &output_digest)
+    }
+
+    fn compute_output_digest(journal_hash: &[u8; 32]) -> [u8; 32] {
+        use sha2::{Digest, Sha256};
+
+        // Hash the "risc0.Output" tag
+        let tag_digest = Sha256::digest(b"risc0.Output");
+
+        // Build concatenated data: tag + journal + assumptions(ZERO) + count(2)
+        let mut all = Vec::new();
+        all.extend_from_slice(&tag_digest);
+        all.extend_from_slice(journal_hash);
+        all.extend_from_slice(&[0u8; 32]); // Digest::ZERO for assumptions
+        all.extend_from_slice(&2u16.to_le_bytes()); // 2 components
+
+        Sha256::digest(&all).into()
+    }
+
+    fn compute_receipt_claim_digest(image_id: &[u8; 32], output_digest: &[u8; 32]) -> [u8; 32] {
+        use sha2::{Digest, Sha256};
+
+        // Fixed post digest from your logs
+        let post_digest =
+            hex::decode("a3acc27117418996340b84e5a90f3ef4c49d22c79e44aad822ec9c313e1eb8e2")
+                .unwrap();
+
+        // Hash the "risc0.ReceiptClaim" tag
+        let tag_digest = Sha256::digest(b"risc0.ReceiptClaim");
+
+        // Build concatenated data: tag + input(ZERO) + pre(image_id) + post + output + exit_codes + count(4)
+        let mut all = Vec::new();
+        all.extend_from_slice(&tag_digest);
+        all.extend_from_slice(&[0u8; 32]); // input = Digest::ZERO
+        all.extend_from_slice(image_id); // pre = image_id
+        all.extend_from_slice(&post_digest); // post (fixed)
+        all.extend_from_slice(output_digest); // output (computed)
+        all.extend_from_slice(&0u32.to_le_bytes()); // sys_exit = 0
+        all.extend_from_slice(&0u32.to_le_bytes()); // user_exit = 0
+        all.extend_from_slice(&4u16.to_le_bytes()); // 4 components
+
+        Sha256::digest(&all).into()
+    }
+
+    #[test]
+    fn g16_hash_fix() {
+        let groth_receipt_raw = include_str!("groth.rcpt.hex");
+        let rcpt: Groth16Receipt<ReceiptClaim> =
+            borsh::from_slice(&hex::decode(groth_receipt_raw).unwrap()).unwrap();
+        rcpt.verify_integrity().unwrap();
+        println!("inner rcpt claim: {:?}", rcpt.claim.digest());
+        let seal_hex = hex::encode(rcpt.seal);
+        println!("seal hex: {:?}", seal_hex);
+        let rcpt_claim = ReceiptClaim::ok(
+            Digest::from_hex("75641a540ee2ad9ee5902bcdcdb8b55c0bef4a28287309b858f97b1356c6c2e0")
+                .unwrap(),
+            MaybePruned::Pruned(
+                Digest::from_hex(
+                    "5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456",
+                )
+                .unwrap(),
+            ),
+        );
+
+        let rcpt_claim_manual = compute_receipt_claim_hash(
+            &hex::decode("5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456")
+                .unwrap()
+                .try_into()
+                .unwrap(),
+            &hex::decode("75641a540ee2ad9ee5902bcdcdb8b55c0bef4a28287309b858f97b1356c6c2e0")
+                .unwrap()
+                .try_into()
+                .unwrap(),
+        );
+        println!(
+            "manual rcpt claim hash: {:?}",
+            hex::encode(rcpt_claim_manual)
+        );
+        println!("rcpt_claim: {:?}", rcpt_claim.digest());
+        println!("rcp_claim from receipt: {:?}", rcpt.claim.digest());
     }
 }
